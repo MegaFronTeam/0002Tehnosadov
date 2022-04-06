@@ -1,1 +1,1 @@
-1. https://megafronteam.github.io/0002Tehnosadov/
+1. https://megafronteam.github.io/0002Tehnosadov/public
