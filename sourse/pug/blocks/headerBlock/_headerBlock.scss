@@ -1,0 +1,126 @@
+// start .headerBlock
+.headerBlock {
+	padding-top: $grid-gutter-width;
+	padding-bottom: 0;
+	margin-bottom: 1px;
+
+	.header {
+		&-right {
+			@include media-breakpoint-down(md) {
+				display: none;
+			}
+			img {
+				width: 100%;
+			}
+		}
+	}
+	.hero-slider {
+		position: relative;
+		margin-right: $grid-gutter-width;
+		@include media-breakpoint-down(md) {
+			margin-right: 0;;
+		}
+		img {
+			max-width: 100%;
+			max-height: 100%;
+			height: auto;
+			width: auto !important;
+			vertical-align: top;
+		}
+		&-button-next,
+		&-button-prev {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			position: absolute;
+			height: 100%;
+			width: 40px;
+			top: 0;
+			background: rgba(255, 255, 255, 0.5);
+			z-index: 2;
+			cursor: pointer;
+			transition: right .3s ease-in-out, left .3s ease-in-out;
+			&:hover {
+				.icon {
+					color: $red;
+				}
+			}
+		}
+		&-button-prev {
+			left: -40px;
+			.icon {
+				transform: rotate(180deg);
+			}
+		}
+		&-button-next {
+			right: -40px;
+		}
+		.icon {
+			width: 11px;
+			height: 20px;
+			transition: fill .3s ease-in-out;
+		}
+		&:hover {
+			.hero-slider-button-prev {
+				left: 0;
+			}
+			.hero-slider-button-next {
+				right: 0;
+			}
+		}
+	}
+
+	h1 {
+		margin-bottom: 1px;
+	}
+
+	h2 {
+		margin-bottom: 1px;
+	}
+
+	.row {
+		--bs-gutter-x: 10px;
+	}
+
+
+
+
+	@include media-breakpoint-up(xl) {}
+
+	@include media-breakpoint-up(lg) {}
+
+	@include media-breakpoint-up(md) {}
+
+	@include media-breakpoint-up(sm) {}
+
+	@include media-breakpoint-up(xs) {}
+
+	//
+	@include media-breakpoint-between(md, xl) {}
+
+
+	//
+	@include media-breakpoint-only(xs) {}
+
+	@include media-breakpoint-only(sm) {}
+
+	@include media-breakpoint-only(md) {}
+
+	@include media-breakpoint-only(lg) {}
+
+	@include media-breakpoint-only(xl) {}
+
+	//
+	@include media-breakpoint-down(xl) {}
+
+	@include media-breakpoint-down(lg) {}
+
+	@include media-breakpoint-down(md) {}
+
+	@include media-breakpoint-down(sm) {}
+
+	@include media-breakpoint-down(xs) {}
+
+}
+
+// end.headerBlock

@@ -1,0 +1,97 @@
+@use "sass:math";
+
+.icon {
+	display: inline-block;
+	width: 1em;
+	height: 1em;
+	fill: currentColor;
+}
+
+.icon-ar_next {
+	font-size:math.div(20,10)*1rem;
+	width: math.div(11,20)*1em;
+}
+.icon-ar_prev {
+	font-size:math.div(20,10)*1rem;
+	width: math.div(11,20)*1em;
+}
+.icon-basket {
+	font-size:math.div(24,10)*1rem;
+	width: math.div(22,24)*1em;
+}
+.icon-bookmarks {
+	font-size:math.div(31,10)*1rem;
+	width: math.div(23,31)*1em;
+}
+.icon-cart {
+	font-size:math.div(31,10)*1rem;
+	width: math.div(31,31)*1em;
+}
+.icon-cartplus {
+	font-size:math.div(20,10)*1rem;
+	width: math.div(20,20)*1em;
+}
+.icon-check {
+	font-size:math.div(27,10)*1rem;
+	width: math.div(27,27)*1em;
+}
+.icon-compare {
+	font-size:math.div(31,10)*1rem;
+	width: math.div(31,31)*1em;
+}
+.icon-fastview {
+	font-size:math.div(40,10)*1rem;
+	width: math.div(40,40)*1em;
+}
+.icon-fb {
+	font-size:math.div(24,10)*1rem;
+	width: math.div(24,24)*1em;
+}
+.icon-geo {
+	font-size:math.div(30,10)*1rem;
+	width: math.div(22,30)*1em;
+}
+.icon-hero-next {
+	font-size:math.div(20,10)*1rem;
+	width: math.div(11,20)*1em;
+}
+.icon-instagram {
+	font-size:math.div(24,10)*1rem;
+	width: math.div(24,24)*1em;
+}
+.icon-login {
+	font-size:math.div(31,10)*1rem;
+	width: math.div(31,31)*1em;
+}
+.icon-oneclick {
+	font-size:math.div(31,10)*1rem;
+	width: math.div(21,31)*1em;
+}
+.icon-phone {
+	font-size:math.div(30,10)*1rem;
+	width: math.div(31,30)*1em;
+}
+.icon-search {
+	font-size:math.div(20,10)*1rem;
+	width: math.div(19,20)*1em;
+}
+.icon-star {
+	font-size:math.div(16,10)*1rem;
+	width: math.div(15,16)*1em;
+}
+.icon-telegram {
+	font-size:math.div(16,10)*1rem;
+	width: math.div(16,16)*1em;
+}
+.icon-viber {
+	font-size:math.div(16,10)*1rem;
+	width: math.div(16,16)*1em;
+}
+.icon-vk {
+	font-size:math.div(24,10)*1rem;
+	width: math.div(24,24)*1em;
+}
+.icon-whatsapp {
+	font-size:math.div(16,10)*1rem;
+	width: math.div(16,16)*1em;
+}

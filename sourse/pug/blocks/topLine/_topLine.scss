@@ -1,0 +1,173 @@
+	// start .topLine
+	.topLine {
+		padding: 10px 0;
+		background-color: $white;
+		box-sizing: border-box;
+		.row {
+			align-items: center;
+		}
+		.container {	
+			padding: 10px;
+			align-items: center;
+			border-top: 1px solid $gray;
+			border-bottom: 1px solid $gray;
+		}
+
+		&__logo {
+			img {
+				margin: 0 15px;
+				width: 205px;
+				height: 24px;
+			}
+		}
+
+		&__search {
+			display: flex;
+			justify-content: space-between;
+  		padding: 7px;
+			width: 100%;
+			margin-bottom: 0;
+			margin-right: $grid-gutter-width;
+			border: 1px solid $gray;
+			&__input-wrap {
+				width: 100%;
+			}
+			input {
+				width: 100%;
+				outline: none;
+				border: none;
+				background-color: transparent;
+				&::placeholder {
+					font-size: rem(13);
+					line-height: 1;
+					background-color: transparent;
+				}
+			}
+			button {
+				background-color: transparent;
+				border: none;
+				.icon {
+					color: $green;
+					font-size: rem(19);
+				}
+			}
+		}
+
+		&__location,
+		&__to-call {
+			position: relative;
+			display: flex;
+			align-items: center;
+			margin-right: $grid-gutter-width;
+			&-text {
+				text-align: center;
+			}
+			p {
+				margin-bottom: 0;
+				font-size: rem(12);
+			}
+			span {
+				display: block;
+				font-size: rem(16);
+				font-weight: bold;
+			}
+			.icon {
+				margin-right: $grid-gutter-width;
+				font-size: rem(24);
+			} 
+		}
+
+		&__location {
+			border: none;
+			background: transparent;
+			transition: color .3s ease-in-out;
+			@include media-breakpoint-down(xl) {
+				margin-right: calc($grid-gutter-width * 3);
+			}
+
+			&:hover {
+				color: $green;
+			}
+			.icon {
+				color: $red;
+			}
+		}
+
+		&__to-call {
+			@include media-breakpoint-down(xl) {
+				margin-right: calc($grid-gutter-width * 3);
+			}
+			.icon {
+				color: $green;
+			}
+		}
+
+
+		&-menu {
+			ul {
+				display: flex;
+				list-style-type: none;
+				margin-bottom: 0;
+			}
+			li {
+				display: flex;
+				flex-direction: column;
+				align-items: center;
+				position: relative;
+				margin-right: $grid-gutter-width;
+				&:not(:last-child) {
+					@include media-breakpoint-down(xl) {
+						margin-right: calc($grid-gutter-width*2);
+					}
+				}		
+				.icon {
+					font-size: rem(24);
+				}
+				a {
+					color: $body-color;
+					&:hover {
+						color: $green;
+					}
+				}
+			}
+			.counting::after {
+				content: '0';
+				position: absolute;
+				bottom: 15px;
+				right: 6px;
+				width: 20px;
+				height: 20px;
+				border: 1px solid $green;
+				border-radius: 100%;
+				background-color: $white;
+				text-align: center;
+				font-size: 12px;
+				line-height: 20px;
+			}
+		}
+		 
+	@include media-breakpoint-up(xl) {}
+	@include media-breakpoint-up(lg) {}
+	@include media-breakpoint-up(md) {}
+	@include media-breakpoint-up(sm) {}
+	@include media-breakpoint-up(xs) {}
+	
+	//
+	@include media-breakpoint-between(md, xl) { }
+	
+	
+	//
+	@include media-breakpoint-only(xs) {}
+	@include media-breakpoint-only(sm) {}
+	@include media-breakpoint-only(md) {}
+	@include media-breakpoint-only(lg) {}
+	@include media-breakpoint-only(xl) {}
+	
+	//
+	@include media-breakpoint-down(xl) {}
+	@include media-breakpoint-down(lg) {}
+	@include media-breakpoint-down(md) {}
+	@include media-breakpoint-down(sm) {}
+	@include media-breakpoint-down(xs) {} 
+
+} // end.topLine

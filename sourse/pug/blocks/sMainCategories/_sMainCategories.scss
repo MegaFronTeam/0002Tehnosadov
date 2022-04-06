@@ -1,0 +1,78 @@
+// start .sMainCategories
+.sMainCategories {
+		--sPT: 0;
+		--sPB: $grid-gutter-width;
+		// --sTPB: ;
+	&__list {
+		display: flex;
+		list-style-type: none;
+	}
+
+	.sliderAutoWidth {		
+		padding: 10px 10px 0 10px;
+		height: 190px;
+	}
+
+	.swiper-slide {
+		height: 170px;
+		max-width: 146px;
+		margin-right: $grid-gutter-width;
+	}
+
+	.main-cat-item {
+		position: relative;
+		display: flex;
+		flex-direction: column;
+		height: 100%;
+		background-color: $white;
+		padding: 10px;
+		border: 1px solid $gray;
+		overflow: hidden;
+		transition: transform .3s ease-in-out, box-shadow .3s ease-in-out;
+		&:not(:last-child) {
+			margin-right: 10px;
+		}	
+		&:hover {
+			transform: scale(1.1);
+			box-shadow: 0 0 1rem rgb(68 68 68 / 50%);
+			.main-cat-item__text {
+				color: $red;
+				text-decoration: underline;
+			}
+		}
+		&__img-wrap {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			min-height: 90px;
+		}
+		img {
+			max-height: 85px;
+			width: auto;
+		}
+		&__text {
+			display: flex;
+			height: 100%;
+			align-items:center;
+			justify-content: center;
+			font-size: 14px;
+			text-align: center;
+			font-weight: 700;
+			color: $blue;
+			transition: color .3s ease-in-out, text-decoration .3s ease-in-out;
+		}
+		p {			
+			margin: 0;
+			padding: 0;
+		}
+	}
+	
+
+	@include media-breakpoint-up(xl) {}
+	@include media-breakpoint-up(lg) {}
+	@include media-breakpoint-up(md) {}
+	@include media-breakpoint-up(sm) {}
+	@include media-breakpoint-between(md, xl) {}
+	@include media-breakpoint-only(xl) {}
+	@include media-breakpoint-down(xl) {}
+} // end.sMainCategories

@@ -1,0 +1,36 @@
+mixin categoryItem(i,t) 
+	+b.main-cat-item
+			+e.img-wrap
+				+img(`img/header-icon-${i}.png`)
+			+e.text(href="#").stretched-link
+				p!= t
+
+mixin sMainCategories(data)
+	// start sMainCategories
+	+b.SECTION.sMainCategories.section#sMainCategories&attributes(attributes)
+		.container.sliderAutoWidthWrap.d-none.d-md-block
+			+b.sliderAutoWidth--js.swiper
+				.swiper-wrapper
+					.swiper-slide
+						+categoryItem('1','Водоснабжение и полив')
+					.swiper-slide
+						+categoryItem('2','Мототехника')
+					.swiper-slide
+						+categoryItem('3','Обогрев и вентиляция')
+					.swiper-slide
+						+categoryItem('4','Продукция STIHL и Viking')
+					.swiper-slide
+						+categoryItem('5','Расходные материалы и аксессуары')
+					.swiper-slide
+						+categoryItem('6','Садовая техника')
+					.swiper-slide
+						+categoryItem('7','Садовый инвентарь и инструменты')
+					.swiper-slide
+						+categoryItem('8','Сварочное оборудование')
+					.swiper-slide
+						+categoryItem('9','Силовое оборудование')
+					.swiper-slide
+						+categoryItem('10','Снегоуборочная техника')
+					.swiper-slide
+						+categoryItem('11','Строительные инструменты')
+	// end sMainCategories

@@ -1,0 +1,30 @@
+mixin headerBlock()
+	// start headerBlock
+	+b.headerBlock.section#headerBlock&attributes(attributes)
+		.container
+			.row
+				.col.col-md-9.header-left
+					+b.swiper.hero-slider
+						.swiper-wrapper
+							.swiper-slide
+								a(href='#')
+									img(src="img/hero-slider-1.jpg")
+							.swiper-slide
+								a(href='#')
+									img(src="img/hero-slider-2.jpg")
+							.swiper-slide
+								a(href='#')
+									img(src="img/hero-slider-3.jpg")
+						.hero-slider-button-prev
+							+icon('hero-next').hero-slider__icon
+						.hero-slider-button-next
+							+icon('hero-next').hero-slider__icon
+				.col-3
+					+b.header-right
+						a(href="#")
+							img(src="img/billboard.jpg")
+			
+
+
+						
+	// end headerBlock
