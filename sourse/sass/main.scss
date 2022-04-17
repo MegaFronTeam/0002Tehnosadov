@@ -45,7 +45,7 @@ $output-bourbon-deprecation-warnings: false;
 // @import "./node_modules/bootstrap/scss/navbar";
 // @import "./node_modules/bootstrap/scss/card";
 // @import "./node_modules/bootstrap/scss/accordion";
-// @import "./node_modules/bootstrap/scss/breadcrumb";
+@import "./node_modules/bootstrap/scss/breadcrumb";
 // @import "./node_modules/bootstrap/scss/pagination";
 // @import "./node_modules/bootstrap/scss/badge";
 // @import "./node_modules/bootstrap/scss/alert";
@@ -69,14 +69,15 @@ $output-bourbon-deprecation-warnings: false;
 // scss-docs-end import-stack
 
 
-// .breadcrumb {
-// 	.active {
-// 		a {
-// 			// color: $breadcrumb-active-color;
-// 			pointer-events: none;
-// 		}
-// 	}
-// }
+.breadcrumb {
+	.active {
+		a {
+			color: $breadcrumb-active-color;
+			pointer-events: none;
+      font-weight: 700;
+		}
+	}
+}
 // @import "./node_modules/bootstrap/scss/pagination";
 
 // .pagination-wrapper ul {
@@ -112,6 +113,9 @@ $output-bourbon-deprecation-warnings: false;
 @import '../pug/blocks/headerBlock/_headerBlock.scss';
 @import '../pug/blocks/sMainCategories/_sMainCategories.scss';
 @import '../pug/blocks/sHit/_sHit.scss';
+@import '../pug/blocks/sCatalogHead/_sCatalogHead.scss';
+@import '../pug/blocks/sFilter/_sFilter.scss';
+@import '../pug/blocks/sCatalogBody/_sCatalogBody.scss';
 
 
 @import '../pug/blocks/header/_header.scss';

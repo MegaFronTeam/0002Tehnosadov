@@ -1,0 +1,14 @@
+mixin sCatalogHead(data)
+	// start sCatalogHead
+	+b.sCatalogHead#sCatalogHead&attributes(attributes)
+		+e.row.row
+			.col-auto
+				button.btn.filter-btn
+					+icon('settings')
+					| Подбор по параметрам
+			.col
+				+b.select-group
+					+select('', 'Сортировать', 'Наименованию', 'Популярности', 'Отзывам', 'Рейтингу', 'Цена по возрастанию', 'Цена по убыванию')
+					+select('', 'Сортировать', 'Наименованию', 'Популярности', 'Отзывам', 'Рейтингу', 'Цена по возрастанию', 'Цена по убыванию')
+					+select('', 'Сортировать', 'Наименованию', 'Популярности', 'Отзывам', 'Рейтингу', 'Цена по возрастанию', 'Цена по убыванию')
+	// end sCatalogHead

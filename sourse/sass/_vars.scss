@@ -44,7 +44,7 @@ $gray-400: #ced4da !default;
 $gray-500: #adb5bd !default;
 $gray-600: #6c757d !default;
 $gray-700: #495057 !default;
-$gray-800: #343a40 !default;
+$gray-800: #444 !default;
 $gray-900: #212529 !default;
 $black: #000 !default;
 // scss-docs-end gray-color-variables
@@ -403,7 +403,7 @@ $line-height-base: 1.5 !default;
 $line-height-sm: 1.25 !default;
 $line-height-lg: 2 !default;
 
-$h1-font-size: $font-size-base * 2.5 !default;
+$h1-font-size: rem(36) !default;
 $h2-font-size: rem(36) !default;
 $h3-font-size: $font-size-base * 1.75 !default;
 $h4-font-size: $font-size-base * 1.5 !default;
@@ -1333,15 +1333,15 @@ $figure-caption-color: $gray-600 !default;
 // Breadcrumbs
 
 // scss-docs-start breadcrumb-variables
-$breadcrumb-font-size: null !default;
+$breadcrumb-font-size: rem(14) !default;
 $breadcrumb-padding-y: 0 !default;
 $breadcrumb-padding-x: 0 !default;
 $breadcrumb-item-padding-x: .5rem !default;
-$breadcrumb-margin-bottom: 1rem !default;
+$breadcrumb-margin-bottom: 0 !default;
 $breadcrumb-bg: null !default;
-$breadcrumb-divider-color: $gray-600 !default;
-$breadcrumb-active-color: $gray-600 !default;
-$breadcrumb-divider: quote("/") !default;
+$breadcrumb-divider-color: $gray-800 !default;
+$breadcrumb-active-color: $gray-800 !default;
+$breadcrumb-divider: quote("·") !default;
 $breadcrumb-divider-flipped: $breadcrumb-divider !default;
 $breadcrumb-border-radius: null !default;
 // scss-docs-end breadcrumb-variables
