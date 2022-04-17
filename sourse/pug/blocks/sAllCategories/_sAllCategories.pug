@@ -1,0 +1,31 @@
+mixin allCategoriesItem(name)
+	+b.categories-item
+		+e.title(href="#")!= name
+
+mixin sAllCategories(data)
+	// start sAllCategories
+	+b.SECTION.sAllCategories.section#sAllCategories&attributes(attributes)
+		.container
+			.row
+				.col-10
+					+b.sliderAutoWidth--js.swiper
+					.swiper-wrapper
+						.swiper-slide
+							+allCategoriesItem('Снегоуборочные лопаты и движки для снега')
+						.swiper-slide
+							+allCategoriesItem('Сварочное оборудование')
+						.swiper-slide
+							+allCategoriesItem('Аппараты для контактной сварки')
+						.swiper-slide
+							+allCategoriesItem('Аппараты для плазменной резки')
+						.swiper-slide
+							+allCategoriesItem('Аппараты для пластика и синтетических материалов')
+						.swiper-slide
+							+allCategoriesItem('Аппараты для пластиковых труб')
+						.swiper-slide
+							+allCategoriesItem('Маски и очки сварщика')
+						.swiper-slide
+							+allCategoriesItem('Сварочные аппараты')
+				.col-2
+					button Все категории
+	// end sAllCategories

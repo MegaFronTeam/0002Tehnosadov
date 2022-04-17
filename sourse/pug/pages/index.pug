@@ -8,6 +8,8 @@ include ../blocks/sForm/_sForm.pug
 include ../blocks/sContent/_sContent.pug
 include ../blocks/sMainCategories/_sMainCategories.pug
 include ../blocks/sHit/_sHit.pug
+include ../blocks/sPopCategories/_sPopCategories.pug
+include ../blocks/sAllCategories/_sAllCategories.pug
  
 include ../blocks/sContact/_sContact.pug
 include ../blocks/sForm/_sForm.pug
@@ -32,6 +34,8 @@ block pagecontent
 	+sMainCategories
 	+sHit('Хит')
 	+sHit('Советуем')
+	+sPopCategories()
+	+sAllCategories()
 
 	+soc()
 	+sForm()

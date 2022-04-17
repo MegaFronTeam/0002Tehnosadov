@@ -1,0 +1,26 @@
+mixin popCatItem(title,img)
+	.col-auto
+		+e.item
+			+e(href='#').item-title.stretched-link!= title
+			+img(`img/pop-item-${img}.jpg`)
+
+mixin sPopCategories(data)
+	// start sPopCategories
+	+b.SECTION.sPopCategories.section#sPopCategories&attributes(attributes)
+		.container
+			+b.section-title
+				h2 Популярные категории
+			.row
+				+popCatItem('Водоснабжение и полив', '1')
+				+popCatItem('Мототехника', '2')
+				+popCatItem('Обогрев и вентиляция', '3')
+				+popCatItem('Продукция STIHL и Viking', '4')
+				+popCatItem('Расходные материалы и аксессуары', '5')
+				+popCatItem('Садовая техника', '6')
+				+popCatItem('Садовый инвентарь и инструменты', '7')
+				+popCatItem('Сварочное оборудование', '8')
+				+popCatItem('Силовое оборудование', '9')
+				+popCatItem('Снегоуборочная техника', '10')
+				+popCatItem('Стероительные инструменты', '11')
+			
+	// end sPopCategories

@@ -1,0 +1,40 @@
+// start .sPopCategories
+.sPopCategories {
+		// --sPT: ;
+		// --sPB: ;
+		// --sTPB: ;
+		.row {
+			--bs-gutter-y: var(--bs-gutter-x);
+			justify-content: flex-start;
+		}
+		&__item {
+			position: relative;
+			height: 100%;
+			padding: 10px;
+			background-color: $white;
+			text-align: center;
+			width: 250px;
+			&:hover {
+				box-shadow: 0 0 1rem #bbb;
+			}
+		}
+		&__item-title {
+			font-size: 18px;
+			font-weight: bold;
+			color: $body-color;
+			&:hover {
+				color: $body-color;
+			}
+		}
+		img {
+			max-width: 100%;
+		}
+
+	@include media-breakpoint-up(xl) {}
+	@include media-breakpoint-up(lg) {}
+	@include media-breakpoint-up(md) {}
+	@include media-breakpoint-up(sm) {}
+	@include media-breakpoint-between(md, xl) {}
+	@include media-breakpoint-only(xl) {}
+	@include media-breakpoint-down(xl) {}
+} // end.sPopCategories
