@@ -45,7 +45,7 @@ $output-bourbon-deprecation-warnings: false;
 // @import "./node_modules/bootstrap/scss/navbar";
 // @import "./node_modules/bootstrap/scss/card";
 // @import "./node_modules/bootstrap/scss/accordion";
-// @import "./node_modules/bootstrap/scss/breadcrumb";
+@import "./node_modules/bootstrap/scss/breadcrumb";
 // @import "./node_modules/bootstrap/scss/pagination";
 // @import "./node_modules/bootstrap/scss/badge";
 // @import "./node_modules/bootstrap/scss/alert";
@@ -69,14 +69,15 @@ $output-bourbon-deprecation-warnings: false;
 // scss-docs-end import-stack
 
 
-// .breadcrumb {
-// 	.active {
-// 		a {
-// 			// color: $breadcrumb-active-color;
-// 			pointer-events: none;
-// 		}
-// 	}
-// }
+.breadcrumb {
+	.active {
+		a {
+			color: $breadcrumb-active-color;
+			pointer-events: none;
+      font-weight: 700;
+		}
+	}
+}
 // @import "./node_modules/bootstrap/scss/pagination";
 
 // .pagination-wrapper ul {
@@ -112,11 +113,17 @@ $output-bourbon-deprecation-warnings: false;
 @import '../pug/blocks/headerBlock/_headerBlock.scss';
 @import '../pug/blocks/sMainCategories/_sMainCategories.scss';
 @import '../pug/blocks/sHit/_sHit.scss';
+<<<<<<< HEAD
 @import '../pug/blocks/sPopCategories/_sPopCategories.scss';
 @import '../pug/blocks/sAllCategories/_sAllCategories.scss';
-@import '../pug/blocks/sBlogPreview/_sBlogPreview.scss';
+@import '../pug/blocks/sBlogPreview/_gitsBlogPreview.scss';
 @import '../pug/blocks/sBrands/_sBrands.scss';
 @import '../pug/blocks/sAbout/_sAbout.scss';
+=======
+@import '../pug/blocks/sCatalogHead/_sCatalogHead.scss';
+@import '../pug/blocks/sFilter/_sFilter.scss';
+@import '../pug/blocks/sCatalogBody/_sCatalogBody.scss';
+>>>>>>> 8c7f31cfe69edd399434f4dbb477a59718b91b5c
 
 
 @import '../pug/blocks/header/_header.scss';

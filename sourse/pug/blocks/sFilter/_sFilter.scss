@@ -1,0 +1,78 @@
+// start .sFilter
+.sFilter {
+	// --sPT: ;
+	// --sPB: ;
+	// --sTPB: ;
+	background-color: $white;
+	padding: rem(10);
+	border: 1px solid $gray;
+	width: 240px;
+	.dd-group {
+		&__item {
+			&.active {
+				.dd-group__head:after {
+					transform: translateY(14%) rotate(180deg);
+				}
+			}
+		}
+		&__head {
+			border-bottom: 1px solid $gray;
+			padding-bottom: rem(10);
+			font-weight: 700;
+			position: relative;
+			&:after {
+				@include mt;
+				content: '';
+				display: block;
+				clip-path: polygon(50% 100%, 0 0, 100% 0);
+				background-color: $body-color;
+				width: 20px;
+				height: 10px;
+				position: absolute;
+				right: 0;
+				bottom: 50%;
+    		transform: translateY(14%);
+			}
+		}
+	}
+	.extra-controls {
+		display: flex;
+		p {
+			margin-bottom: 0;
+			margin-right: rem(10);
+			font-weight: 700;
+			line-height: 1.7;
+		}
+		input {
+			display: inline-block;
+			width: 100%;
+			& + p {
+				margin-left: rem(15);
+			}
+		}
+	}
+	.irs {
+		&-to, &-from, &-single, &-min, &-max {
+			visibility: hidden !important;
+			display: none !important;
+		}
+		&-handle {
+			transform: translate(0);
+			background-color: $body-color;
+			border-color: $body-color;
+			&:hover {
+				background-color: $body-color;
+			}
+		}
+		&-bar {
+			background-color: $red;
+		}
+	}
+	@include media-breakpoint-up(xl) {}
+	@include media-breakpoint-up(lg) {}
+	@include media-breakpoint-up(md) {}
+	@include media-breakpoint-up(sm) {}
+	@include media-breakpoint-between(md, xl) {}
+	@include media-breakpoint-only(xl) {}
+	@include media-breakpoint-down(xl) {}
+} // end.sFilter

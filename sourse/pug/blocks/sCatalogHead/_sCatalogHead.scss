@@ -1,0 +1,37 @@
+// start .sCatalogHead
+.sCatalogHead {
+		// --sPT: ;
+		// --sPB: ;
+		// --sTPB: ;
+	.filter-btn {
+		padding: rem(10);
+		border: 1px solid $gray;
+		height: 100%;
+		min-width: 240px;
+		background-color: $white;
+		@include media-breakpoint-up(lg) {
+			pointer-events: none;
+		}
+		.icon {
+			font-size: rem(24);
+			margin-right: rem(10);
+		}
+	}
+	&__row {
+		margin-bottom: rem(15);
+	}
+	.select-group {
+		padding: rem(10);
+		background-color: $white;
+		border: 1px solid $gray;
+		display: flex;
+		justify-content: space-between;
+	}
+	@include media-breakpoint-up(xl) {}
+	@include media-breakpoint-up(lg) {}
+	@include media-breakpoint-up(md) {}
+	@include media-breakpoint-up(sm) {}
+	@include media-breakpoint-between(md, xl) {}
+	@include media-breakpoint-only(xl) {}
+	@include media-breakpoint-down(xl) {}
+} // end.sCatalogHead

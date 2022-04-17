@@ -1,0 +1,16 @@
+//- mixin 
+
+mixin sFilter(data)
+	// start sFilter
+	+b.sFilter#sFilter&attributes(attributes)
+		+e.block
+			+ddGroup()
+				+ddGroupItem('Цена', 'active')
+					.range-slider
+						input.js-range-slider(type='text' value='')
+					.extra-controls
+						p от
+						input.js-input-from(type='text' value='0')
+						p до
+						input.js-input-to(type='text' value='0')
+	// end sFilter
