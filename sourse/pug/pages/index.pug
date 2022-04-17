@@ -10,6 +10,9 @@ include ../blocks/sMainCategories/_sMainCategories.pug
 include ../blocks/sHit/_sHit.pug
 include ../blocks/sPopCategories/_sPopCategories.pug
 include ../blocks/sAllCategories/_sAllCategories.pug
+include ../blocks/sBlogPreview/_sBlogPreview.pug
+include ../blocks/sBrands/_sBrands.pug
+include ../blocks/sAbout/_sAbout.pug
  
 include ../blocks/sContact/_sContact.pug
 include ../blocks/sForm/_sForm.pug
@@ -36,6 +39,11 @@ block pagecontent
 	+sHit('Советуем')
 	+sPopCategories()
 	+sAllCategories()
+	+sHit('Новинки')
+	+sHit('Акции')
+	+sBlogPreview()
+	+sBrands()
+	+sAbout()
 
 	+soc()
 	+sForm()

@@ -1,0 +1,42 @@
+// start .sBrands
+.sBrands {
+		// --sPT: ;
+		// --sPB: ;
+		// --sTPB: ;
+	.sliderAutoWidth {
+		height: 110px;
+	}
+	.swiper-slide {
+		width: 250px;
+		margin-right: $grid-gutter-width;
+	}
+	@include media-breakpoint-up(xl) {}
+	@include media-breakpoint-up(lg) {}
+	@include media-breakpoint-up(md) {}
+	@include media-breakpoint-up(sm) {}
+	@include media-breakpoint-between(md, xl) {}
+	@include media-breakpoint-only(xl) {}
+	@include media-breakpoint-down(xl) {}
+} // end.sBrands
+
+.brand-item {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding: $grid-gutter-width;
+	width: 250px;
+	height: 110px;
+	margin-right: rem(10);
+	border: 1px solid #dddddd;
+  background: #bbbbbb;
+	filter: grayscale(100%);
+	transition: .3 ease-in-out;
+	&:hover {
+		filter: none;
+		background-color: $white;
+	}
+	
+	img {
+		max-width: 100%;
+	}
+}

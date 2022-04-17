@@ -1,0 +1,23 @@
+mixin brandsItem(img)
+	+b.brand-item(href="#")
+		+img(`img/brand-${img}.png`)
+
+mixin sBrands(data)
+	// start sBrands
+	+b.SECTION.sBrands.section#sBrands&attributes(attributes)
+		.container
+			+b.section-title
+				.row
+					.col
+						h2 Бренды
+					.col-auto
+							+controlWrap()
+			+b.sliderAutoWidth--js.swiper
+				.swiper-wrapper
+					- var n = 1;
+						while n < 17
+							.swiper-slide
+								+brandsItem(n++)
+
+
+	// end sBrands

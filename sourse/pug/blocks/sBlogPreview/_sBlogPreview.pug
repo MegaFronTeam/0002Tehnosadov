@@ -1,0 +1,27 @@
+mixin blogItem(img,title,caption,date)
+	+b.blog-item&attributes(attributes)
+		+e.img-wrap(href="#")
+			+img(`img/blog-item-${img}.png`)
+			+e.title!= title
+		+e.caption(href='#')!= caption
+		+e.date!= date
+
+mixin sBlogPreview(data)
+	// start sBlogPreview
+	+b.SECTION.sBlogPreview.section#sBlogPreview&attributes(attributes)
+		.container
+			+b.section-title
+				a(href="#")
+					h2 Блог
+			.row
+				.col-4
+					+blogItem('1','', 'Уход за триммером для травы: правила и рекомендации','09.02.2022').--lg
+				.col-2
+					+blogItem('2','', 'Как выбрать тепловую пушку: классификация, характеристики, популярные модели','09.02.2022')
+				.col-2
+					+blogItem('3','', 'Самый проходимый снегоход в глубоком снегу','30.11.2021')
+				.col-2
+					+blogItem('4','', 'Профессиональная бензопила для валки леса: рейтинг лучших','17.09.2021')
+				.col-2
+					+blogItem('5','', 'Ретинг бензиновых измельчителей веток','09.02.2022')
+	// end sBlogPreview

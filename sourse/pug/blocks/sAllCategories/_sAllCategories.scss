@@ -3,6 +3,25 @@
 		// --sPT: ;
 		// --sPB: ;
 		// --sTPB: ;
+	.swiper-wrapper {
+		overflow: hidden;
+	}
+	.swiper-slide {
+		width: auto;
+	}
+
+	&__show {
+		width: 100%;
+		height: 100%;
+		border: none;
+		color: $white;
+		background-color: $body-color;
+		font-weight: 700;
+		transition: background-color .3 ease-in-out;
+		&:hover {
+				background-color: #A8C828;
+			}
+	}
 
 	@include media-breakpoint-up(xl) {}
 	@include media-breakpoint-up(lg) {}
@@ -12,3 +31,30 @@
 	@include media-breakpoint-only(xl) {}
 	@include media-breakpoint-down(xl) {}
 } // end.sAllCategories
+.categories-item {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	margin-right: $grid-gutter-width;
+	width: 250px;
+	height: 60px;
+	border: 1px solid #dddddd;
+	background-color: $white;
+	text-align: center;
+	&__title {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		height: 100%;
+		width: 100%;
+		padding: $grid-gutter-width;
+		color: $body-color;
+		font-weight: 700;
+		transition: text-decoration .3s ease-in-out, background-color .3s ease-in-out;
+		&:hover {
+			color: $body-color;
+			text-decoration: underline;
+			background-color: #A8C828;
+		}
+	}
+}
