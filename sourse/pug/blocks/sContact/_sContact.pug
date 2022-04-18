@@ -1,9 +1,52 @@
 mixin sContact()
 	// start sContact
-	+b.SECTION.sContact.section#sContact&attributes(attributes)
-		.container
-			+b.section-title.text-center
-				h2 sContact
-				
+	+b.sContact#sContact&attributes(attributes)
+		+e.block
 			.row
+				.col-xxl-2.col-xl-auto.col-sm-6
+					+e.block-item
+						h5 Телефон
+						a(href="tel:+74992886163") +7 499 288 61 63
+					+e.block-item
+						h5 E-mail
+						a(href="mailto:info@tehnosadov.ru") info@tehnosadov.ru
+				.col-xl-4.col-sm-6
+					+e.block-item
+						h5 Режим работы интернет-магазина
+						p ПН-ПТ c&nbsp;09:00 до&nbsp;20:00 часов<br />СБ-ВС с&nbsp;10:00 до&nbsp;18:00 часов<br /><br /><span><strong>Режим работы с&nbsp;30.12.2021 по&nbsp;9.01.2022</strong></span><br />30.12.21&nbsp;с 10.00 до&nbsp;18.00<br />31.12.21&nbsp;с 10.00 до&nbsp;15.00<br /><span>01.01.22 выходной</span><br /><span>02.01.22 выходной</span><br />03.01.22&nbsp;с 10.00 до&nbsp;18.00<br />04.01.22&nbsp;с 10.00 до&nbsp;18.00<br />05.01.22&nbsp;с 10.00 до&nbsp;18.00<br />06.01.22&nbsp;с 10.00 до&nbsp;18.00<br /><span>07.01.22 выходной</span><br />08.01.22&nbsp;с 10.00 до&nbsp;18.00<br />09.01.22&nbsp;с 10.00 до&nbsp;18.00
+					+e.block-item
+						h5 Режим работы колл-центра
+						p 24/7
+				.col-xxl-2.col-xl-auto.col-sm-6
+					+e.block-item
+						h5 Доставка
+						p Пн-Пт: с 09:00 до 20:00
+						p Сб-Вс: с 10:00 до 18:00
+				.col-xl-3.col-sm-6
+					+e.block-item
+						h5 Адрес магазина
+						p г.Москва, Дмитровское шоссе, д.62, с.5
+		+e.block
+			+e.block-item
+				h5 Реквизиты
+				p <strong>ООО «Техносадов»</strong>
+				p <strong>ОГРН</strong> 1187746800845
+				p <strong>ИНН</strong> 7743273314
+				p <strong>КПП</strong> 771301001
+				p <strong>Расчетный счет</strong> №40702810237100000151
+				p Филиал «Центральный» Банка ВТБ (ПАО) в г. Москве
+				p <strong>корр. счет</strong> №30101810145250000411
+				p <strong>БИК</strong> 044525411
+				p <strong>Юр. адрес:</strong> 127474 г.Москва, ш. Дмитровское, д.62, строение 5, этаж 1, помещение X, комната 1
+		+e.block
+			+e.block-item
+				h5 Наш магазин
+				script(src='https://api-maps.yandex.ru/2.1/?lang=ru_RU&apikey=6331e0a6-b922-4b24-a8f0-88e62d68142f')
+				+e.map-widget#map
+			+e.block-item
+				h5 Как нас найти
+				p <strong>Пешком</strong>
+				p Станция метро Верхние Лихоборы, перейти Дмитровское шоссе и двигаться в направлении ТЦ "Колизей", вход по правой стороне здания.
+				p <strong>На автомобиле</strong>
+				p Двигаясь из центра по Дмитровскому шоссе в направлении МО после поворота на Дубнинскую улицу через 150 метров будет заезд в ТЦ “Колизей”.
 	// end sContact

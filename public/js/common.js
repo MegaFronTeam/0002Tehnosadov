@@ -468,3 +468,38 @@ for (let wrap of sliderWrap) {
 // 		document.body.classList.remove('loaded_hiding');
 // 	}, 500);
 // }
+
+if (document.querySelector('.sContact__map-widget')) {
+	ymaps.ready(function () {
+		var myMap = new ymaps.Map('map', {
+			center: [55.854249, 37.564554],
+			zoom: 18,
+			controls: [`zoomControl`]
+		}, {
+			searchControlProvider: 'yandex#search'
+		}),
+
+			myPlacemark = new ymaps.Placemark(myMap.getCenter(), {
+
+			}, {
+				// Опции.
+				// Необходимо указать данный тип макета.
+				iconLayout: 'default#image',
+				// Своё изображение иконки метки.
+				iconImageHref: 'img/svg/map-icon.svg',
+				// Размеры метки.
+				iconImageSize: [26, 40],
+				// Смещение левого верхнего угла иконки относительно
+				// её "ножки" (точки привязки).
+				iconImageOffset: [30, -25]
+			});
+
+		if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
+			//... отключаем перетаскивание карты
+			myMap.behaviors.disable('drag');
+			// myMap.zoom = 17;
+		}
+		myMap.geoObjects
+			.add(myPlacemark)
+	});
+}

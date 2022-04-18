@@ -1,29 +1,96 @@
+// start .sForm
+.sForm {
+	--sPT: #{rem(14)};
+	--sPB: #{rem(14)};
+	h5 {
+		font-size: rem(18);
+		font-weight: bold;
+		margin-bottom: rem(24);
+	}
+	border: 1px solid #dddddd;
+	padding: rem(14);
+	padding-top: rem(24);
+	background-color: #ffffff;
+	form {
+		text-align: center;
+	}
+	.form-wrap {
+		&__input {
+			padding: rem(14);
+			background-color: $white;
+			&::placeholder {
+				color: #dddddd;
+				font-weight: bold;
+			}
+		}
+		&__input-wrap {
+			margin-bottom: rem(14);
+			&:last-child {
+				margin-bottom: 0;
+			}
+		}
+	}
+	.row {
+		@include media-breakpoint-up(lg) {
+			--bs-gutter-x: #{rem(20)};
+		}
+	}
+	textarea {
+		height: 100%;
+	}
+	&__btn {
+		font-weight: bold;
+		transition-duration: 0.4s;
+		color: $white !important;
+		background-color: #444444;
+		font-size: rem(13);
+		line-height: 100%;
+		margin-top: rem(18);
+		padding: rem(12);
+		&:hover {
+			background-color: #ff3300;
+		}
+		@include media-breakpoint-up(sm) {
+			width: rem(250);
+		}
+		width: 100%;
+	}
+	@include media-breakpoint-up(xl) {
+	}
+	@include media-breakpoint-up(lg) {
+	}
+	@include media-breakpoint-up(md) {
+	}
+	@include media-breakpoint-up(sm) {
+	}
+	@include media-breakpoint-up(xs) {
+	}
 
-	// start .sForm
-	.sForm {
-		 
-	@include media-breakpoint-up(xl) {}
-	@include media-breakpoint-up(lg) {}
-	@include media-breakpoint-up(md) {}
-	@include media-breakpoint-up(sm) {}
-	@include media-breakpoint-up(xs) {}
-	
 	//
-	@include media-breakpoint-between(md, xl) { }
-	
-	
-	//
-	@include media-breakpoint-only(xs) {}
-	@include media-breakpoint-only(sm) {}
-	@include media-breakpoint-only(md) {}
-	@include media-breakpoint-only(lg) {}
-	@include media-breakpoint-only(xl) {}
-	
-	//
-	@include media-breakpoint-down(xl) {}
-	@include media-breakpoint-down(lg) {}
-	@include media-breakpoint-down(md) {}
-	@include media-breakpoint-down(sm) {}
-	@include media-breakpoint-down(xs) {} 
+	@include media-breakpoint-between(md, xl) {
+	}
 
+	//
+	@include media-breakpoint-only(xs) {
+	}
+	@include media-breakpoint-only(sm) {
+	}
+	@include media-breakpoint-only(md) {
+	}
+	@include media-breakpoint-only(lg) {
+	}
+	@include media-breakpoint-only(xl) {
+	}
+
+	//
+	@include media-breakpoint-down(xl) {
+	}
+	@include media-breakpoint-down(lg) {
+	}
+	@include media-breakpoint-down(md) {
+	}
+	@include media-breakpoint-down(sm) {
+	}
+	@include media-breakpoint-down(xs) {
+	}
 } // end.sForm

@@ -1,12 +1,14 @@
 mixin sForm()
 	// start sForm
-	+b.SECTION.sForm.section#sForm&attributes(attributes)
-		.container
-			+b.section-title.text-center
-				h2 sForm
-				h2 sForm
-				h2 sForm
-				h2 sForm
-				
+	+b.sForm.section#sForm&attributes(attributes)
+		h5 Остались вопросы?
+		+form-wrap
 			.row
+				.col-lg-6
+					+input(`ФИО:`)
+					+input(`Телефон:`)
+					+input(`E-mail:`)
+				.col-lg-6
+					+input(`Ваш вопрос:`,`textarea`)
+			button.sForm__btn.btn Спросить
 	// end sForm
