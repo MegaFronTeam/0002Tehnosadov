@@ -1,0 +1,97 @@
+// start .sCommunications
+.sCommunications {
+	background-image: url('../img/bricks.jpg');
+	background-size: 100% 100%;
+		// --sPB: ;
+		// --sTPB: ;
+	.row {
+		--bs-gutter-y: #{rem(20)};
+	}
+	.col-3 {
+		padding: $grid-gutter-width;
+	}
+	&__title {
+		margin-bottom: $grid-gutter-width;
+		font-weight: bold;
+    font-size: 24px;
+	}
+
+	.form-wrap {
+		&__input-wrap {
+		}
+		&__input {
+				margin-bottom: rem(20);
+				height: rem(40);
+				border: 1px solid $body-color;
+			}
+		&__btn {
+			border:none;
+			padding: $grid-gutter-width rem(20);
+			height: rem(40);
+			color: $white;
+			background-color: $body-color;
+			transition: background-color .3s ease-in-out;
+			&:hover {
+				background-color: $red;
+			}
+		}
+		&__policy {
+			.form-check {
+				display: flex;
+				align-items: center;
+			}
+			.form-check-input {
+				width: rem(40);
+				height: rem(40);
+				padding: $grid-gutter-width;
+				margin-right: rem(20);
+				content: url('../img/checked.svg');
+				background: #fff;
+    		border: 1px solid #ddd;
+			}
+		}
+	}
+
+	@include media-breakpoint-up(xl) {}
+	@include media-breakpoint-up(lg) {}
+	@include media-breakpoint-up(md) {}
+	@include media-breakpoint-up(sm) {}
+	@include media-breakpoint-between(md, xl) {}
+	@include media-breakpoint-only(xl) {}
+	@include media-breakpoint-down(xl) {}
+} // end.sCommunications
+
+.feedback {
+	padding: 0 rem(20) rem(20) 0;
+	position: relative;
+	height: 100%;
+	color: $white;
+	z-index: 1;
+	&::before {
+		content: '';
+		position: absolute;
+		right: 0;
+		top: rem(-10);
+		width: calc(100% + 500px);
+		height: calc(100% + rem(20));
+		background-color: $red;
+		z-index: -1;
+	}
+	&__title {
+		font-weight: bold;
+    font-size: 24px;
+	}
+	&__btn {
+		display: inline-block;
+		padding: rem(14);
+		width: 60%;
+		text-align: center;
+		background-color: $white;
+		color: $body-color;
+		font-weight: 700;
+		transition: background-color .3s ease-in-out;
+		&:hover {
+			background-color: $yellow;
+		}
+	}
+}

@@ -1,9 +1,46 @@
 mixin footer()
 	+b.FOOTER.footer
 		.container
-			.row
+			+e.top.row
+				.col-12.col-sm-6.col-lg-4.col-xl-3
+					+e.title Кабинет покупателя
+					ul
+						li 
+							a(href="#") Войти
+						li 
+							a(href="#") Регистрация
+						li 
+							a(href="#") Политика конфидециальности
+				.col-3.d-none.d-xl-block
+				.col-12.col-sm-6.col-lg-4.col-xl-3
+					+e.title Информация для покупателя
+					ul
+						li 
+							a(href="#") Сервисный центр
+						li 
+							a(href="#") Отзывы
+						li 
+							a(href="#") Вопросы и ответы
+				.col.col-lg-4.col-xl-3
+					+e.title Контакты
+					address 
+						p г. Москва, Дмитровское шоссе 62с5 
+						p Тел.: 
+							a(href="tel:+74954773236") +7 495 477 32 36
+						p E-mail: 
+							a(href="mailto:dmitrovka@tehnosadov.ru") dmitrovka@tehnosadov.ru
+						p ПН-ПТ: с&nbsp;09:00 до&nbsp;20:00
+						p СБ-ВС: с&nbsp;10:00 до&nbsp;18:00
+					p E-mail: 
+						a(href="mailto:info@tehnosadov.ru") info@tehnosadov.ru
+			+e.bottom.row
 				.col
-					
-				.col Footer
-				.col
-				.col-auto
+					+e.title Товары для дома и&nbsp;сада &laquo;Техносадов&raquo; <sup class="reg">&reg;</sup> 2018-2022
+					p Сайт носит информационный характер и&nbsp;не&nbsp;является публичной офертой, определяемой положениями ч.2&nbsp;ст.&nbsp;437&nbsp;ГК РФ. Внешний вид, цвет и&nbsp;характеристики товаров указаны ориентировочно, могут не&nbsp;совпадать с&nbsp;обновленными моделями&nbsp;&mdash; уточняйте информацию у&nbsp;менеджеров при заказе.
+				.col-12.col-lg-auto.d-flex.align-items-center.justify-content-center
+					+soc
+						+item-sos('vk','https://vk.com/tehnosadov')
+						+item-sos('youtube','https://youtube.com/channel/UC4Q_1trBaz7TReyeksjy7UA')
+						+item-sos('telegram','https://t.me/tehnosadov_bot')
+						+item-sos('whatsapp','https://api.whatsapp.com/message/BICUPZKPJ3TRH1')
+						+item-sos('ok','https://ok.ru/group/60953239879731')

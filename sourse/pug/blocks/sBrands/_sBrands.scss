@@ -28,9 +28,11 @@
 	height: 110px;
 	margin-right: rem(10);
 	border: 1px solid #dddddd;
-  background: #bbbbbb;
-	filter: grayscale(100%);
 	transition: .3 ease-in-out;
+	@include media-breakpoint-up(lg) {
+		background: #bbbbbb;
+		filter: grayscale(100%);
+	}
 	&:hover {
 		filter: none;
 		background-color: $white;

@@ -11,15 +11,46 @@
 	position: relative;
 	margin-bottom: 0;
 	max-width: 100%;
-	li{
-		
+	li{		
 		// margin-left: 0;
 		// margin-right: 0;
 		padding: 0;
+		
 	}
 	a{
 		display: block;
-		padding: rem(20) calc(var(--bs-gutter-x) / 2);
+		padding: rem(20);
+		font-weight: 700;
+		transition: .3s ease-in-out;
+		&:hover {
+			background-color: $red;
+			color: $white;
+		}
+	}
+
+	li {
+		&:first-child {
+			a {
+				padding: rem(20) rem(40);
+				background-color: $blue;
+				text-decoration: underline;
+				text-decoration-color: transparent;
+				&:hover {
+					background-color: #008dcb;
+					text-decoration-color: $white;
+				}
+			}
+		}
+		&:last-child {
+			a {
+				background-color: $yellow;
+				color:$body-color;
+				&:hover {
+					background-color: $red;
+					color: $white;
+				}
+			}
+		}
 	}
 }
 
