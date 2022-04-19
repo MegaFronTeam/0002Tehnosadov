@@ -11,8 +11,7 @@ include ../blocks/sHit/_sHit.pug
 include ../blocks/sCatalogHead/_sCatalogHead.pug
 include ../blocks/sFilter/_sFilter.pug
 include ../blocks/sCatalogBody/_sCatalogBody.pug
-include ../blocks/sProductDesc/_sProductDesc.pug
-include ../blocks/sAllCategories/_sAllCategories.pug
+include ../blocks/sBlog/_sBlog.pug
  
 include ../blocks/sContact/_sContact.pug
 include ../blocks/sForm/_sForm.pug
@@ -21,29 +20,20 @@ include ../blocks/footer/_footer.pug
 
 block variables
 	- let  mainPage= 'main-page' 
-	- let  bg= '02-catalog.png'
+	- let  bg= null
 
 block title
-	- let  title= 'Садовая техника'
+	- let  title= 'Статьи о садовой технике'
 	title= title
 block pagecontent
 	//- +mob-mnu()
 	
 	
-	+topLine
+	+topLine()
 	+top-nav()
 	//- +sMainCategories
-	+page-head(title, 'Главная', 'Садовая техника')
-	.container
-		+sCatalogHead()
-		.row
-			.col-auto
-				+sFilter()
-			.col
-				+sCatalogBody()
-	+sProductDesc
-	+sMainCategories
-	+sAllCategories
+	+page-head('', 'Главная', 'Статьи')
+	+sBlog()
 	+footer()
       
 
