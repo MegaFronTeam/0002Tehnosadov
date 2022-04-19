@@ -1,5 +1,5 @@
 "use strict";
-const JSCCommon = { 
+const JSCCommon = {
 	modalCall() {
 		const link = '[data-fancybox="modal"], .link-modal-js';
 
@@ -21,8 +21,8 @@ const JSCCommon = {
 				PREV: "Назад",
 			},
 		});
-		document.querySelectorAll(".modal-close-js").forEach(el=>{
-			el.addEventListener("click", ()=>{
+		document.querySelectorAll(".modal-close-js").forEach(el => {
+			el.addEventListener("click", () => {
 				Fancybox.close();
 			})
 		})
@@ -77,7 +77,7 @@ const JSCCommon = {
 		}
 
 	},
-	mobileMenu() { 
+	mobileMenu() {
 		const menu = document.querySelector(".menu-mobile--js");
 		if (!menu) return;
 		this.toggleMenu();
@@ -151,7 +151,7 @@ const JSCCommon = {
 		// mask for input
 		let InputTel = [].slice.call(document.querySelectorAll('input[type="tel"]'));
 		InputTel.forEach(element => element.setAttribute("pattern", "[+][0-9]{1}[(][0-9]{3}[)][0-9]{3}-[0-9]{2}-[0-9]{2}"));
-		Inputmask({"mask":"+9(999)999-99-99", showMaskOnHover: false}).mask(InputTel);
+		Inputmask({ "mask": "+9(999)999-99-99", showMaskOnHover: false }).mask(InputTel);
 	},
 	// /inputMask
 	ifie() {
@@ -295,7 +295,7 @@ function eventHandler() {
 	JSCCommon.makeDDGroup();
 	// JSCCommon.toggleShow(".catalog-block__toggle--desctop", '.catalog-block__dropdown');
 	// JSCCommon.animateScroll();
-	
+
 	// JSCCommon.CustomInputFile(); 
 	var x = window.location.host;
 	let screenName;
@@ -370,13 +370,13 @@ function eventHandler() {
 	// 	});
 
 	var $range = $(".js-range-slider"),
-	$inputFrom = $(".js-input-from"),
-	$inputTo = $(".js-input-to"),
-	instance,
-	min = 0,
-	max = 100000,
-	from = 0,
-	to = 0;
+		$inputFrom = $(".js-input-from"),
+		$inputTo = $(".js-input-to"),
+		instance,
+		min = 0,
+		max = 100000,
+		from = 0,
+		to = 0;
 
 	$range.ionRangeSlider({
 		skin: "square",
@@ -390,42 +390,42 @@ function eventHandler() {
 	});
 	instance = $range.data("ionRangeSlider");
 
-	function updateInputs (data) {
+	function updateInputs(data) {
 		from = data.from;
 		to = data.to;
-		
+
 		$inputFrom.prop("value", from);
-		$inputTo.prop("value", to);	
+		$inputTo.prop("value", to);
 	}
 
 	$inputFrom.on("input", function () {
-			var val = $(this).prop("value");
-			
-			// validate
-			if (val < min) {
-					val = min;
-			} else if (val > to) {
-					val = to;
-			}
-			
-			instance.update({
-					from: val
-			});
+		var val = $(this).prop("value");
+
+		// validate
+		if (val < min) {
+			val = min;
+		} else if (val > to) {
+			val = to;
+		}
+
+		instance.update({
+			from: val
+		});
 	});
 
 	$inputTo.on("input", function () {
-			var val = $(this).prop("value");
-			
-			// validate
-			if (val < from) {
-					val = from;
-			} else if (val > max) {
-					val = max;
-			}
-			
-			instance.update({
-					to: val
-			});
+		var val = $(this).prop("value");
+
+		// validate
+		if (val < from) {
+			val = from;
+		} else if (val > max) {
+			val = max;
+		}
+
+		instance.update({
+			to: val
+		});
 	});
 
 	// $("#demo_0").ionRangeSlider({
@@ -442,35 +442,40 @@ if (document.readyState !== 'loading') {
 }
 
 const heroSwiper = new Swiper('.hero-slider', {
-  navigation: {
-    nextEl: '.hero-slider-button-next',
-    prevEl: '.hero-slider-button-prev',
-  },
+	navigation: {
+		nextEl: '.hero-slider-button-next',
+		prevEl: '.hero-slider-button-prev',
+	},
 });
 
 const sliderWrap = document.querySelectorAll('.sliderAutoWidthWrap');
 for (let wrap of sliderWrap) {
 	const hitSwiper = new Swiper(wrap.querySelector('.sliderAutoWidth--js'), {
-	slidesPerView: 'auto',
+		slidesPerView: 'auto',
 		navigation: {
 			nextEl: wrap.querySelector('.swiper-button-next'),
 			prevEl: wrap.querySelector('.swiper-button-prev'),
 		},
 	});
 }
+if (document.querySelector('.sAbout__btn') != null) {
+	const aboutBtn = document.querySelector('.sAbout__btn');
+}
+if (document.querySelector('.sAbout__hidden') != null) {
+	const aboutText = document.querySelector('.sAbout__hidden');
+	aboutBtn.addEventListener('click', function () {
+		aboutText.classList.toggle('hidden')
+		if (aboutText.classList.contains('hidden')) {
+			aboutBtn.textContent = 'Подробнее ...';
+			aboutBtn.classList.remove('hide-btn')
+		} else {
+			aboutBtn.textContent = 'Скрыть';
+			aboutBtn.classList.add('hide-btn')
+		}
+	})
+}
 
-const aboutBtn = document.querySelector('.sAbout__btn');
-const aboutText = document.querySelector('.sAbout__hidden');
-aboutBtn.addEventListener('click', function() {
-	aboutText.classList.toggle('hidden')
-	if (aboutText.classList.contains('hidden')) {
-		aboutBtn.textContent = 'Подробнее ...';
-		aboutBtn.classList.remove('hide-btn')
-	} else {
-		aboutBtn.textContent = 'Скрыть';
-		aboutBtn.classList.add('hide-btn')
-	}
-})
+
 
 
 // window.onload = function () {

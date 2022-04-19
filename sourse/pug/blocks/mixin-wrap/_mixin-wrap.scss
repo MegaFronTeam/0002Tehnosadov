@@ -1,12 +1,7 @@
-<<<<<<< HEAD
-.soc {
-	@include roww(10px, m);
-=======
  
 	  
 .soc{
 	@include roww(40px, m);
->>>>>>> eab0c19c9535926d26d341c6540fa63c657feb06
 	display: flex;
 	&__item {
 		text-decoration: none !important;
