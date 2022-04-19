@@ -40,9 +40,12 @@ mixin page-head(title, ...items)
 			h1!= title
 
 
-mixin sidebar(...items)
+mixin sidebar(active,...items)
 	+b.sidebar
 		ul
-			each item in items
+			each item,id in items
 				li
-					a(href="#")!=item
+					if (id+1 ==active)
+						a.active(href="#")!=item
+					else
+						a(href="#")!=item

@@ -18,8 +18,8 @@ include ../blocks/sForm/_sForm.pug
 include ../blocks/footer/_footer.pug
 
 block variables
-	- let  mainPage= null
-	- let  bg= null
+	- let  mainPage= 'contact-page'
+	- let  bg= '02-catalog.png'
 
 block title
 	- let  title= 'Контакты'
@@ -32,12 +32,12 @@ block pagecontent
 	+top-nav()
 	//- +sMainCategories
 	+page-head(title, 'Главная', 'Контакты')
-	.container.page-container
+	.container
 		.row
 			.col-lg-2
-				+sidebar(``,`FAQ`,`Отзывы`)
+				+sidebar(`FAQ`,`Отзывы`)
 			.col-lg-10
-				.mainside
+				.contacts-wrap
 					+sContact
 					+sForm
 	+footer

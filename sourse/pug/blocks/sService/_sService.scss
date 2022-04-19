@@ -1,0 +1,30 @@
+// start .sService
+.sService {
+	// --sPT: ;
+	// --sPB: ;
+	// --sTPB: ;
+	ul {
+		padding-left: rem(32);
+	}
+	table {
+		width: 100%;
+	}
+	th {
+		border-bottom: 1px solid #bbbbbb;
+		padding-bottom: rem(10);
+	}
+	@include media-breakpoint-up(xl) {
+	}
+	@include media-breakpoint-up(lg) {
+	}
+	@include media-breakpoint-up(md) {
+	}
+	@include media-breakpoint-up(sm) {
+	}
+	@include media-breakpoint-between(md, xl) {
+	}
+	@include media-breakpoint-only(xl) {
+	}
+	@include media-breakpoint-down(xl) {
+	}
+} // end.sService
