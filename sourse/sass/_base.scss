@@ -500,3 +500,22 @@ iframe {
 	
 	// @include row-sw(10px, sm, 100px);
 }
+
+.contact-page{
+	.row{
+		--bs-gutter-x:#{rem(8)};
+		--bs-gutter-y:#{rem(8)};
+	}
+}
+.contacts-wrap{
+	border: 1px solid #dddddd;
+	padding: rem(14);
+	height: 100%;
+	background-color: #ffffff;
+}
+.ymaps-2-1-79-gototech{
+	display: none !important;
+}
+.ymaps-2-1-79-copyright{
+	display: none !important;
+}

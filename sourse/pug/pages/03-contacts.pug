@@ -1,0 +1,47 @@
+extends ../layout/main.pug
+
+include ../blocks/header/_header.pug
+include ../blocks/topLine/_topLine.pug
+include ../blocks/top-nav/_top-nav.pug 
+//- include ../blocks/headerBlock/_headerBlock.pug
+//- include ../blocks/sForm/_sForm.pug
+//- include ../blocks/sContent/_sContent.pug
+//- include ../blocks/sMainCategories/_sMainCategories.pug
+//- include ../blocks/sHit/_sHit.pug
+//- include ../blocks/sCatalogHead/_sCatalogHead.pug
+//- include ../blocks/sFilter/_sFilter.pug
+//- include ../blocks/sCatalogBody/_sCatalogBody.pug
+ 
+include ../blocks/sContact/_sContact.pug
+include ../blocks/sForm/_sForm.pug
+//- include ../blocks/sForm/_sForm.pug
+include ../blocks/footer/_footer.pug
+
+block variables
+	- let  mainPage= 'contact-page'
+	- let  bg= '02-catalog.png'
+
+block title
+	- let  title= 'Контакты'
+	title= title
+block pagecontent
+	//- +mob-mnu()
+	
+	
+	+topLine
+	+top-nav()
+	//- +sMainCategories
+	+page-head(title, 'Главная', 'Контакты')
+	.container
+		.row
+			.col-lg-2
+				+sidebar(`FAQ`,`Отзывы`)
+			.col-lg-10
+				.contacts-wrap
+					+sContact
+					+sForm
+	+footer
+      
+
+
+
