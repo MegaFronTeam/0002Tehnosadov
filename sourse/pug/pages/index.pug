@@ -13,6 +13,7 @@ include ../blocks/sAllCategories/_sAllCategories.pug
 include ../blocks/sBlogPreview/_sBlogPreview.pug
 include ../blocks/sBrands/_sBrands.pug
 include ../blocks/sAbout/_sAbout.pug
+include ../blocks/sCommunications/_sCommunications.pug
  
 include ../blocks/sContact/_sContact.pug
 include ../blocks/sForm/_sForm.pug
@@ -44,19 +45,9 @@ block pagecontent
 	+sBlogPreview()
 	+sBrands()
 	+sAbout()
+	+sCommunications()
 
-	+soc()
-	+sForm()
-	//- +sForm()
-	//- - let list = items[0].title
-	//- p= list
-	.container
-		each item in items
-			li 
-				h2= item.title
-				p= item.text
-	//- +sContact()
-	
+
 	+footer()
       
 

@@ -457,8 +457,20 @@ for (let wrap of sliderWrap) {
 			prevEl: wrap.querySelector('.swiper-button-prev'),
 		},
 	});
-
 }
+
+const aboutBtn = document.querySelector('.sAbout__btn');
+const aboutText = document.querySelector('.sAbout__hidden');
+aboutBtn.addEventListener('click', function() {
+	aboutText.classList.toggle('hidden')
+	if (aboutText.classList.contains('hidden')) {
+		aboutBtn.textContent = 'Подробнее ...';
+		aboutBtn.classList.remove('hide-btn')
+	} else {
+		aboutBtn.textContent = 'Скрыть';
+		aboutBtn.classList.add('hide-btn')
+	}
+})
 
 
 // window.onload = function () {

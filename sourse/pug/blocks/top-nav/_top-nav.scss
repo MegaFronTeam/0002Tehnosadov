@@ -3,6 +3,11 @@
 	// 
 	background-color: $body-color;
 	color: $white;
+
+	.menu-item {
+		font-weight: 700;
+		
+	}
 	
 	@include media-breakpoint-up(xl) {
 	}

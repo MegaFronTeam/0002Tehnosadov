@@ -11,7 +11,19 @@
 		padding: 0;
 		margin-left: rem(40);
 	}
-
+	button {
+		border: none;
+		font-weight: 700;
+		color: $green;
+		background-color: transparent;
+		margin-bottom: rem(20);
+	}
+	.hidden {
+		display: none;
+	}
+	.hide-btn {
+		color: $red;
+	}
 
 
 	@include media-breakpoint-up(xl) {}

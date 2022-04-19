@@ -1,0 +1,23 @@
+mixin sCommunications(data)
+	// start sCommunications
+	+b.SECTION.sCommunications.section#sCommunications&attributes(attributes)
+		.container
+			.row
+				.col-md-10.col-xl-3
+					+b.feedback
+						+e.title Остались вопросы?
+						p Мы с удовольствием ответим на них и поможем Вам сделать правильный выбор
+						+btn('Спросить')
+				.col-md-6.col-xl-3
+					+e.title Будьте в&nbsp;курсе
+					p Подпишитесь на&nbsp;последние обновления и&nbsp;узнавайте о&nbsp;новинках и&nbsp;специальных предложениях первым
+				.col-md-6.col-xl
+					+form-wrap()
+						.row
+							.col
+								+input('Введите свой e-mail')
+							.col-auto
+								+btn('Подписаться','button')
+						+policy()
+
+	// end sCommunications
