@@ -38,3 +38,11 @@ mixin page-head(title, ...items)
 		.container
 			+breadcrumb(...items)
 			h1!= title
+
+
+mixin sidebar(...items)
+	+b.sidebar
+		ul
+			each item in items
+				li
+					a(href="#")!=item
