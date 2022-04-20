@@ -11,6 +11,8 @@ include ../blocks/sHit/_sHit.pug
 include ../blocks/sCatalogHead/_sCatalogHead.pug
 include ../blocks/sFilter/_sFilter.pug
 include ../blocks/sCatalogBody/_sCatalogBody.pug
+include ../blocks/sProductDesc/_sProductDesc.pug
+include ../blocks/sAllCategories/_sAllCategories.pug
  
 include ../blocks/sContact/_sContact.pug
 include ../blocks/sForm/_sForm.pug
@@ -39,6 +41,9 @@ block pagecontent
 				+sFilter()
 			.col
 				+sCatalogBody()
+	+sProductDesc
+	+sMainCategories
+	+sAllCategories
 	+footer()
       
 

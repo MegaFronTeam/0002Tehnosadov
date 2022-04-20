@@ -3,6 +3,9 @@
 mixin sFilter(data)
 	// start sFilter
 	+b.sFilter#sFilter&attributes(attributes)
+		+e.headline
+			p Фильтры
+			+e.close
 		+e.block
 			+ddGroup()
 				+ddGroupItem('Цена', 'active')
@@ -13,4 +16,22 @@ mixin sFilter(data)
 						input.js-input-from(type='text' value='0')
 						p до
 						input.js-input-to(type='text' value='0')
+				+ddGroupItem('Бренд:', 'active').dd-group__item--scroll
+					+e.wrap
+						+in-c("checkbox", 'A-iPower')
+						+in-c("checkbox", 'A-iPower')
+						+in-c("checkbox", 'A-iPower')
+						+in-c("checkbox", 'A-iPower')
+						+in-c("checkbox", 'A-iPower')
+						+in-c("checkbox", 'A-iPower')
+						+in-c("checkbox", 'A-iPower')
+						+in-c("checkbox", 'A-iPower')
+						+in-c("checkbox", 'A-iPower')
+						+in-c("checkbox", 'A-iPower')
+						+in-c("checkbox", 'A-iPower')
+						+in-c("checkbox", 'A-iPower')
+						+in-c("checkbox", 'A-iPower')
+						+in-c("checkbox", 'A-iPower')
+						+in-c("checkbox", 'A-iPower')
+			button.btn.btn-submit(type='submit') Применить
 	// end sFilter

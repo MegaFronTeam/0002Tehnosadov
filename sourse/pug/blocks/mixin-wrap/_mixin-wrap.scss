@@ -107,7 +107,7 @@
 
 .sidebar {
 	border: 1px solid #dddddd;
-	padding: rem(14);
+	// padding: rem(14);
 	height: 100%;
 	background-color: #ffffff;
 	ul {
@@ -115,11 +115,21 @@
 		list-style-type: none;
 	}
 	li {
-		margin-bottom: 16px;
+		// margin-bottom: 16px;
 	}
 	a {
 		font-size: 14px;
 		line-height: 120%;
 		color: #009fe4;
+		display: block;
+		padding: rem(14);
+		padding-top: rem(10);
+		padding-bottom: rem(10);
+		&.active{
+			background-color: #dddddd;
+			color: $body-color;
+			pointer-events: none;
+			font-weight: bold;
+		}
 	}
 }
