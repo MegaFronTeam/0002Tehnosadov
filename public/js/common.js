@@ -433,6 +433,35 @@ function eventHandler() {
 	// 	max: 1000,
 	// 	from: 550
 	// });
+	const heroSwiper = new Swiper('.hero-slider', {
+		navigation: {
+			nextEl: '.hero-slider-button-next',
+			prevEl: '.hero-slider-button-prev',
+		},
+	});
+	
+	const sliderWrap = document.querySelectorAll('.sliderAutoWidthWrap');
+	for (let wrap of sliderWrap) {
+		const hitSwiper = new Swiper(wrap.querySelector('.sliderAutoWidth--js'), {
+			slidesPerView: 'auto',
+			navigation: {
+				nextEl: wrap.querySelector('.swiper-button-next'),
+				prevEl: wrap.querySelector('.swiper-button-prev'),
+			},
+		});
+	}
+	
+	$(".sAbout__btn--js").click(function() {
+		$(".sAbout__hidden").slideToggle(function() {
+			if ($(".sAbout__hidden").is(":visible")) {
+				$(".sAbout__btn--js").text('Скрыть')
+				$(".sAbout__btn--js").addClass('hide-btn')
+			} else {
+				$(".sAbout__btn--js").text('Подробнее ...');
+				$(".sAbout__btn--js").removeClass('hide-btn')
+			}
+		});
+	})
 
 };
 if (document.readyState !== 'loading') {
@@ -440,42 +469,6 @@ if (document.readyState !== 'loading') {
 } else {
 	document.addEventListener('DOMContentLoaded', eventHandler);
 }
-
-const heroSwiper = new Swiper('.hero-slider', {
-	navigation: {
-		nextEl: '.hero-slider-button-next',
-		prevEl: '.hero-slider-button-prev',
-	},
-});
-
-const sliderWrap = document.querySelectorAll('.sliderAutoWidthWrap');
-for (let wrap of sliderWrap) {
-	const hitSwiper = new Swiper(wrap.querySelector('.sliderAutoWidth--js'), {
-		slidesPerView: 'auto',
-		navigation: {
-			nextEl: wrap.querySelector('.swiper-button-next'),
-			prevEl: wrap.querySelector('.swiper-button-prev'),
-		},
-	});
-}
-if (document.querySelector('.sAbout__btn') != null) {
-	const aboutBtn = document.querySelector('.sAbout__btn');
-}
-if (document.querySelector('.sAbout__hidden') != null) {
-	const aboutText = document.querySelector('.sAbout__hidden');
-	aboutBtn.addEventListener('click', function () {
-		aboutText.classList.toggle('hidden')
-		if (aboutText.classList.contains('hidden')) {
-			aboutBtn.textContent = 'Подробнее ...';
-			aboutBtn.classList.remove('hide-btn')
-		} else {
-			aboutBtn.textContent = 'Скрыть';
-			aboutBtn.classList.add('hide-btn')
-		}
-	})
-}
-
-
 
 
 // window.onload = function () {

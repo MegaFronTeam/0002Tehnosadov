@@ -63,7 +63,9 @@
 	}
 	.icon {
 		max-width: 30px;
-
+	}
+	.icon-ok, .icon-whatsapp {
+		font-size: rem(24);
 	}
 // 
 @include media-breakpoint-up(xl) {}

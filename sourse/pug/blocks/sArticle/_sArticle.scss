@@ -1,0 +1,50 @@
+// start .sArticle
+.sArticle {
+	// --sPT: ;
+	// --sPB: ;
+	// --sTPB: ;
+	margin-bottom: $grid-gutter-width;
+	padding: 1rem;
+	background: #fff;
+	border: 1px solid #ddd;
+	h2 {
+		position: relative;
+		padding-left: rem(40);
+		font-size: rem(21);
+		font-weight: 700;
+		&::before {
+			content: '';
+			position: absolute;
+			background: url(../img/svg/article-subtitle.svg) center center no-repeat;
+			background-size: 30px 30px;
+			height: rem(40);
+			width: rem(40);
+			left: 0;
+			top: 50%;
+			transform: translateY(-50%);
+		}
+	}
+	p { 
+		margin: rem(14) 0;
+		text-indent: $grid-gutter-width; 
+	}
+
+	ul {
+		padding: 0;
+		margin: rem(14) 0 rem(14) rem(40);
+	}
+
+	img {
+		float: right;
+		margin: rem(14);
+	}
+
+
+	@include media-breakpoint-up(xl) {}
+	@include media-breakpoint-up(lg) {}
+	@include media-breakpoint-up(md) {}
+	@include media-breakpoint-up(sm) {}
+	@include media-breakpoint-between(md, xl) {}
+	@include media-breakpoint-only(xl) {}
+	@include media-breakpoint-down(xl) {}
+} // end.sArticle

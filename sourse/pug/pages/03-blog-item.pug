@@ -13,6 +13,9 @@ include ../blocks/sFilter/_sFilter.pug
 include ../blocks/sCatalogBody/_sCatalogBody.pug
 include ../blocks/sBlogPreview/_sBlogPreview.pug
 include ../blocks/sBlog/_sBlog.pug
+include ../blocks/sArticle/_sArticle.pug
+include ../blocks/sBlogSlider/_sBlogSlider.pug
+include ../blocks/sBlogNav/_sBlogNav.pug
  
 include ../blocks/sContact/_sContact.pug
 include ../blocks/sForm/_sForm.pug
@@ -24,7 +27,7 @@ block variables
 	- let  bg= null
 
 block title
-	- let  title= 'Статьи о садовой технике'
+	- let  title= 'Уход за триммером для травы: правила и рекомендации'
 	title= title
 block pagecontent
 	//- +mob-mnu()
@@ -32,10 +35,12 @@ block pagecontent
 	
 	+topLine()
 	+top-nav()
-	//- +sMainCategories	
-	+sBlog()
+	+page-head(title, 'Главная', 'Cтатьи',title).--article
+	.container
+		.row
+			.col-auto
+				+sBlogNav()
+			.col
+				+sArticle()
+		+sBlogSlider()
 	+footer()
-      
-
-
-

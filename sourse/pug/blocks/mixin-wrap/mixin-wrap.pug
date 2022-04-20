@@ -34,7 +34,7 @@ mixin addblock()
 		+e.btn--plus(type="button")
 
 mixin page-head(title, ...items)
-	+b.page-head
+	+b.page-head&attributes(attributes)
 		.container
 			+breadcrumb(...items)
 			h1!= title

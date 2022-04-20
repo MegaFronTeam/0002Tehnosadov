@@ -1,28 +1,23 @@
-// start .sBlog
-.sBlog {
+// start .sBlogSlider
+.sBlogSlider {
 		// --sPT: ;
 		// --sPB: ;
 		// --sTPB: ;
-	.page-head {
-		margin-bottom: 0;
+	.swiper-wrapper {
+		height: auto;
 	}
-	.row {
-		margin-bottom: $grid-gutter-width;
-		--bs-gutter-y: #{$grid-gutter-width};	
+	.swiper-slide {
+		width: calc((100% / 6) - $grid-gutter-width);
+		margin-right: $grid-gutter-width;
 	}
 	.blog-item {
-		height: 400px;
-	}
-
-	button {
+		height: rem(325);
 		padding: $grid-gutter-width;
-		width: 100%;
-		border: 1px solid #ddd;
-    font-weight: bold;
-    background: #fff;
-		transition: background-color .3s ease-in-out;
 		&:hover {
-			background-color: #e6e6e6;
+			box-shadow: 0 0 1rem rgb(68 68 68 / 20%);
+		}
+		&__date {
+			display: none;
 		}
 	}
 
@@ -33,4 +28,4 @@
 	@include media-breakpoint-between(md, xl) {}
 	@include media-breakpoint-only(xl) {}
 	@include media-breakpoint-down(xl) {}
-} // end.sBlog
+} // end.sBlogSlider
