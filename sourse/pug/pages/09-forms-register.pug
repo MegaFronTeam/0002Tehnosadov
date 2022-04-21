@@ -1,0 +1,39 @@
+extends ../layout/main.pug
+
+include ../blocks/header/_header.pug
+include ../blocks/topLine/_topLine.pug
+include ../blocks/top-nav/_top-nav.pug 
+
+include ../blocks/sContact/_sContact.pug
+include ../blocks/sForm/_sForm.pug
+include ../blocks/sService/_sService.pug
+include ../blocks/sRegister/_sRegister.pug
+include ../blocks/footer/_footer.pug
+
+block variables
+	- let  mainPage= null
+	- let  bg= null
+
+block title
+	- let  title= 'Регистрация'
+	title= title
+block pagecontent
+	//- +mob-mnu()
+	
+	
+	+topLine
+	+top-nav()
+	//- +sMainCategories
+	+page-head(title, 'Главная', 'personal')
+	.container.page-container
+		.row
+			.col-lg-2
+				+sidebar(`1`,`Личные данные`,`Мои заказы`,`Выйти`)
+			.col-lg-10
+				.mainside
+					+sRegister()
+	+footer
+      
+
+
+

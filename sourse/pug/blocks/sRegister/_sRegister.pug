@@ -1,0 +1,29 @@
+mixin sRegister(data)
+	// start sRegister
+	+b.SECTION.sRegister.section#sRegister&attributes(attributes)
+		.container
+			.row
+				.col-6 
+					+form-wrap
+						.sRegister__title Регистрация нового пользователя
+						+input(``,'text','Имя')
+						+input(``,'text','Фамилия:')
+						+input(``,'text','Логин (мин. 3 символа):')
+						+input(``,'text','Пароль*:')
+						+input(``,'text','Подтверждение пароля*:')
+						+input(``,'text','E-Mail*:')
+						+input(``,'text','Защита от автоматической регистрации*:')
+						+e.btn-wrap
+							button.sRegister__btn.btn Регистрация
+							a(href="#") Вход
+				.col-6
+					+e.title Зарегистрируйтесь
+					p и&nbsp;Вы получите возможность:
+					ul 
+						li Используйте введённые ранее данные
+						li Отслеживайте статус заказа
+						li Получайте персонализированные предложения
+						li Один год дополнительной гарантии при регистрации товара
+						li Сохраняйте историю заказов
+
+	// end sRegister

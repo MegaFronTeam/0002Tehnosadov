@@ -3,10 +3,35 @@
 		// --sPT: ;
 		// --sPB: ;
 		// --sTPB: ;
+	height: 100%;
+	padding: $grid-gutter-width;
+	max-width: 330px;
 	background: #fff;
 	border: 1px solid #ddd;
-	height: 100vh;
 	overflow-y: scroll;
+	&__title {
+		border-bottom: 1px solid #ddd;
+    padding-bottom: $grid-gutter-width;;
+		margin-bottom: $grid-gutter-width;
+    font-weight: bold;
+	}
+	ul {
+		padding: 0;
+		list-style-type: none;
+		li {
+			margin-bottom: $grid-gutter-width;
+		}
+		a {
+			color: $blue;
+			font-weight: 700;
+		}
+		ul {
+			a {
+				margin-left: $grid-gutter-width;
+				font-weight: 500;
+			}
+		}
+	}
 
 	@include media-breakpoint-up(xl) {}
 	@include media-breakpoint-up(lg) {}

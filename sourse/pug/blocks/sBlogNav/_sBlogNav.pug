@@ -1,9 +1,10 @@
 mixin sBlogNav(data)
 	// start sBlogNav
 	+b.SECTION.sBlogNav.section#sBlogNav&attributes(attributes)
-		+e.title Содержание
-			<nav class="blog-nav is-hidden" title="Содеражние статьи">
-				ul.blog-nav__list
+		+e.sticky-wrap--js
+			+e.title Содержание
+			<nav class="blog-nav" title="Содеражние статьи">
+				ul.blog-nav__list.nav
 					li.blog-nav__item
 						a(href="#").blog-nav__link Приготовление бензиново-масляной смеси
 					li.blog-nav__item
@@ -14,7 +15,7 @@ mixin sBlogNav(data)
 						a(href="#").blog-nav__link Обслуживание триммера в&nbsp;домашних условиях
 						ul
 							li
-								a(href="#") Двигатель
+								a(href="#dvig") Двигатель
 							li
 								a(href="#") Режущий механизм
 							li

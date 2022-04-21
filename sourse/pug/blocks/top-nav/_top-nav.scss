@@ -8,6 +8,12 @@
 		font-weight: 700;
 		
 	}
+
+	&__catalog {
+		display: flex;
+		align-items: center;
+		max-width:rem(312);
+	}
 	
 	@include media-breakpoint-up(xl) {
 	}
@@ -51,4 +57,68 @@
 	@include media-breakpoint-down(xs) {}
 }
 
-
+.catalog-btn {
+	display: flex;
+	align-items: center;	
+	padding: $grid-gutter-width;
+	color: $white;
+	background-color: #5e5e5e;
+	transition: background-color .3s ease-in-out;
+	border: none;
+	height: 100%;
+	width: 100%;
+	font-weight: 700;
+	&:hover {
+		background-color: $red;
+	}
+	span {
+    display: block;
+    position: relative;
+		width: 20px;
+    height: 3px;
+    border-radius: 1px;
+    margin-right: $grid-gutter-width;
+    background: $white;;
+    transition: .3s;
+		&::before {
+			content: '';
+			width: 20px;
+			height: 3px;
+			border-radius: 1px;
+			position: absolute;
+			background: $white;
+			top: 7px;
+			left: 0;
+			transition: .3s;
+		}
+		&::after {
+			content: '';
+			width: 20px;
+			height: 3px;
+			border-radius: 1px;
+			position: absolute;
+			background: $white;
+			bottom: 7px;
+			left: 0;
+			transition: .3s;
+		}
+	}
+	&--active {
+		background-color:$red;
+		transition: .3s;
+		span {
+			background-color: transparent;
+			@include mt;
+			&::before {
+				transform: rotate(45deg);
+				transform-origin: right;
+				transition: .3s;
+			}
+			&::after {
+				transform: rotate(-45deg);
+				transform-origin: right;
+				transition: .3s;
+			}
+		}
+	}
+}

@@ -1,0 +1,86 @@
+mixin sCatalogNav(data)
+	// start sCatalogNav
+	+b.SECTION.sCatalogNav.section#sCatalogNav&attributes(attributes)
+		+e.container.container
+			+e.wrap
+				ul.main-categories
+					li
+						a(href="#", data-path="garden") Садовая техника
+					li
+						a(href="#", data-path="watering") Водоснабжение и полив
+					li
+						a(href="#") Расходные материалы и аксессуары
+					li
+						a(href="#") Силовое оборудование
+					li
+						a(href="#") Строительные инструменты
+					li
+						a(href="#") Снегоуборочная техника
+					li
+						a(href="#") Обогрев и вентиляция
+					li
+						a(href="#") Продукция STIHL и Viking
+					li
+						a(href="#") Сварочное оборудование
+					li
+						a(href="#") Садовый инвентарь и инструменты
+					li
+						a(href="#") Мототехника
+				+b.submenu(data-target="garden")
+					+e.title(href="#") Садовая техника
+					ul
+						li
+							a(href="#") Триммеры
+						li
+							a(href="#") Газонокосилки
+							ul
+								li 
+									a(href="#") Роботы газонокосилки
+								li
+									a(href="#") Механические газонокосилки
+								li
+									a(href="#") Газонокосилки аккумуляторные
+								li
+									a(href="#") Газонокосилки электрические
+								li
+									a(href="#") Газонокосилки бензиновые
+						li
+							a(href="#") Сенокосилки
+						li
+							a(href="#") Воздуходувки и садовые пылесосы
+						li
+							a(href="#") Опрыскиватели
+						li
+							a(href="#") Садовые ножницы и кусторезы
+						li
+							a(href="#") Садовые измельчители травы и веток
+						li
+							a(href="#") Мини-тракторы
+						li
+							a(href="#") Культиваторы и Мотоблоки
+						li
+							a(href="#") Вертикуттеры и аэраторы
+						li
+							a(href="#") Мойки высокого давления
+				+b.submenu.invisible(data-target="watering")
+					+e.title(href="#") Водоснабжение и полив
+					ul
+						li
+							a(href="#") Мотопомпы
+						li
+							a(href="#") Насосы и станции водоснабжения
+						li
+							a(href="#") Дождеватели и распылители
+						li
+							a(href="#") Полив и комплектующие
+						li
+							a(href="#") Принадлежности для насосов
+						li
+							a(href="#") Садовые шланги
+						li
+							a(href="#") Наконечники, пистолеты и распылители
+						li
+							a(href="#") Шланги
+						li
+							a(href="#") Катушки и тележки для шлангов
+	// end sCatalogNav

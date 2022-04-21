@@ -472,6 +472,36 @@ function eventHandler() {
 		$('.sFilter').removeClass('active');
 		$('body').removeClass('fixed');
 	});
+
+	$('.catalog-btn--js').on('click', function() {
+		$('.catalog-btn--js').toggleClass('catalog-btn--active');
+		$('.sCatalogNav__wrap').toggleClass('visible');
+	});
+
+	$(".main-categories a").hover(function() {
+		const path = $(this).data('path');
+		$('[data-target="garden"]').addClass('visible')
+		// $('[data-target="${path}').addClass('visible')
+		// $(`[data-target="${path}"]`).addClass('visible');
+	});
+
+	// document.querySelectorAll('.main-categories li').forEach(function (tabsMenu) {
+	// 	tabsMenu.addEventListener('hover')
+	// });
+
+	$('.sBlogNav__sticky-wrap--js').hcSticky({
+    stickTo: $('.hc-container'),
+		responsive: {
+			768: {
+				disable: true
+			}
+		}
+  });
+
+	// var scrollSpy = new bootstrap.ScrollSpy(document.body, {
+	// 	target: '.sBlogNav'
+	// })
+
 };
 if (document.readyState !== 'loading') {
 	eventHandler();

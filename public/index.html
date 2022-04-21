@@ -86,6 +86,9 @@
 			<div class="top-nav block-with-lazy">
 				<div class="container">
 					<div class="row">
+						<div class="top-nav__catalog col">
+							<button class="catalog-btn catalog-btn--js"><span></span>Каталог товаров</button>
+						</div>
 						<div class="col order-lg-0 order-last">
 							<div class="menu-mobile menu-mobile--js">
 								<div class="menu-mobile__inner">
@@ -114,6 +117,67 @@
 			<header class="header" id="header">
 			</header>
 			<!-- end header-->
+			<!-- start sCatalogNav-->
+			<section class="sCatalogNav section" id="sCatalogNav">
+				<div class="sCatalogNav__container container">
+					<div class="sCatalogNav__wrap">
+						<ul class="main-categories">
+							<li><a href="#" data-path="garden">Садовая техника</a></li>
+							<li><a href="#" data-path="watering">Водоснабжение и полив</a></li>
+							<li><a href="#">Расходные материалы и аксессуары</a></li>
+							<li><a href="#">Силовое оборудование</a></li>
+							<li><a href="#">Строительные инструменты</a></li>
+							<li><a href="#">Снегоуборочная техника</a></li>
+							<li><a href="#">Обогрев и вентиляция</a></li>
+							<li><a href="#">Продукция STIHL и Viking</a></li>
+							<li><a href="#">Сварочное оборудование</a></li>
+							<li><a href="#">Садовый инвентарь и инструменты</a></li>
+							<li><a href="#">Мототехника</a></li>
+						</ul>
+						<div class="submenu" data-target="garden">
+							<a class="submenu__title" href="#">Садовая техника
+							</a>
+							<ul>
+								<li><a href="#">Триммеры</a></li>
+								<li><a href="#">Газонокосилки</a>
+									<ul>
+										<li> <a href="#">Роботы газонокосилки</a></li>
+										<li><a href="#">Механические газонокосилки</a></li>
+										<li><a href="#">Газонокосилки аккумуляторные</a></li>
+										<li><a href="#">Газонокосилки электрические</a></li>
+										<li><a href="#">Газонокосилки бензиновые</a></li>
+									</ul>
+								</li>
+								<li><a href="#">Сенокосилки</a></li>
+								<li><a href="#">Воздуходувки и садовые пылесосы</a></li>
+								<li><a href="#">Опрыскиватели</a></li>
+								<li><a href="#">Садовые ножницы и кусторезы</a></li>
+								<li><a href="#">Садовые измельчители травы и веток</a></li>
+								<li><a href="#">Мини-тракторы</a></li>
+								<li><a href="#">Культиваторы и Мотоблоки</a></li>
+								<li><a href="#">Вертикуттеры и аэраторы</a></li>
+								<li><a href="#">Мойки высокого давления</a></li>
+							</ul>
+						</div>
+						<div class="submenu invisible" data-target="watering">
+							<a class="submenu__title" href="#">Водоснабжение и полив
+							</a>
+							<ul>
+								<li><a href="#">Мотопомпы</a></li>
+								<li><a href="#">Насосы и станции водоснабжения</a></li>
+								<li><a href="#">Дождеватели и распылители</a></li>
+								<li><a href="#">Полив и комплектующие</a></li>
+								<li><a href="#">Принадлежности для насосов</a></li>
+								<li><a href="#">Садовые шланги</a></li>
+								<li><a href="#">Наконечники, пистолеты и распылители</a></li>
+								<li><a href="#">Шланги</a></li>
+								<li><a href="#">Катушки и тележки для шлангов</a></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</section>
+			<!-- end sCatalogNav-->
 			<!-- start headerBlock-->
 			<div class="headerBlock section" id="headerBlock">
 				<div class="container">
@@ -2939,7 +3003,8 @@
 		<!-- end modals-->
 		<script src="libs/jquery/jquery.min.js"></script>
 		<script src="libs/@fancyapps/ui/fancybox.umd.js"> </script>
-		<script src="libs/swiper/swiper-bundle.min.js"> </script>
+		<script src="libs/swiper/swiper-bundle.min.js"></script>
+		<script src="libs/hc-sticky/hc-sticky.js"></script>
 		<script src="libs/ion-rangeslider/js/ion.rangeSlider.min.js"> </script>
 		<script src="js/common.js?v=0.0.1"></script>
 	</body>

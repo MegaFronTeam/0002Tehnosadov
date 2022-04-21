@@ -86,6 +86,9 @@
 			<div class="top-nav block-with-lazy">
 				<div class="container">
 					<div class="row">
+						<div class="top-nav__catalog col">
+							<button class="catalog-btn catalog-btn--js"><span></span>Каталог товаров</button>
+						</div>
 						<div class="col order-lg-0 order-last">
 							<div class="menu-mobile menu-mobile--js">
 								<div class="menu-mobile__inner">
@@ -129,16 +132,17 @@
 				<div class="row">
 					<div class="col-auto">
 						<!-- start sBlogNav-->
-						<section class="sBlogNav section" id="sBlogNav">
-							<div class="sBlogNav__title">
-								Содержание<nav class="blog-nav is-hidden" title="Содеражние статьи">
-								<ul class="blog-nav__list">
+						<section class="sBlogNav section hc-container" id="sBlogNav">
+							<div class="sBlogNav__sticky-wrap sBlogNav__sticky-wrap--js">
+								<div class="sBlogNav__title">Содержание
+								</div><nav class="blog-nav" title="Содеражние статьи">
+								<ul class="blog-nav__list nav">
 									<li class="blog-nav__item"><a class="blog-nav__link" href="#">Приготовление бензиново-масляной смеси</a></li>
 									<li class="blog-nav__item"><a class="blog-nav__link" href="#">Обкатка двигателя&nbsp;&mdash; почему это важно?</a></li>
 									<li class="blog-nav__item"><a class="blog-nav__link" href="#">Выбор масла для редуктора</a></li>
 									<li class="blog-nav__item"><a class="blog-nav__link" href="#">Обслуживание триммера в&nbsp;домашних условиях</a>
 										<ul>
-											<li><a href="#">Двигатель</a></li>
+											<li><a href="#dvig">Двигатель</a></li>
 											<li><a href="#">Режущий механизм</a></li>
 											<li><a href="#">Шпуля с&nbsp;леской</a></li>
 											<li><a href="#">Редуктор</a></li>
@@ -155,7 +159,7 @@
 					</div>
 					<div class="col">
 						<!-- start sArticle-->
-						<section class="sArticle section" id="sArticle">
+						<section class="sArticle section scrollspy-example" id="sArticle" data-bs-spy="scroll" data-bs-target=".sBlogNav" data-bs-offset="0" tabindex="0">
 							<p>Красивый ухоженный газон, аккуратно подстриженная лужайка&nbsp;&mdash; это результат использования триммера для травы. При помощи этого инструмента можно быстро привести участок в&nbsp;порядок. В&nbsp;отличие от&nbsp;газонокосилки небольшой и&nbsp;маневренный инструмент легко проникает в&nbsp;труднодоступные места (вокруг деревьев, возле забора, скамеек). Как и&nbsp;любая другая техника, триммер нуждается в&nbsp;грамотном уходе и&nbsp;обслуживании.</p>
 							<p>Срок службы и&nbsp;работоспособность бензокосы зависит от&nbsp;того, соблюдает&nbsp;ли пользователь правила эксплуатации. Вся информация, которая может потребоваться владельцу, размещена в&nbsp;руководстве. Обязательно изучите этот документ перед тем, как приступать к&nbsp;работе с&nbsp;триммером. А&nbsp;в&nbsp;этой статье остановимся на&nbsp;рассмотрении главных вопросов, касающихся использования инструмента.</p>
 							<h2>Приготовление бензиново-масляной смеси</h2>
@@ -185,7 +189,7 @@
 							<p>При выборе смазки важно обращать внимание также на&nbsp;бренд. Самые лучшие продукты этого типа выпускаются под такими торговыми марками как Husqvarna, Huter, Stihl.</p>
 							<h2>Обслуживание триммера в&nbsp;домашних условиях</h2>
 							<p>Триммеры требуют правильного ухода, особенно те&nbsp;модели, которые работают на&nbsp;бензине. Сложные мероприятия проводятся в&nbsp;сервисном центре, а&nbsp;вот простые операции можно выполнить самостоятельно в&nbsp;гараже. Каждый владелец должен знать, как чистить электрический триммер или мотокосу, как менять фильтрующие элементы, наматывать леску на&nbsp;шпулю и&nbsp;пр.</p>
-							<h2>Двигатель</h2>
+							<h2 id="dvig">Двигатель</h2>
 							<p>Двигатель отвечает за&nbsp;обеспечение работоспособности триммеру. Техника популярных брендов комплектуется надежными моторами, которые имеют повышенный рабочий ресурс. Наиболее распространенные проблемы, которые могут возникнуть с&nbsp;силовым агрегатом:</p>
 							<ul>
 								<li>поломка карбюратора;</li>
@@ -493,7 +497,8 @@
 		<!-- end modals-->
 		<script src="libs/jquery/jquery.min.js"></script>
 		<script src="libs/@fancyapps/ui/fancybox.umd.js"> </script>
-		<script src="libs/swiper/swiper-bundle.min.js"> </script>
+		<script src="libs/swiper/swiper-bundle.min.js"></script>
+		<script src="libs/hc-sticky/hc-sticky.js"></script>
 		<script src="libs/ion-rangeslider/js/ion.rangeSlider.min.js"> </script>
 		<script src="js/common.js?v=0.0.1"></script>
 	</body>

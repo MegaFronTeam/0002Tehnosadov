@@ -39,8 +39,9 @@ block pagecontent
 	.container
 		.row
 			.col-auto
-				+sBlogNav()
+				+sBlogNav().hc-container
 			.col
-				+sArticle()
+				+sArticle()(data-bs-spy="scroll", data-bs-target=".sBlogNav", data-bs-offset="0", class="scrollspy-example", tabindex="0")
 		+sBlogSlider()
+	
 	+footer()

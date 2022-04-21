@@ -1,0 +1,110 @@
+// start .sCatalogNav
+.sCatalogNav {
+	--sPT: 0;
+	--sPB: 0;
+	// --sTPB: ;
+	&__container {
+		position: relative;
+		width: 100%;
+	}
+	&__wrap {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		opacity: 0;
+		visibility: hidden;	
+		z-index: 10;
+		display: flex;
+		box-shadow: 5px 5px 1rem #bbb;
+		border: 1px solid #ddd;
+	}
+	ul {
+		list-style-type: none;
+	}
+	a {
+		color:$body-color;
+		font-weight: 700;
+	}
+	.main-categories {
+		max-width:rem(312);
+		margin-bottom: 0;
+		background-color: $white;
+		border-right: 1px solid #ddd;
+		li {
+			
+		}
+		a {
+			display: block;
+			padding: rem(20) rem(30) rem(20) rem(50);
+			transition: background .3s ease-in-out;
+			&:hover {
+				background: #f7f7f7;
+			}
+		}
+	}
+	.submenu {
+    background: $white;
+		width: 100%;
+		// opacity: 0;
+    // visibility: hidden;
+		transition-property: opacity, visibility;
+    transition-duration: 0.3s;
+    transition-delay: 0.15s;
+		a {
+			text-decoration: underline;
+			text-decoration-color: transparent;
+			@include mt;
+			&:hover {
+				text-decoration-color: initial;
+			}
+		}
+		&__title {
+			display: block;
+			padding: rem(10) rem(5);
+			font-size: rem(21);
+			font-weight: 700;
+			border-bottom: 1px solid #ddd;
+		}
+		ul {
+			padding: rem(10);
+			column-count: 3;
+			ul {
+				column-count: 1;
+				a {
+					padding: rem(10) 0;
+					color: $blue;
+					font-weight: 500;
+				}
+			}
+		}
+		li {
+			a {
+				padding: rem(5) rem(10);
+			}
+		}
+	}
+
+	
+	.main-categories li:hover .submenu{
+		opacity: 1;
+    visibility: visible;
+	}
+	@include media-breakpoint-up(xl) {}
+	@include media-breakpoint-up(lg) {}
+	@include media-breakpoint-up(md) {}
+	@include media-breakpoint-up(sm) {}
+	@include media-breakpoint-between(md, xl) {}
+	@include media-breakpoint-only(xl) {}
+	@include media-breakpoint-down(xl) {}
+} // end.sCatalogNav
+
+.visible {
+	opacity: 1;
+  visibility: visible;
+}
+
+.invisible {
+	opacity: 0;
+  visibility: hidden;
+}
