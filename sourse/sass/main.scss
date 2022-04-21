@@ -126,14 +126,11 @@ $output-bourbon-deprecation-warnings: false;
 @import '../pug/blocks/sCommunications/_sCommunications.scss';
 @import '../pug/blocks/sProductDesc/_sProductDesc.scss';
 @import '../pug/blocks/sBlog/_sBlog.scss';
-<<<<<<< HEAD
 @import '../pug/blocks/sArticle/_sArticle.scss';
 @import '../pug/blocks/sBlogSlider/_sBlogSlider.scss';
 @import '../pug/blocks/sBlogNav/_sBlogNav.scss';
-=======
 @import '../pug/blocks/sService/_sService.scss';
->>>>>>> da75d33d16dfa9ce0a950e0b3fb22935d83cf85c
-
+@import '../pug/blocks/sAccount/_sAccount.scss';
 
 @import '../pug/blocks/header/_header.scss';
 @import '../pug/blocks/footer/_footer.scss';

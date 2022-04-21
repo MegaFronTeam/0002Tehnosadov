@@ -39,17 +39,17 @@
 		height: 100%;
 	}
 	&__btn {
-		font-weight: bold;
-		transition-duration: 0.4s;
-		color: $white !important;
-		background-color: #444444;
-		font-size: rem(13);
-		line-height: 100%;
+		// font-weight: bold;
+		// transition-duration: 0.4s;
+		// color: $white !important;
+		// background-color: #444444;
+		// font-size: rem(13);
+		// line-height: 100%;
 		margin-top: rem(18);
-		padding: rem(12);
-		&:hover {
-			background-color: #ff3300;
-		}
+		// padding: rem(12);
+		// &:hover {
+		// 	background-color: #ff3300;
+		// }
 		@include media-breakpoint-up(sm) {
 			width: rem(250);
 		}
