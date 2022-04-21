@@ -1,0 +1,92 @@
+// start .sBasket
+.sBasket {
+		// --sPT: ;
+		// --sPB: ;
+		// --sTPB: ;
+	table {
+		font-size: 12px;
+	}
+	th {
+		text-align: center;
+	}
+	img {
+		max-height: 150px;
+		object-fit: contain;
+	}
+	tbody {
+		background-color:$white;
+	}
+
+	.icon-close {
+		font-size: rem(20);
+	}
+
+	&__buttons {
+		display: flex;
+		justify-content: space-between;
+	}
+	&__btn {
+		color: $white;
+		padding: rem(10) rem(20);
+		font-size: 12px;
+		font-weight: 700;
+		@include mt;
+		&--dark {
+			background-color: $body-color;
+			text-decoration: underline;
+			text-decoration-color: transparent;
+			&:hover {
+				background: $red;
+				color: $white;
+				text-decoration-color: $white;
+			}
+		}
+		&--green {
+			background-color: $green;
+			&:hover {
+				color: $white;
+				background: #408100;
+			}
+		}
+	}
+	@include media-breakpoint-up(xl) {}
+	@include media-breakpoint-up(lg) {}
+	@include media-breakpoint-up(md) {}
+	@include media-breakpoint-up(sm) {}
+	@include media-breakpoint-between(md, xl) {}
+	@include media-breakpoint-only(xl) {}
+	@include media-breakpoint-down(xl) {}
+} // end.sBasket
+
+.basket-item {
+	vertical-align: middle;
+	&__img-wrap {
+		padding: $grid-gutter-width;
+		width: 15%;
+		text-align: center;
+	}
+	&__title {
+		width: 25%;
+	}
+	&__name {
+		color: $body-color;
+		text-decoration: underline;
+		text-decoration-color: transparent;
+		@include mt;
+		&:hover {
+			text-decoration-color: initial;
+		}
+	}
+	&__count, &__number,&__weight,&__price,&__delete {
+		width: 12%;
+		text-align: center;
+	}
+	&__remove-btn {
+		background-color: transparent;
+		border: none;
+		transition: .5s;
+		&:hover {
+			transform: rotate(180deg);
+		}
+	}
+}

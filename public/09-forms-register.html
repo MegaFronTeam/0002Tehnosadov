@@ -285,30 +285,65 @@
 				</div>
 			</footer>
 		</div>
-		<!--  start modals--><a class="link-modal-js" href="modal-call">modal-call </a>
-		<div id="modal-call" style="display: none">
+		<!--  start modals-->
+		<div id="one-click-order" style="display: none">
 			<div class="modal-win">
 				<div class="form-wrap">
 					<form>
-						<div class="text-center">
-							<div class="form-wrap__title form-data h3 ttu">Обратный звонок
-							</div>
-							<p class="after-headline">Заполните заявку и&nbsp;мы&nbsp;с&nbsp;Вами свяжемся в&nbsp;течение 15&nbsp;минут</p>
+						<div class="form-wrap__title form-data h3">Быстрый заказ
 						</div>
-						<div class="form-wrap__input-wrap form-group"><input class="form-wrap__input form-control" name="text" type="text" placeholder="Ваше Имя" required="required"/> 
-						</div>
-						<!-- +e.input-wrap-->
-						<button class="form-wrap__btn btn" type="submit"> 
-						</button>
-						<div class="form-wrap__policy">
-							<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="checkbox" type="checkbox" checked="checked"/><small class="custom-input__text text-secondary">Я согласен на обработку персональных данных, а также с условиями подписки</small>
+						<div class="form-wrap__input-wrap form-group">
+							<label><span class="form-wrap__input-title">ФИО: </span><input class="form-wrap__input form-control" name="text" type="text" placeholder="" required="required"/>
 							</label>
 						</div>
+						<!-- +e.input-wrap-->
+						<div class="form-wrap__input-wrap form-group">
+							<label><span class="form-wrap__input-title">Телефон: </span><input class="form-wrap__input form-control" name="number" type="number" placeholder="" step="any" required="required"/>
+							</label>
+						</div>
+						<!-- +e.input-wrap-->
+						<button class="form-wrap__btn btn-main" type="submit">Купить
+						</button>
 					</form>
 				</div>
 			</div>
 		</div>
-		<!-- #modal-call-->
+		<div id="added-to-cart" style="display: none">
+			<div class="modal-win">
+				<div class="modal-win__title form-data h3">Товар добавлен в корзину
+				</div>
+				<table class="modal-basket">
+					<tbody>
+						<tr class="modal-basket__item">
+							<td class="modal-basket__img-wrap"><img src="img/to-cart-1.jpg" alt="" loading="lazy"/>
+							</td>
+							<td class="modal-basket__name"><a href="#">Штыковая укороченная лопата FISKARS SolidTM 1026667</a>
+							</td>
+							<td class="modal-basket__number">1
+							</td>
+						</tr>
+						<tr class="modal-basket__item">
+							<td class="modal-basket__img-wrap"><img src="img/to-cart-2.jpg" alt="" loading="lazy"/>
+							</td>
+							<td class="modal-basket__name"><a href="#">Аккумуляторная газонокосилка PATRIOT РТ 330 Li</a>
+							</td>
+							<td class="modal-basket__number">35
+							</td>
+						</tr>
+					</tbody>
+				</table>
+				<div class="modal-basket__price">
+					<p>Общая стоимость</p>
+					<div class="modal-basket__total">13 140 руб.</div>
+				</div>
+				<div class="modal-basket__buttons">
+					<a class="modal-win__btn modal-win__btn--green" href="#">Продолжить покупки
+					</a>
+					<a class="modal-win__btn modal-win__btn--blue" href="#">Перейти в корзину
+					</a>
+				</div>
+			</div>
+		</div>
 		<!-- end modals-->
 		<script src="libs/jquery/jquery.min.js"></script>
 		<script src="libs/@fancyapps/ui/fancybox.umd.js"> </script>

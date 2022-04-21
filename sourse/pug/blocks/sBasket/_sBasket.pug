@@ -1,0 +1,44 @@
+mixin basketItem(img,name,number,weight,price)
+	+b.basket-item.TR
+		+e.img-wrap.TD
+			a(href="#")
+				+img(`img/basket-${img}.jpg`)
+		+e.title.TD
+			+e.name(href="#")!= name
+		+e.number.TD!= number
+		+e.count.TD
+			+addblock()
+		+e.weight.TD #{weight} кг
+		+e.price.TD #{price} руб.
+		+e.delete.TD
+			+e.remove-btn.BUTTON
+				+icon('close')
+
+
+mixin sBasket(data)
+	// start sBasket
+	+b.SECTION.sBasket.section#sBasket&attributes(attributes)
+		.container
+			table.table.table-borderless
+				thead.table-dark
+					tr
+						th(colspan="2").text-start Товар
+						th Артикул
+						th Количество
+						th Вес
+						th Цена
+						th 
+				tbody
+					+basketItem('1','Штыковая укороченная лопата FISKARS SolidTM 1026667', '1026667', '0', '850')
+					+basketItem('2','Аккумуляторная газонокосилка PATRIOT РТ 330 Li', '512300330', '0', '12290')
+				thead.table-dark
+					tr
+						th(colspan="3").text-end Итого
+						th 2 шт.
+						th 0 кг
+						th.text-end 13 140 руб.
+						th 
+			+e.buttons
+				+e(href="#").btn--dark Очистить корзину
+				+e(href="#").btn--green Оформить
+	// end sBasket

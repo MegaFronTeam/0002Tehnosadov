@@ -31,36 +31,44 @@
 }
 
 .addBlock {
-	color: var(--color, #{$primary});
-	border: 1px solid;
-	border-radius: 23px;
+	color: $body-color;
+	// border: 1px solid;
+	// border-radius: 23px;
 	display: flex;
+	justify-content: center;
 	position: relative;
 	overflow: hidden;
 	input {
-		color: inherit;
+		color: $body-color;
 		text-align: center;
 		border: none;
-		height: rem(45);
+		width: rem(40);
+		height: rem(40);
+		border: 1px solid $body-color;
+		&::placeholder {
+			color: $body-color;
+		}
 	}
 	&__btn {
 		color: inherit;
-		height: rem(45);
+		width: rem(40);
+		height: rem(40);
+    max-width: 40px;
+    border: 1px solid #ddd;
 		position: relative;
-		border-radius: 23px;
 		background: none !important;
-		border: none !important;
+		// border: none !important;
 		box-shadow: none !important;
 		outline: none !important;
 		background: transparent;
 		// padding-left: rem(8);
 		// padding-right: rem(8);
-		width: rem(26);
+		// width: rem(26);
 		&::before,
 		&::after {
 			content: "";
-			width: 10px;
-			height: 2px;
+			width: 6px;
+			height: 1px;
 			background-color: currentColor;
 			@include a-cent;
 			position: absolute;
