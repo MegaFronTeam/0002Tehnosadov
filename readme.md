@@ -1,6 +1,9 @@
 1. https://megafronteam.github.io/0002Tehnosadov/public
 2. https://megafronteam.github.io/0002Tehnosadov/public/02-catalog.html
 3. https://megafronteam.github.io/0002Tehnosadov/public/03-contacts.html
+3. https://megafronteam.github.io/0002Tehnosadov/public/03-blog.html
+3. https://megafronteam.github.io/0002Tehnosadov/public/03-blog-item.html
+3. https://megafronteam.github.io/0002Tehnosadov/public/09-forms-register.html
 СЕРВИСНЫЙ ЦЕНТР:
 ----
 1. https://megafronteam.github.io/0002Tehnosadov/public/04-service-center.html
