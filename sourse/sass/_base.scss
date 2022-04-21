@@ -496,3 +496,16 @@ iframe {
 	display: flex;
 	flex-direction: column;
 }
+
+.btn-main {
+	font-weight: bold;
+	transition-duration: 0.4s;
+	color: $white !important;
+	background-color: #444444;
+	font-size: rem(13);
+	line-height: 100%;
+	padding: rem(12);
+	&:hover {
+		background-color: #ff3300;
+	}
+}

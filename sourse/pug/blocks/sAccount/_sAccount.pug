@@ -1,0 +1,32 @@
+mixin sAccountLogin(data)
+	// start sAccount
+	+b.sAccount#sAccount&attributes(attributes)
+		+e.login-wrap
+			+e.login-item
+				+e.title Вход в личный кабинет
+				+form-wrap
+					+input(``,`text`,`Имя пользователя:`)
+					+input(``,`password`,`Пароль:`)
+					.sAccount__login-btn-wrap
+						a.sAccount__login.btn.btn-main(href="#") Войти
+						a.sAccount__link(href="#") Забыли пароль?
+			+e.login-item
+				+e.title Регистрация нового пользователя
+				p Быстро, удобно, легко!
+				ul 
+					li Используйте введённые ранее данные
+					li Отслеживайте статус заказа
+					li Получайте персонализированные предложения
+					li Один год дополнительной гарантии при регистрации товара
+					li Сохраняйте историю заказов
+				+e.reg.btn.btn-main(href="#") Зарегистрироваться
+
+mixin sAccountForget(data)
+	+b.sAccount#sAccount&attributes(attributes)
+		+e.forget-wrap
+			p Если вы&nbsp;забыли пароль, введите E-Mail.<br />Контрольная строка для смены пароля, а&nbsp;также ваши регистрационные данные, будут высланы вам по&nbsp;E-Mail.
+			+form-wrap
+				+input(``,`text`,`E-mail*:`)
+				.sAccount__login-btn-wrap
+					a.sAccount__send.btn.btn-main(href="#") Выслать
+					a.sAccount__link(href="#") Назад
