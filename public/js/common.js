@@ -510,6 +510,19 @@ function eventHandler() {
 	// 	target: '.sBlogNav'
 	// })
 
+	let textHidden = 'Все категории';
+	let textShow = 'Скрыть';
+
+	$('.sAllCategories__show').click(function() {
+		$(this).toggleClass('active');
+		let text = this.querySelector('.sAllCategories__text');
+		text.innerHTML = (text.innerHTML == textShow) 
+			? textHidden
+			: textShow;
+		$('.sliderAutoWidth--js').toggleClass('hidden');
+		$('.sAllCategories__col--js').toggleClass('active');
+	});
+
 };
 if (document.readyState !== 'loading') {
 	eventHandler();
