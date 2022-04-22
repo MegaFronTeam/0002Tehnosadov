@@ -35,19 +35,18 @@
 			display: block;
 		}
 	}
+	&__row-full-list {
+		--bs-gutter-y: var(--bs-gutter-x);
+	}
 	.sliderAutoWidth {
 		&.hidden {
 			display: none;
 		}
 	}
 	&__fullList {
-		@include roww(10px, 'm');
-		margin-top: calc(-1 * var(--bs-gutter-x));
-		display: flex;
-		flex-wrap: wrap;
 		.categories-item {
-			margin-top: var(--bs-gutter-x);
-			width: rem(297);
+			width: 100%;
+			margin-right: 0;
 		}
 	}
 	@include media-breakpoint-up(xl) {}
