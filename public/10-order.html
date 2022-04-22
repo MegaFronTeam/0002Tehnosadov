@@ -4,7 +4,7 @@
 <html lang="ru">
 	<head>
 		<meta charset="utf-8">
-		<title>Моя корзина</title>
+		<title>Оформление заказа</title>
 		<meta name="description" content="о чем страница">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 		<meta name="viewport" content="width=device-width,initial-scale=1.0,  shrink-to-fit=no">
@@ -119,108 +119,140 @@
 						<ol class="breadcrumb" itemscope="itemscope" itemtype="http://schema.org/BreadcrumbList">
 							<li class="breadcrumb-item" itemprop="itemListElement" itemscope="itemscope" itemtype="http://schema.org/ListItem"><a href="/" itemprop="item"><span itemprop="name">Главная</span>
 									<meta itemprop="position" content="1"/></a></li>
-							<li class="breadcrumb-item active" itemprop="itemListElement" itemscope="itemscope" itemtype="http://schema.org/ListItem"><a href="#" itemprop="item"><span itemprop="name">Корзина</span>
+							<li class="breadcrumb-item" itemprop="itemListElement" itemscope="itemscope" itemtype="http://schema.org/ListItem"><a href="#" itemprop="item"><span itemprop="name">Корзина</span>
 									<meta itemprop="position" content="2"/></a></li>
+							<li class="breadcrumb-item active" itemprop="itemListElement" itemscope="itemscope" itemtype="http://schema.org/ListItem"><a href="#" itemprop="item"><span itemprop="name">Оформление заказа</span>
+									<meta itemprop="position" content="3"/></a></li>
 						</ol>
 					</nav>
-					<h1>Моя корзина</h1>
+					<h1>Оформление заказа</h1>
 				</div>
 			</div>
-			<!-- start sBasket-->
-			<section class="sBasket section" id="sBasket">
+			<!-- start sOrder-->
+			<section class="sOrder section" id="sOrder">
 				<div class="container">
-					<table class="table table-borderless">
-						<thead class="table-dark header-top">
-							<tr>
-								<th class="text-start" colspan="2">Товар</th>
-								<th>Артикул</th>
-								<th>Количество</th>
-								<th>Вес</th>
-								<th>Цена</th>
-								<th> </th>
-							</tr>
-						</thead>
-						<tbody>
-							<tr class="basket-item">
-								<td class="basket-item__img-wrap" data-label="Товар"><a href="#"><img src="img/basket-1.jpg" alt="" loading="lazy"/></a>
-								</td>
-								<td class="basket-item__title">
-									<a class="basket-item__name" href="#">Штыковая укороченная лопата FISKARS SolidTM 1026667
-									</a>
-								</td>
-								<td class="basket-item__number" data-label="Артикул">1026667
-								</td>
-								<td class="basket-item__count" data-label="Количество">
-									<div class="addBlock">
-										<button class="addBlock__btn addBlock__btn--minus" type="button">
-										</button>
-										<input type="text" value="1"/>
-										<button class="addBlock__btn addBlock__btn--plus" type="button">
-										</button>
+					<form class="orderPage" id="js_sale_order_form_ajax" action="" method="POST" onsubmit="CShopSaleOrder.submitForm('Y'); return false;">
+						<input id="sessid" type="hidden" name="sessid" value="1289f465be6898f4c2bfe179869665b1"/>
+						<input type="hidden" name="PERSON_TYPE_OLD" value="1"/>
+						<input type="hidden" name="is_ajax_post" value="Y"/>
+						<input type="hidden" name="via_ajax" value="Y"/>
+						<input type="hidden" name="location_type" value="code"/>
+						<div class="orderPage_main">
+							<div class="orderPage_row">
+								<div class="orderPage_main_title">
+									<svg class="icon icon-user ">
+										<use xlink:href="img/svg/sprite.svg#user"></use>
+									</svg>Тип покупателя
+								</div>
+								<div class="orderPage_main_control">
+									<label>
+										<input onchange="CShopSaleOrder.submitForm('N')" type="radio" name="PERSON_TYPE" checked="checked" value="1"/><span class="orderPage_main_control_radio"></span><span class="orderPage_main_control_caption">Физическое лицо</span>
+									</label>
+									<label>
+										<input onchange="CShopSaleOrder.submitForm('N')" type="radio" name="PERSON_TYPE" value="2"/><span class="orderPage_main_control_radio"></span><span class="orderPage_main_control_caption">Юридическое лицо</span>
+									</label>
+								</div>
+								<div class="orderPage_main_block">
+									<div class="orderPage_main_block_item orderPage_main_block_itemItem">
+										<input id="js_frm_sale_order_ajax_old_city_code_val" type="hidden" value="0000073738"/><span class="orderPage_main_block_item_title"><b>Город доставки:</b><span class="req">*</span></span>
+										<div class="orderPage_main_block_itemItem__inner">
+											<div class="bx-sls" id="sls-32848">
+												<div class="dropdown-block bx-ui-sls-input-block"><span class="dropdown-icon"></span>
+													<input class="dropdown-field" type="text" autocomplete="off" name="ORDER_PROP_6" value="0000073738" placeholder="Введите название ..."/>
+													<div class="dropdown-fade2white"></div>
+													<div class="bx-ui-sls-loader"></div>
+													<div class="bx-ui-sls-clear" title="Отменить выбор"></div>
+													<div class="bx-ui-sls-pane"></div>
+												</div>
+												<script type="text/html" data-template-id="bx-ui-sls-error">
+													<div class="bx-ui-sls-error">
+													<div></div>
+													{{message}}
+													</div>
+												</script>
+												<script type="text/html" data-template-id="bx-ui-sls-dropdown-item">
+													<div class="dropdown-item bx-ui-sls-variant">
+													<span class="dropdown-item-text">{{display_wrapped}}</span>
+													</div>
+												</script>
+												<div class="bx-ui-sls-error-message"></div>
+											</div>
+										</div>
 									</div>
-								</td>
-								<td class="basket-item__weight" data-label="Вес">0 кг
-								</td>
-								<td class="basket-item__price" data-label="Цена">850 руб.
-								</td>
-								<td class="basket-item__delete" data-label="Удалить из корзины">
-									<button class="basket-item__remove-btn">
-										<svg class="icon icon-close ">
-											<use xlink:href="img/svg/sprite.svg#close"></use>
-										</svg>
-									</button>
-								</td>
-							</tr>
-							<tr class="basket-item">
-								<td class="basket-item__img-wrap" data-label="Товар"><a href="#"><img src="img/basket-2.jpg" alt="" loading="lazy"/></a>
-								</td>
-								<td class="basket-item__title">
-									<a class="basket-item__name" href="#">Аккумуляторная газонокосилка PATRIOT РТ 330 Li
-									</a>
-								</td>
-								<td class="basket-item__number" data-label="Артикул">512300330
-								</td>
-								<td class="basket-item__count" data-label="Количество">
-									<div class="addBlock">
-										<button class="addBlock__btn addBlock__btn--minus" type="button">
-										</button>
-										<input type="text" value="1"/>
-										<button class="addBlock__btn addBlock__btn--plus" type="button">
-										</button>
-									</div>
-								</td>
-								<td class="basket-item__weight" data-label="Вес">0 кг
-								</td>
-								<td class="basket-item__price" data-label="Цена">12290 руб.
-								</td>
-								<td class="basket-item__delete" data-label="Удалить из корзины">
-									<button class="basket-item__remove-btn">
-										<svg class="icon icon-close ">
-											<use xlink:href="img/svg/sprite.svg#close"></use>
-										</svg>
-									</button>
-								</td>
-							</tr>
-						</tbody>
-						<thead class="table-dark">
-							<tr>
-								<th class="text-end" colspan="3">Итого</th>
-								<th>2 шт.</th>
-								<th>0 кг</th>
-								<th class="text-end">13 140 руб.</th>
-								<th> </th>
-							</tr>
-						</thead>
-					</table>
-					<div class="sBasket__buttons">
-						<a class="sBasket__btn sBasket__btn--dark" href="#">Очистить корзину
-						</a>
-						<a class="sBasket__btn sBasket__btn--green" href="#">Оформить
-						</a>
-					</div>
+									<style>
+										.orderPage_main_block_itemItem{
+										margin-bottom: 20px;
+										}
+										.orderPage_main_block_itemItem__inner{
+										width: 80%;
+										}
+										.orderPage_main_block_itemItem .bx-sls {
+										width: 100%;
+										}
+									</style>
+									<label class="orderPage_main_block_item"><span class="orderPage_main_block_item_title"><b>Ф.И.О.:</b><span class="req">*</span></span>
+										<input name="ORDER_PROP_1" value="" type="text"/>
+									</label>
+									<label class="orderPage_main_block_item"><span class="orderPage_main_block_item_title"><b>E-Mail:</b><span class="req">*</span></span>
+										<input name="ORDER_PROP_2" value="" type="text"/>
+									</label>
+									<label class="orderPage_main_block_item"><span class="orderPage_main_block_item_title"><b>Телефон:</b><span class="req">*</span></span>
+										<input name="ORDER_PROP_3" value="" type="text"/>
+									</label>
+									<label class="orderPage_main_block_item"><span class="orderPage_main_block_item_title"><b>Комментарии к заказу:</b></span>
+										<textarea name="ORDER_DESCRIPTION" cols="30" rows="10"></textarea>
+									</label>
+								</div>
+							</div>
+							<div class="orderPage_row d-block">
+								<div class="orderPage_main_title">
+									<svg class="icon icon-truck ">
+										<use xlink:href="img/svg/sprite.svg#truck"></use>
+									</svg>Способ доставки
+								</div>
+								<div class="d-block">
+									<label class="custom-radio-tab">
+										<input type="radio" onchange="CShopSaleOrder.submitForm();" name="DELIVERY_ID" checked="checked" value="36"/><span class="orderPage_main_control-item"><span class="orderPage_main_control-item__block"><span class="orderPage_main_control-item__block-content"><span class="orderPage_main_control-item__block-title">Доставка курьером</span><span class="orderPage_main_control-item__block-text">Стоимость: <b>390 руб.</b></span><span class="orderPage_main_control-item__block-text">в пределах МКАД</span></span><img class="orderPage_main_control-item__block-img" src="" alt=""/></span><span class="orderPage_main_control-item__form-wrap"><span class="orderPage_main_block_item"><span class="orderPage_main_block_item_title"><b>Адрес доставки:</b></span>
+													<input name="ORDER_PROP_7" value="" type="text"/></span><span class="orderPage_main_block_item"><span class="orderPage_main_block_item_title"><b>Улица:</b><span class="req">*</span></span>
+													<input name="ORDER_PROP_21" value="" type="text"/></span><span class="orderPage_main_block_item"><span class="orderPage_main_block_item_title"><b>Дом/Корпус:</b><span class="req">*</span></span>
+													<input name="ORDER_PROP_22" value="" type="text"/></span><span class="orderPage_main_block_item"><span class="orderPage_main_block_item_title"><b>Квартира:</b><span class="req">*</span></span>
+													<input name="ORDER_PROP_23" value="" type="text"/></span></span></span>
+									</label>
+									<label class="custom-radio-tab">
+										<input type="radio" onchange="CShopSaleOrder.submitForm();" name="DELIVERY_ID" value="2"/><span class="orderPage_main_control-item"><span class="orderPage_main_control-item__block"><span class="orderPage_main_control-item__block-content"><span class="orderPage_main_control-item__block-title">Самовывоз</span><span class="orderPage_main_control-item__block-text"></span><span class="orderPage_main_control-item__block-text">Вы можете самостоятельно забрать заказ из нашего магазина.</span></span><img class="orderPage_main_control-item__block-img" src="" alt=""/></span><span class="orderPage_main_control-item__form-wrap"></span></span>
+									</label>
+									<label class="custom-radio-tab">
+										<input type="radio" onchange="CShopSaleOrder.submitForm();" name="DELIVERY_ID" value="44"/><span class="orderPage_main_control-item"><span class="orderPage_main_control-item__block"><span class="orderPage_main_control-item__block-content"><span class="orderPage_main_control-item__block-title">Доставка до адреса за МКАД (Московская область)</span><span class="orderPage_main_control-item__block-text"></span><span class="orderPage_main_control-item__block-text">Доставка на основе зон в Яндекс картах. Для расчета стоимости доставки, пожалуйста, <a class="sebekon_delivery_price_link" href="/bitrix/components/sebekon/delivery.calc/order.php" target="_blank">отметьте место доставки</a>.</span></span><img class="orderPage_main_control-item__block-img" src="" alt=""/></span><span class="orderPage_main_control-item__form-wrap"></span></span>
+									</label>
+								</div>
+							</div>
+							<div class="orderPage_row d-block">
+								<div class="orderPage_main_title">
+									<svg class="icon icon-wallet ">
+										<use xlink:href="img/svg/sprite.svg#wallet"></use>
+									</svg>Способ оплаты
+								</div>
+								<div class="d-block">
+									<label class="custom-radio-tab">
+										<input checked="checked" type="radio" name="PAY_SYSTEM_ID" value="16"/><span class="orderPage_main_control-item"><span class="orderPage_main_control-item__block"><span class="orderPage_main_control-item__block-content"><span class="orderPage_main_control-item__block-title mb-0">Кредит ПочтаБанк</span></span><img class="orderPage_main_control-item__block-img" src="img/pochtabank.png" alt=""/></span></span>
+									</label>
+									<label class="custom-radio-tab">
+										<input type="radio" name="PAY_SYSTEM_ID" value="9"/><span class="orderPage_main_control-item"><span class="orderPage_main_control-item__block"><span class="orderPage_main_control-item__block-content"><span class="orderPage_main_control-item__block-title mb-0">Наличный расчет</span></span><img class="orderPage_main_control-item__block-img" src="img/cash.png" alt=""/></span></span>
+									</label>
+								</div>
+							</div>
+						</div>
+						<div class="orderPage_side orderPage_side--js">
+							<div class="orderPage_row line"><b>Ваш заказ:</b><a href="/sale/">Изменить</a></div>
+							<div class="orderPage_row line"><b>Товаров на:</b> 12 290 руб.</div>
+							<div class="orderPage_row line"><b>Доставка:</b> 390 руб.</div>
+							<button class="btn_order" type="submit">Оформить</button>
+						</div>
+					</form>
+					<div class="row"></div>
 				</div>
 			</section>
-			<!-- end sBasket-->
+			<!-- end sOrder-->
 			<footer class="footer">
 				<div class="container">
 					<div class="footer__top row">

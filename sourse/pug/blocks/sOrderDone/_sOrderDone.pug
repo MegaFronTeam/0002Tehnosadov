@@ -1,0 +1,18 @@
+mixin sOrderDone(data)
+	// start sOrderDone
+	+b.SECTION.sOrderDone.section#sOrderDone&attributes(attributes)
+		+e.container.container
+			+e.main
+				p Ваш заказ &#8470;&nbsp;
+					span 1275
+					| от&nbsp;
+					span 22.04.2022 17:10 
+					| успешно создан.
+				p Номер вашей оплаты: &#8470;&nbsp;
+					span 1275/1
+			p Вы&nbsp;можете следить за&nbsp;выполнением своего заказа в&nbsp;
+				a(href="#") Персональном разделе сайта. 
+				| Обратите внимание, что для входа в&nbsp;этот раздел вам необходимо будет ввести логин и&nbsp;пароль пользователя сайта.
+			+e.payment 
+			p Оплата заказа <br>Наличный расчет
+	// end sOrderDone
