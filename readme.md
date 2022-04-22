@@ -24,5 +24,7 @@
 Личный кабинет:
 
 1. https://megafronteam.github.io/0002Tehnosadov/public/05-account-login.html
-1. https://megafronteam.github.io/0002Tehnosadov/public/05-account-forget.html
+2. https://megafronteam.github.io/0002Tehnosadov/public/05-account-forget.html
+2. https://megafronteam.github.io/0002Tehnosadov/public/05-account-reg.html
+2. https://megafronteam.github.io/0002Tehnosadov/public/05-account-profile.html
 

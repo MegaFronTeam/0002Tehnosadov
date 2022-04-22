@@ -30,3 +30,49 @@ mixin sAccountForget(data)
 				.sAccount__login-btn-wrap
 					a.sAccount__send.btn.btn-main(href="#") Выслать
 					a.sAccount__link(href="#") Назад
+
+mixin sAccountReg(data)
+	// start sAccount
+	+b.sAccount#sAccount&attributes(attributes)
+		+e.reg-wrap
+			+e.reg-item
+				+e.title Регистрация нового пользователя
+				+form-wrap
+					+input(``,`text`,`Имя:`)
+					+input(``,`text`,`Фамилия:`)
+					+input(``,`text`,`Логин (мин. 3 символа):`)
+					+input(``,`password`,`Пароль*:`)
+					+input(``,`password`,`Подтверждение пароля*:`)
+					+input(``,`text`,`E-Mail*:`)
+					.form-wrap__input-wrap.form-group
+						label
+							span.form-wrap__input-title Защита от автоматической регистрации*:
+							.sAccount__captcha-wrap
+								+b.captcha
+									input(type='hidden' name='captcha_sid' value='0d30ef1086f3c4e156bfdd01d9427c83')
+									img(src='/bitrix/tools/captcha.php?captcha_sid=0d30ef1086f3c4e156bfdd01d9427c83' width='180' height='40' alt='CAPTCHA')
+								input.form-wrap__input.form-control(name='text' type='text' placeholder='')
+					.sAccount__reg-btn-wrap
+						a.sAccount__reg-btn.btn.btn-main(href="#") Регистрация
+						a.sAccount__link(href="#") Вход
+			+e.reg-item
+				+e.title Зарегистрируйтесь
+				p и Вы получите возможность:
+				ul 
+					li Используйте введённые ранее данные
+					li Отслеживайте статус заказа
+					li Получайте персонализированные предложения
+					li Один год дополнительной гарантии при регистрации товара
+					li Сохраняйте историю заказов
+
+mixin sAccountProfile(data)
+	// start sAccount
+	+b.sAccount#sAccount&attributes(attributes)
+		+form-wrap
+			+input(``,`text`,`Фамилия:`)
+			+input(``,`text`,`Имя:`)
+			+input(``,`tel`,`Телефон`)
+			+input(``,`text`,`E-Mail*:`)
+			+input(``,`password`,`Новый пароль:`)
+			+input(``,`password`,`Повторите пароль:`)
+			a.sAccount__profile-btn.btn.btn-main(href="#") Сохранить

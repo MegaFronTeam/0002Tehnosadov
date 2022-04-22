@@ -3,7 +3,8 @@
 	// --sPT: ;
 	// --sPB: ;
 	// --sTPB: ;
-	&__login-wrap {
+	&__login-wrap,
+	&__reg-wrap {
 		display: flex;
 		padding-top: rem(14);
 		@include media-breakpoint-up(lg) {
@@ -12,7 +13,8 @@
 		}
 		flex-direction: column;
 	}
-	&__login-item {
+	&__login-item,
+	&__reg-item {
 		@include media-breakpoint-up(lg) {
 			max-width: 40%;
 			width: 40%;
@@ -53,7 +55,19 @@
 		display: block;
 		width: 100%;
 	}
-	
+	&__reg-btn {
+		@include media-breakpoint-up(xxl) {
+			width: rem(250);
+		}
+		@include media-breakpoint-up(sm) {
+			width: rem(200);
+			margin-bottom: 0;
+		}
+		margin-bottom: rem(14);
+		display: block;
+		width: 100%;
+	}
+
 	&__send {
 		@include media-breakpoint-up(xxl) {
 			width: rem(250);
@@ -72,7 +86,8 @@
 	&__link {
 		color: #009fe4 !important;
 	}
-	&__login-btn-wrap {
+	&__login-btn-wrap,
+	&__reg-btn-wrap {
 		display: flex;
 		align-items: center;
 		@include media-breakpoint-up(sm) {
@@ -87,13 +102,29 @@
 		}
 		width: 100%;
 	}
-	ul{
+	ul {
 		padding-left: rem(28);
 	}
-	&__forget-wrap{
+	&__forget-wrap {
 		width: 100%;
 		max-width: rem(490);
 		margin: 0 auto;
+	}
+	&__captcha-wrap {
+		display: flex;
+	}
+	.captcha {
+		width: 50%;
+		min-width: 50%;
+		img {
+			width: 100%;
+		}
+	}
+	&__profile-btn {
+		@include media-breakpoint-up(lg) {
+			width: rem(250);
+		}
+		width: 100%;
 	}
 	@include media-breakpoint-up(xl) {
 	}
