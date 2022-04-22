@@ -18,8 +18,38 @@
 		&:hover {
 				background-color: #A8C828;
 			}
+		&.active {
+			// width: 100%;
+			margin-top: rem(10);
+			padding: 17px 0;
+		}
 	}
 
+	&__text {
+		margin-bottom: 0;
+	}
+
+	&__col {
+		display: none;
+		&.active {
+			display: block;
+		}
+	}
+	.sliderAutoWidth {
+		&.hidden {
+			display: none;
+		}
+	}
+	&__fullList {
+		@include roww(10px, 'm');
+		margin-top: calc(-1 * var(--bs-gutter-x));
+		display: flex;
+		flex-wrap: wrap;
+		.categories-item {
+			margin-top: var(--bs-gutter-x);
+			width: rem(297);
+		}
+	}
 	@include media-breakpoint-up(xl) {}
 	@include media-breakpoint-up(lg) {}
 	@include media-breakpoint-up(md) {}
