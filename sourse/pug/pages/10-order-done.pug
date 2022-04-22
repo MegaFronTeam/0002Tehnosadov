@@ -1,0 +1,44 @@
+extends ../layout/main.pug
+
+include ../blocks/header/_header.pug
+include ../blocks/topLine/_topLine.pug
+include ../blocks/top-nav/_top-nav.pug 
+include ../blocks/headerBlock/_headerBlock.pug
+include ../blocks/sForm/_sForm.pug
+include ../blocks/sContent/_sContent.pug
+include ../blocks/sMainCategories/_sMainCategories.pug
+include ../blocks/sHit/_sHit.pug
+include ../blocks/sPopCategories/_sPopCategories.pug
+include ../blocks/sAllCategories/_sAllCategories.pug
+include ../blocks/sBlogPreview/_sBlogPreview.pug
+include ../blocks/sBrands/_sBrands.pug
+include ../blocks/sAbout/_sAbout.pug
+include ../blocks/sCommunications/_sCommunications.pug
+include ../blocks/sCatalogNav/_sCatalogNav.pug
+include ../blocks/sOrderDone/_sOrderDone.pug
+ 
+include ../blocks/sContact/_sContact.pug
+include ../blocks/sForm/_sForm.pug
+include ../blocks/sForm/_sForm.pug
+include ../blocks/footer/_footer.pug
+
+block variables
+	- let  mainPage= 'main-page' 
+	- let  bg= null
+
+block title
+	- let  title= 'Заказ сформирован'
+	title= title
+block pagecontent
+	//- +mob-mnu()
+	
+	
+	+topLine
+	+top-nav()
+	+page-head(title, 'Главная', 'Корзина', 'Оформление заказа')
+	+sOrderDone()
+	+footer()
+      
+
+
+

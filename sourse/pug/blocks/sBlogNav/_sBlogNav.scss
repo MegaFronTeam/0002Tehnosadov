@@ -1,14 +1,16 @@
 // start .sBlogNav
 .sBlogNav {
-		// --sPT: ;
-		// --sPB: ;
-		// --sTPB: ;
+	// --sPT: ;
+	// --sPB: ;
+	// --sTPB: ;
 	height: 100%;
 	padding: $grid-gutter-width;
-	max-width: 330px;
 	background: #fff;
 	border: 1px solid #ddd;
 	overflow-y: scroll;
+	@include media-breakpoint-up(lg) {
+		max-width: 330px;
+	}
 	&__title {
 		border-bottom: 1px solid #ddd;
     padding-bottom: $grid-gutter-width;;

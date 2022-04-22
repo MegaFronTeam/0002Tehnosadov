@@ -1,23 +1,25 @@
-// start .sBlogSlider
-.sBlogSlider {
+// start .sOrderDone
+.sOrderDone {
 		// --sPT: ;
 		// --sPB: ;
 		// --sTPB: ;
-	.swiper-wrapper {
-		height: auto;
+	&__container {
+		background-color: $white;
+		padding: rem(10);
 	}
-	.swiper-slide {
-		width: 246px;
-		margin-right: $grid-gutter-width;
+	&__main {
+		margin-bottom: rem(40);
+		font-weight: 700;
+		font-size: rem(21);
 	}
-	.blog-item {
-		height: rem(325);
-		padding: $grid-gutter-width;
+
+	a {
+		color: $blue;
+		text-decoration: underline;
+		text-decoration-color: transparent;
+		@include mt;
 		&:hover {
-			box-shadow: 0 0 1rem rgb(68 68 68 / 20%);
-		}
-		&__date {
-			display: none;
+			text-decoration-color: $blue;
 		}
 	}
 
@@ -28,4 +30,4 @@
 	@include media-breakpoint-between(md, xl) {}
 	@include media-breakpoint-only(xl) {}
 	@include media-breakpoint-down(xl) {}
-} // end.sBlogSlider
+} // end.sOrderDone

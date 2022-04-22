@@ -133,6 +133,9 @@ $output-bourbon-deprecation-warnings: false;
 @import '../pug/blocks/sCatalogNav/_sCatalogNav.scss';
 @import '../pug/blocks/sRegister/_sRegister.scss';
 @import '../pug/blocks/sBasket/_sBasket.scss';
+@import '../pug/blocks/sOrder/_sOrder.scss';
+@import '../pug/blocks/sOrderDone/_sOrderDone.scss';
+@import '../pug/blocks/sFavorites/_sFavorites.scss';
 
 @import '../pug/blocks/sAccount/_sAccount.scss';
 

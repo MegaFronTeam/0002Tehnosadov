@@ -11,11 +11,10 @@ include ../blocks/sHit/_sHit.pug
 include ../blocks/sCatalogHead/_sCatalogHead.pug
 include ../blocks/sFilter/_sFilter.pug
 include ../blocks/sCatalogBody/_sCatalogBody.pug
-include ../blocks/sBlogPreview/_sBlogPreview.pug
-include ../blocks/sBlog/_sBlog.pug
-include ../blocks/sArticle/_sArticle.pug
-include ../blocks/sBlogSlider/_sBlogSlider.pug
-include ../blocks/sBlogNav/_sBlogNav.pug
+include ../blocks/sProductDesc/_sProductDesc.pug
+include ../blocks/sAllCategories/_sAllCategories.pug
+include ../blocks/sBasket/_sBasket.pug
+include ../blocks/sOrder/_sOrder.pug
  
 include ../blocks/sContact/_sContact.pug
 include ../blocks/sForm/_sForm.pug
@@ -24,24 +23,21 @@ include ../blocks/footer/_footer.pug
 
 block variables
 	- let  mainPage= 'main-page' 
-	- let  bg= null
+	- let  bg= '02-catalog.png'
 
 block title
-	- let  title= 'Уход за триммером для травы: правила и рекомендации'
+	- let  title= 'Оформление заказа'
 	title= title
 block pagecontent
 	//- +mob-mnu()
 	
 	
-	+topLine()
+	+topLine
 	+top-nav()
-	+page-head(title, 'Главная', 'Cтатьи',title).--article
-	.container
-		.row
-			.col-lg-auto
-				+sBlogNav().hc-container
-			.col
-				+sArticle()(data-bs-spy="scroll", data-bs-target=".sBlogNav", data-bs-offset="0", class="scrollspy-example", tabindex="0")
-		+sBlogSlider()
-	
+	+page-head(title, 'Главная', 'Корзина',title)
+	+sOrder()
 	+footer()
+
+
+
+

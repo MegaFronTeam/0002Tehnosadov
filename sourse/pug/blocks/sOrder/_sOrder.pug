@@ -1,0 +1,170 @@
+mixin sOrder(data)
+	// start sOrder
+	+b.SECTION.sOrder.section#sOrder&attributes(attributes)
+		.container
+			form#js_sale_order_form_ajax.orderPage(action='' method='POST' onsubmit="CShopSaleOrder.submitForm('Y'); return false;")
+				input#sessid(type='hidden' name='sessid' value='1289f465be6898f4c2bfe179869665b1')
+				input(type='hidden' name='PERSON_TYPE_OLD' value='1')
+				input(type='hidden' name='is_ajax_post' value='Y')
+				input(type='hidden' name='via_ajax' value='Y')
+				input(type='hidden' name='location_type' value='code')
+				.orderPage_main
+					.orderPage_row
+						.orderPage_main_title
+							+icon('user')
+							| Тип покупателя
+						.orderPage_main_control
+							label
+								input(onchange="CShopSaleOrder.submitForm('N')" type='radio' name='PERSON_TYPE' checked='checked' value='1')
+								span.orderPage_main_control_radio
+								span.orderPage_main_control_caption Физическое лицо
+							label
+								input(onchange="CShopSaleOrder.submitForm('N')" type='radio' name='PERSON_TYPE' value='2')
+								span.orderPage_main_control_radio
+								span.orderPage_main_control_caption Юридическое лицо
+						.orderPage_main_block
+							.orderPage_main_block_item.orderPage_main_block_itemItem
+								input#js_frm_sale_order_ajax_old_city_code_val(type='hidden' value='0000073738')
+								span.orderPage_main_block_item_title
+									b Город доставки:
+									span.req *
+								.orderPage_main_block_itemItem__inner
+									#sls-32848.bx-sls
+										.dropdown-block.bx-ui-sls-input-block
+											span.dropdown-icon
+											input.dropdown-field(type='text' autocomplete='off' name='ORDER_PROP_6' value='0000073738' placeholder='Введите название ...')
+											.dropdown-fade2white
+											.bx-ui-sls-loader
+											.bx-ui-sls-clear(title='Отменить выбор')
+											.bx-ui-sls-pane
+										script(type='text/html' data-template-id='bx-ui-sls-error').
+											<div class="bx-ui-sls-error">
+											<div></div>
+											{{message}}
+											</div>
+										script(type='text/html' data-template-id='bx-ui-sls-dropdown-item').
+											<div class="dropdown-item bx-ui-sls-variant">
+											<span class="dropdown-item-text">{{display_wrapped}}</span>
+											</div>
+										.bx-ui-sls-error-message
+							style.
+								.orderPage_main_block_itemItem{
+								margin-bottom: 20px;
+								}
+								.orderPage_main_block_itemItem__inner{
+								width: 80%;
+								}
+								.orderPage_main_block_itemItem .bx-sls {
+								width: 100%;
+								}
+							label.orderPage_main_block_item
+								span.orderPage_main_block_item_title
+									b Ф.И.О.:
+									span.req *
+								input(name='ORDER_PROP_1' value='' type='text')
+							label.orderPage_main_block_item
+								span.orderPage_main_block_item_title
+									b E-Mail:
+									span.req *
+								input(name='ORDER_PROP_2' value='' type='text')
+							label.orderPage_main_block_item
+								span.orderPage_main_block_item_title
+									b Телефон:
+									span.req *
+								input(name='ORDER_PROP_3' value='' type='text')
+							label.orderPage_main_block_item
+								span.orderPage_main_block_item_title
+									b Комментарии к заказу:
+								textarea(name='ORDER_DESCRIPTION' cols='30' rows='10')
+					.orderPage_row.d-block
+						.orderPage_main_title
+							+icon('truck')
+							| Способ доставки
+						.d-block
+							label.custom-radio-tab
+								input(type='radio' onchange='CShopSaleOrder.submitForm();' name='DELIVERY_ID' checked='checked' value='36')
+								span.orderPage_main_control-item
+									span.orderPage_main_control-item__block
+										span.orderPage_main_control-item__block-content
+											span.orderPage_main_control-item__block-title Доставка курьером
+											span.orderPage_main_control-item__block-text
+												| Стоимость: 
+												b 390 руб.
+											span.orderPage_main_control-item__block-text в пределах МКАД
+										img.orderPage_main_control-item__block-img(src='' alt='')
+									span.orderPage_main_control-item__form-wrap
+										span.orderPage_main_block_item
+											span.orderPage_main_block_item_title
+												b Адрес доставки:
+											input(name='ORDER_PROP_7' value='' type='text')
+										span.orderPage_main_block_item
+											span.orderPage_main_block_item_title
+												b Улица:
+												span.req *
+											input(name='ORDER_PROP_21' value='' type='text')
+										span.orderPage_main_block_item
+											span.orderPage_main_block_item_title
+												b Дом/Корпус:
+												span.req *
+											input(name='ORDER_PROP_22' value='' type='text')
+										span.orderPage_main_block_item
+											span.orderPage_main_block_item_title
+												b Квартира:
+												span.req *
+											input(name='ORDER_PROP_23' value='' type='text')
+							label.custom-radio-tab
+								input(type='radio' onchange='CShopSaleOrder.submitForm();' name='DELIVERY_ID' value='2')
+								span.orderPage_main_control-item
+									span.orderPage_main_control-item__block
+										span.orderPage_main_control-item__block-content
+											span.orderPage_main_control-item__block-title Самовывоз
+											span.orderPage_main_control-item__block-text
+											span.orderPage_main_control-item__block-text Вы можете самостоятельно забрать заказ из нашего магазина.
+										img.orderPage_main_control-item__block-img(src='' alt='')
+									span.orderPage_main_control-item__form-wrap
+							label.custom-radio-tab
+								input(type='radio' onchange='CShopSaleOrder.submitForm();' name='DELIVERY_ID' value='44')
+								span.orderPage_main_control-item
+									span.orderPage_main_control-item__block
+										span.orderPage_main_control-item__block-content
+											span.orderPage_main_control-item__block-title Доставка до адреса за МКАД (Московская область)
+											span.orderPage_main_control-item__block-text
+											span.orderPage_main_control-item__block-text
+												| Доставка на основе зон в Яндекс картах. Для расчета стоимости доставки, пожалуйста, 
+												a.sebekon_delivery_price_link(href='/bitrix/components/sebekon/delivery.calc/order.php' target='_blank') отметьте место доставки
+												| .
+										img.orderPage_main_control-item__block-img(src='' alt='')
+									span.orderPage_main_control-item__form-wrap
+					.orderPage_row.d-block
+						.orderPage_main_title
+							+icon('wallet')
+							| Способ оплаты
+						.d-block
+							label.custom-radio-tab
+								input(checked='checked' type='radio' name='PAY_SYSTEM_ID' value='16')
+								span.orderPage_main_control-item
+									span.orderPage_main_control-item__block
+										span.orderPage_main_control-item__block-content
+											span.orderPage_main_control-item__block-title.mb-0 Кредит ПочтаБанк
+										img.orderPage_main_control-item__block-img(src='img/pochtabank.png' alt='')
+							label.custom-radio-tab
+								input(type='radio' name='PAY_SYSTEM_ID' value='9')
+								span.orderPage_main_control-item
+									span.orderPage_main_control-item__block
+										span.orderPage_main_control-item__block-content
+											span.orderPage_main_control-item__block-title.mb-0 Наличный расчет
+										img.orderPage_main_control-item__block-img(src='img/cash.png' alt='')
+				.orderPage_side.orderPage_side--js
+					.orderPage_row.line
+						b Ваш заказ:
+						a(href='/sale/') Изменить
+					.orderPage_row.line
+						b Товаров на:
+						|  12 290 руб.
+					.orderPage_row.line
+						b Доставка:
+						|  390 руб.
+					button.btn_order(type='submit') Оформить
+							
+			.row
+	// end sOrder

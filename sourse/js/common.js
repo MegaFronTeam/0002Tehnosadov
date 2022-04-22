@@ -497,6 +497,14 @@ function eventHandler() {
 			}
 		}
   });
+	$('.orderPage_side--js').hcSticky({
+    stickTo: $('.orderPage'),
+		responsive: {
+			992: {
+				disable: true
+			}
+		}
+  });
 
 	// var scrollSpy = new bootstrap.ScrollSpy(document.body, {
 	// 	target: '.sBlogNav'
