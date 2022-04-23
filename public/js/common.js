@@ -510,19 +510,58 @@ function eventHandler() {
 	// 	target: '.sBlogNav'
 	// })
 
-	let textHidden = 'Все категории';
-	let textShow = 'Скрыть';
+	// let textHidden = 'Все категории';
+	// let textShow = 'Скрыть';
 
-	$('.sAllCategories__show').click(function() {
-		$(this).toggleClass('active');
-		let text = this.querySelector('.sAllCategories__text');
-		text.innerHTML = (text.innerHTML == textShow) 
-			? textHidden
-			: textShow;
-		$('.sliderAutoWidth--js').toggleClass('hidden');
-		$('.sAllCategories__col--js').toggleClass('active');
+	// $('.sAllCategories__show').click(function() {
+	// 	$(this).toggleClass('active');
+	// 	let text = this.querySelector('.sAllCategories__text');
+	// 	text.innerHTML = (text.innerHTML == textShow) 
+	// 		? textHidden
+	// 		: textShow;
+	// 	$('.sliderAutoWidth--js').toggleClass('hidden');
+	// 	$('.sAllCategories__col--js').toggleClass('active');
+	// });
+
+	$('.sAllCategories__toggle').click(function () {
+		let self = this;
+		let textHidden =  self.dataset.open;
+		let textShow = self.dataset.close;
+		let parent = self.closest('.sliderAutoWidthWrap');
+		self.classList.toggle("active");
+		self.innerHTML = (self.innerHTML == textShow) 
+		? textHidden
+		: textShow;
+		parent.querySelector('.sliderAutoWidth--js').classList.toggle("active");
+		// parent.querySelector('.sAllCategories__col--js').classList.toggle("active"); 
 	});
 
+	const sProductDescswiper = new Swiper('.sProductDesc__slider--js', {
+		slidesPerView: 1,
+		spaceBetween: 10,
+		breakpoints: {
+			640: {
+				slidesPerView: 2,
+			},
+			768: {
+				slidesPerView: 3,
+			},
+			992: {
+				slidesPerView: 4,
+			},
+			1200: {
+				slidesPerView: 5,
+			},
+			1600: {
+				slidesPerView: 6,
+			},
+		},
+	});
+
+	const sProductDescSwiper2 = new Swiper('.sProductDesc__slider--js2', {
+		slidesPerView: 'auto',
+		spaceBetween: 10,
+	});
 };
 if (document.readyState !== 'loading') {
 	eventHandler();

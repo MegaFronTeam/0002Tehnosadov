@@ -7,7 +7,7 @@
 		width: auto;
 	}
 
-	&__show {
+	&__toggle {
 		width: 100%;
 		height: 100%;
 		border: none;
@@ -39,7 +39,7 @@
 		--bs-gutter-y: var(--bs-gutter-x);
 	}
 	.sliderAutoWidth {
-		&.hidden {
+		&.active {
 			display: none;
 		}
 	}

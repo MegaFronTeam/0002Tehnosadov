@@ -6,13 +6,9 @@ include ../blocks/top-nav/_top-nav.pug
 include ../blocks/headerBlock/_headerBlock.pug
 include ../blocks/sForm/_sForm.pug
 include ../blocks/sContent/_sContent.pug
-//- include ../blocks/sMainCategories/_sMainCategories.pug
 include ../blocks/sHit/_sHit.pug
 include ../blocks/sCatalogHead/_sCatalogHead.pug
-//- include ../blocks/sFilter/_sFilter.pug
-//- include ../blocks/sCatalogBody/_sCatalogBody.pug
 include ../blocks/sProductDesc/_sProductDesc.pug
-//- include ../blocks/sAllCategories/_sAllCategories.pug
 include ../blocks/sBlogSlider/_sBlogSlider.pug
  
 include ../blocks/sContact/_sContact.pug
@@ -33,20 +29,9 @@ block pagecontent
 	
 	+topLine
 	+top-nav()
-	//- +sMainCategories
 	+page-head(title, 'Главная', 'Садовая техника', 'Расходные материалы к садовой технике', 'Триммерный корд Husqvarna Opti Round 1%2C5 мм/15 м в блистере 5976688-01')
-	//- +sAllCategories
-	//- .container
-	//- 	+sCatalogHead()
-	//- 	.row
-	//- 		.col-auto
-	//- 			+sFilter()
-	//- 		.col
-	//- 			+sCatalogBody()
-	+sProductDesc
+	+sProductDesc2
 	+sBlogSlider('Ранее просмотренные товары')
-	//- +sMainCategories
-	//- +sAllCategories
 	+footer()
       
 

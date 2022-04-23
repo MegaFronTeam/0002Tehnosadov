@@ -2,34 +2,21 @@ mixin sProductDesc(data)
 	// start sProductDesc
 	+b.sProductDesc#sProductDesc&attributes(attributes)
 		.container
-			//- .tabs
-				//- .row
-				//- 	.col-auto
-				//- 		+e.btn.tabs__btn  154
-				//- 	.col-auto
-				//- 		+e.btn.tabs__btn 154fadsfds
-				//- 	.col-auto
-				//- 		+e.btn.tabs__btn asdawdzxdfas
-				//- +e.content.tabs__content.active 
-				//- 	b 14kl;sdjma;
-				//- +e.content.tabs__content
-				//- 	b 14kl;sdjma;
-				//- +e.content.tabs__content
-				//- 	b 14kkgljsksljdf
 			.tabs
-				+e.tabs.tabs__caption
-					+e.tabs-btn.tabs__btn.active 
-						+icon('ddgroup-icon-1')
-						| Похожие товары
-					+e.tabs-btn.tabs__btn
-						+icon('ddgroup-icon-2')
-						| Описание
-					+e.tabs-btn.tabs__btn
-						+icon('ddgroup-icon-3')
-						| Отзывы(Без авторизации)
-					+e.tabs-btn.tabs__btn
-						+icon('ddgroup-icon-3')
-						| Отзывы(С авторизацией)
+				+e.slider--js2.swiper
+					+e.tabs.tabs__caption.swiper-wrapper
+						+e.tabs-btn.tabs__btn.active.swiper-slide
+							+icon('ddgroup-icon-1')
+							| Похожие товары
+						+e.tabs-btn.tabs__btn.swiper-slide
+							+icon('ddgroup-icon-2')
+							| Описание
+						+e.tabs-btn.tabs__btn.swiper-slide
+							+icon('ddgroup-icon-3')
+							| Отзывы(Без авторизации)
+						+e.tabs-btn.tabs__btn.swiper-slide
+							+icon('ddgroup-icon-3')
+							| Отзывы(С авторизацией)
 				.tabs__wrap
 					.tabs__content
 						+e.content
@@ -59,3 +46,82 @@ mixin sProductDesc(data)
 								+input('', 'textarea', 'Содержание:')
 								button.btn(type="submit") Отправить
 	// end sProductDesc
+
+mixin sProductDesc2(data)
+	// start sProductDesc
+	+b.sProductDesc#sProductDesc&attributes(attributes)
+		.container
+			.tabs
+				+e.slider--js2.swiper
+					+e.tabs.tabs__caption.swiper-wrapper
+						+e.tabs-btn.tabs__btn.active.swiper-slide
+							+icon('settings')
+							| Характеристики
+						+e.tabs-btn.tabs__btn.swiper-slide
+							+icon('ddgroup-icon-3')
+							| Отзывы(Без авторизации)
+						+e.tabs-btn.tabs__btn.swiper-slide
+							+icon('ddgroup-icon-3')
+							| Отзывы(C авторизацей)
+						+e.tabs-btn.tabs__btn.swiper-slide
+							+icon('ddgroup-icon-1')
+							| Похожие товары
+						+e.tabs-btn.tabs__btn.swiper-slide
+							+icon('ddgroup-icon-2')
+							| Дополнительно
+				.tabs__wrap
+					.tabs__content
+						+e.content
+							+b.techsheet
+								+e.title Бренд:
+								+e.value Husqvarna
+							+b.techsheet
+								+e.title Бренд:
+								+e.value Husqvarna
+					.tabs__content
+						+e.content
+							p Чтобы оставить отзыв, Вам необходимо #[a(href="#") авторизироваться] на сайте.
+					.tabs__content
+						+e.content
+							+e.title Оставить отзыв
+							+form-wrap()
+								+input('', 'text', 'Ваше имя:')
+								+input('', 'email', 'Ваш e-mail:')
+								+input('', 'textarea', 'Содержание:')
+								button.btn(type="submit") Отправить
+					.tabs__content
+						+e.content
+							+e.slider--js.swiper
+								.swiper-wrapper
+									.swiper-slide
+										+productCard('1', '5004754', 'Комплект аккумуляторная цепная пила Husqvarna 120i 9670982-01 + Аккумулятор Husqvarna BLi200 9670919-01 + Зарядное устройство Husqvarna QC 330 9670914-01', '33 589 руб.', '')
+									.swiper-slide
+										+productCard('1', '5004754', 'Комплект аккумуляторная цепная пила Husqvarna 120i 9670982-01 + Аккумулятор Husqvarna BLi200 9670919-01 + Зарядное устройство Husqvarna QC 330 9670914-01', '33 589 руб.', '')
+									.swiper-slide
+										+productCard('1', '5004754', 'Комплект аккумуляторная цепная пила Husqvarna 120i 9670982-01 + Аккумулятор Husqvarna BLi200 9670919-01 + Зарядное устройство Husqvarna QC 330 9670914-01', '33 589 руб.', '')
+									.swiper-slide
+										+productCard('1', '5004754', 'Комплект аккумуляторная цепная пила Husqvarna 120i 9670982-01 + Аккумулятор Husqvarna BLi200 9670919-01 + Зарядное устройство Husqvarna QC 330 9670914-01', '33 589 руб.', '')
+									.swiper-slide
+										+productCard('1', '5004754', 'Комплект аккумуляторная цепная пила Husqvarna 120i 9670982-01 + Аккумулятор Husqvarna BLi200 9670919-01 + Зарядное устройство Husqvarna QC 330 9670914-01', '33 589 руб.', 'aval')
+									.swiper-slide
+										+productCard('1', '5004754', 'Комплект аккумуляторная цепная пила Husqvarna 120i 9670982-01 + Аккумулятор Husqvarna BLi200 9670919-01 + Зарядное устройство Husqvarna QC 330 9670914-01', '33 589 руб.', 'aval')
+									.swiper-slide
+										+productCard('1', '5004754', 'Комплект аккумуляторная цепная пила Husqvarna 120i 9670982-01 + Аккумулятор Husqvarna BLi200 9670919-01 + Зарядное устройство Husqvarna QC 330 9670914-01', '33 589 руб.', 'aval')
+									.swiper-slide
+										+productCard('1', '5004754', 'Комплект аккумуляторная цепная пила Husqvarna 120i 9670982-01 + Аккумулятор Husqvarna BLi200 9670919-01 + Зарядное устройство Husqvarna QC 330 9670914-01', '33 589 руб.', 'aval')
+									.swiper-slide
+										+productCard('1', '5004754', 'Комплект аккумуляторная цепная пила Husqvarna 120i 9670982-01 + Аккумулятор Husqvarna BLi200 9670919-01 + Зарядное устройство Husqvarna QC 330 9670914-01', '33 589 руб.', 'aval')
+					.tabs__content
+						+e.content
+							p Каталог садовой техники для сада и&nbsp;огорода предлагает широкий ассортимент товаров:
+							ul
+								li оборудование для работы на&nbsp;приусадебном участке&nbsp;&mdash; воздуходувки (садовые пылесосы) для уборки газона от&nbsp;листьев в&nbsp;саду, газонокосилки и&nbsp;триммеры, скарификаторы, ножницы и&nbsp;секаторы, высоторезы, кусторезы садовые, цепные бензопилы и&nbsp;электропилы, измельчители садового мусора, бензиновые и&nbsp;аккумуляторные снегоуборщики, мотоблоки, мотокультиваторы, мотобуры, дровоколы, подметальные машины для ухода за&nbsp;территорией, мойки высокого давления, мотопомпы
+								li строительный инструмент&nbsp;&mdash; электростанции, дрели, рубанки, штроборезы, миксеры, шлифовальные машины, компрессоры
+								li садовый инвентарь&nbsp;&mdash; комбинированные системы, ручной инструмент, тачки и&nbsp;тележки, ранцевые опрыскиватели, лопаты, топоры, баки для воды, канистры, щетки, мебель садовая, универсальные наборы инструментов
+								li системы водоснабжения&nbsp;&mdash; насосы и&nbsp;насосные станции, шланги, распылители, наконечники
+								li все для энергоснабжения&nbsp;&mdash; электрогенераторы, бесперебойники, дизельные и&nbsp;бензинове генераторы, автоматика
+								li инверторные сварочные аппараты, электроды и&nbsp;маски, все для сварки меттала и&nbsp;пластика
+								li средства защиты&nbsp;&mdash; перчатки, каски, очки, распираторы и&nbsp;др. аксессуары
+								li расходные материалы&nbsp;&mdash; запчасти, двигатели, аккумуляторы и&nbsp;ЗУ, насадки и&nbsp;масла, фильтры и&nbsp;смазки, колеса, ножи, леска и&nbsp;травосборник для бензокосы, комплекты для ремонта и&nbsp;другие комплектующие для реализуемой техники
+							p Вся садовая техника, представленная в&nbsp;интернет магазине, изготовлена популярными компаниями с&nbsp;безупречной репутацией, которые работают на&nbsp;отечественном и&nbsp;мировом рынке много лет. Среди наиболее популярных брендов у&nbsp;нас представлены: patriot, al-ko, stihl, huter, caiman, husqvarna<br>Доставка товаров по&nbsp;Москве и&nbsp;России происходит в&nbsp;кротчайшие сроки.
+							p К&nbsp;вашим услугам консультанты, которые бесплатно помогут сделать правильный выбор и&nbsp;сервисный центр, где наши специалисты произведут ремонт вашей техники, в&nbsp;случае его поломки.
