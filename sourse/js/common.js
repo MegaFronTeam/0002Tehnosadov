@@ -516,25 +516,39 @@ function eventHandler() {
 	// $('.sAllCategories__show').click(function() {
 	// 	$(this).toggleClass('active');
 	// 	let text = this.querySelector('.sAllCategories__text');
-	// 	text.innerHTML = (text.innerHTML == textShow) 
+	// 	text.innerHTML = (text.innerHTML == textShow)
 	// 		? textHidden
 	// 		: textShow;
 	// 	$('.sliderAutoWidth--js').toggleClass('hidden');
 	// 	$('.sAllCategories__col--js').toggleClass('active');
 	// });
+	const catLinks = document.querySelectorAll(".sliderAutoWidthWrap");
 
-	$('.sAllCategories__toggle').click(function () {
-		let self = this;
-		let textHidden =  self.dataset.open;
-		let textShow = self.dataset.close;
-		let parent = self.closest('.sliderAutoWidthWrap');
-		self.classList.toggle("active");
-		self.innerHTML = (self.innerHTML == textShow) 
-		? textHidden
-		: textShow;
-		parent.querySelector('.sliderAutoWidth--js').classList.toggle("active");
-		// parent.querySelector('.sAllCategories__col--js').classList.toggle("active"); 
-	});
+	for (const el of catLinks) { 
+		let slider = el.querySelector('.sliderCategotiesLinks--js');
+ 
+		const sliderCategotiesLinks = new Swiper(slider, { slidesPerView: 'auto' });
+
+		el.addEventListener("click", function (event) {
+			let target = event.target.closest(".sAllCategories__toggle");
+			if (!target) return; 
+			let textHidden = target.dataset.open;
+			let textShow = target.dataset.close;
+			target.classList.toggle("active");
+			target.innerHTML = (target.innerHTML == textShow)
+				? textHidden
+				: textShow;
+				el.classList.toggle("active");
+				if (el.contains('active')) { 
+					sliderCategotiesLinks.destroy(false);
+					console.log(1);
+				}
+				else {
+					sliderCategotiesLinks.init();
+				}
+			
+		});
+	}
 
 	const sProductDescswiper = new Swiper('.sProductDesc__slider--js', {
 		slidesPerView: 1,
