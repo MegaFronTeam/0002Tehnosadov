@@ -28,3 +28,8 @@
 2. https://megafronteam.github.io/0002Tehnosadov/public/05-account-reg.html
 2. https://megafronteam.github.io/0002Tehnosadov/public/05-account-profile.html
 
+1. https://megafronteam.github.io/0002Tehnosadov/public/09-forms-register.html
+1. https://megafronteam.github.io/0002Tehnosadov/public/10-basket.html
+1. https://megafronteam.github.io/0002Tehnosadov/public/10-order.html
+1. https://megafronteam.github.io/0002Tehnosadov/public/10-order-done.html
+1. https://megafronteam.github.io/0002Tehnosadov/public/12-favorits.html
