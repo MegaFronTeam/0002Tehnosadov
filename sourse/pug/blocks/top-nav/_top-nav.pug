@@ -1,3 +1,4 @@
+include ../sCatalogNav/_sCatalogNav.pug
 mixin menu-toggle()
 	+b.toggle-menu-mobile--js.d-lg-none
 		span
@@ -22,7 +23,7 @@ mixin top-nav()
 	+b.top-nav.block-with-lazy
 		.container
 			.row
-				+e.catalog.col
+				+e.col-catalog.col
 					button.catalog-btn.catalog-btn--js <span></span>Каталог товаров
 				.col.order-lg-0.order-last
 					.menu-mobile.menu-mobile--js
@@ -32,4 +33,5 @@ mixin top-nav()
 					
 				.col-auto.d-lg-none
 					+menu-toggle()
+			+sCatalogNav()
 	// end top-nav

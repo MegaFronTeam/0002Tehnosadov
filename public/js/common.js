@@ -475,7 +475,7 @@ function eventHandler() {
 
 	$('.catalog-btn--js').on('click', function() {
 		$('.catalog-btn--js').toggleClass('catalog-btn--active');
-		$('.sCatalogNav__wrap').toggleClass('visible');
+		$('.sCatalogNav').toggleClass('visible');
 	});
 
 	$(".main-categories a").hover(function() {
