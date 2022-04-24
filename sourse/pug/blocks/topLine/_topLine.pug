@@ -12,29 +12,30 @@ mixin topLine()
 						input(type="text" name="Имя" placeholder="Что будем искать?")
 						button
 							+icon('search')
-				.col-auto
-					+e.BUTTON.location
-						+icon('geo')
-						.topLine__location-text
-							p <span>Москва</span>Выбрать другой город							
-				.col-auto
-					+e.to-call
-						+icon('phone')
-						.topLine__to-call-text
-							p <span> +7 861 206 10 07</span> с 09:00 до 20:00							
-						a(href='tel:+74951208090').stretched-link
-				+b.topLine-menu.col-auto
-					ul
-						li
+				.topLine-menu.col-auto
+					.row
+						.col-auto.d-lg-none
+						.col-auto
+							+e.BUTTON.location
+								+icon('geo')
+								.topLine__location-text
+									p <span>Москва</span>Выбрать другой город							
+						.col-auto
+							+e.to-call
+								+icon('phone')
+								.topLine__to-call-text
+									p <span> +7 861 206 10 07</span> с 09:00 до 20:00							
+								a(href='tel:+74951208090').stretched-link 
+						.col-auto
 							+icon('login')
 							a(href="#").stretched-link Кабинет
-						li.counting
+						.col-auto.counting
 							+icon('compare')
 							a(href="#").stretched-link Сравнения
-						li.counting
+						.col-auto.counting
 							+icon('bookmarks')
 							a(href="#").stretched-link Закладки
-						li.counting
+						.col-auto.counting
 							+icon('cart')
 							a(href="#").stretched-link Корзина
 	// end topLine
