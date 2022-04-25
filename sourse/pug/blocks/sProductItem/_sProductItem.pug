@@ -24,34 +24,105 @@ mixin sProductItem(data)
 									+img('img/sProductItem-img-1.png')
 								.swiper-slide
 									+img('img/sProductItem-img-1.png')
-				.col-6.col-lg-3
+				.col-12.col-md-6.col-lg-3
 					+e.info-wrap
-						table
-							tbody
-								tr
-									td
-										p Рейтинг:
-									td
-										+ratingInfo()
-								tr
-									td
-										p Производитель:
-									td
-										a(href="#") Husqvarna
-								tr
-									td
-										p Артикул:
-									td
-										p 5976688-01
-								tr
-									td
-										p Цена:
-									td
-										p.price 199 руб.
-								tr
-									td
-										+addblock()
-									td
+						+e.row.row 
+							.col
+								+e.P.title Рейтинг:
+							.col-auto
+								+ratingInfo()
+						+e.row.row
+							.col
+								+e.P.title Производитель:
+							.col-auto
+								+e.link(href="#") Husqvarna
+						+e.row.row
+							.col
+								+e.P.title Артикул:
+							.col-auto
+								p 5976688-01
+						+e.row.row
+							.col
+								+e.P.title Цена:
+							.col-auto
+								+e.P.price 199 руб.
+						+e.row.row
+							.col-auto
+								+addblock()
+							.col
+								+e.BUTTON.addToCard
+									+icon('cartplus')
+									span В корзину
+						+e.row.row
+							.col-auto.d-flex
+								button.product-card__to-bookmarks(title='В закладки')
+									+icon('bookmarks')
+								button.product-card__to-compare(title='Сравнить')
+									+icon('compare')
+							.col
+								button.product-card__to-buy(title='Купить в один клик')
+									+icon('oneclick')
+									span Купить в 1 клик
+						+e.row.row
+							.col
+								+e.installment.btn(href="#") Рассрочка 0%
+						+e.row.row
+							.col.text-center
+								a(href="#") Нашли дешевле?
 					+e.info-wrap
-				.col-6.col-lg-3
+						+e.row.row
+							.col.align-self-center
+								+icon('cards')
+							+e.col-help.col-auto
+								p.font-weight-bold В кредит от 1.66 ₽ / мес
+								a(href="#") Условия кредитования и рассрочки
+						+e.row.row
+							.col.align-self-center
+								+icon('car')
+							+e.col-help.col-auto
+								a(href="#") Как заказать?
+				.col-12.col-md-6.col-lg-3
+					+e.info-wrap
+						+e.row.row
+							.col
+								+e.P.title Артикул:
+							.col-auto
+								p 1-2 дня
+						+e.row.row
+							.col
+								+e.P.title м-н Дмитровка
+							.col-auto
+								p.text-danger Нет в наличии
+						+e.row.row
+							.col
+								+e.P.title Склад
+							.col-auto
+								+e.P.haveInStock В наличии
+						+e.row.row
+							.col
+								+e.P.title Варианты доставки:
+						+e.variants
+							.row
+									.col-auto.align-self-center
+										+icon('car')
+									+e.col-help.col
+										p Курьерская доставка по Москве от 390 руб.
+						+e.variants
+							.row
+								.col-auto.align-self-center
+									+icon('plane')
+								+e.col-help.col
+									p Доставка по России от 500 руб.
+						+e.variants
+							.row
+								.col-auto.align-self-center
+									+icon('store')
+								+e.col-help.col
+									p Самовывоз бесплатно.
+						+e.variants
+							.row
+								.col
+									a(href="#") Доставка
+								.col-auto
+									a(href="#") Оплата
 	// end sProductItem
