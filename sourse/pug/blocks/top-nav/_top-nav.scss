@@ -6,7 +6,7 @@
 	z-index: 301;
 	.container{
 		position: relative;
-		@include media-breakpoint-down(md) {
+		@include media-breakpoint-down(lg) {
 			display: none;
 		}
 

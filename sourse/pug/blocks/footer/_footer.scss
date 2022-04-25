@@ -6,12 +6,15 @@
 	@include media-breakpoint-down(sm) {
 		text-align: center;
 	}
-	&__top {
-		padding-bottom: rem(20);
-		border-bottom: 1px solid #ddd;
+	@include media-breakpoint-down(lg) {
+		padding-bottom: 83px;
+	}
+	
+	&__top {		
+		--bs-gutter-x: 20px;
 	}
 	&__title {
-		margin-right: rem(20);
+		// margin-right: rem(20);
 		margin-bottom: $grid-gutter-width;
 		padding-bottom: $grid-gutter-width;
 		font-weight: 700;
@@ -47,6 +50,10 @@
 		@include media-breakpoint-down(sm) {
 			max-width: none;
 		}
+	}
+	&__contacts {
+		padding-bottom: rem(20);
+		border-bottom: 1px solid #ddd;
 	}
 	&__bottom {
 		padding: $grid-gutter-width 0;

@@ -1,9 +1,8 @@
 mixin categoryItem(i,t) 
-	+b.main-cat-item
-			+e.img-wrap
-				+img(`img/header-icon-${i}.png`)
-			+e.text(href="#").stretched-link
-				p!= t
+	+b.main-cat-item(href="#")
+		+e.img-wrap
+			+img(`img/header-icon-${i}.png`)
+		+e.text!= t
 
 mixin sMainCategories(data)
 	// start sMainCategories

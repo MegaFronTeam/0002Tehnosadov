@@ -14,7 +14,7 @@ mixin modal()
 			+form-wrap
 				+e.title.form-data.h3 Быстрый заказ
 				+input(``,'text','ФИО: ')(required)
-				+input(``,'number','Телефон: ')(required)
+				+input(``,'number','Телефон: ')(required type='tel')
 				+e.BUTTON.btn.btn-main(type="submit") Купить
 
 	div(id="added-to-cart"  style="display: none" )

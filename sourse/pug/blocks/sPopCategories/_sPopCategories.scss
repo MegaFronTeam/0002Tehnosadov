@@ -9,11 +9,13 @@
 		}
 		&__item {
 			position: relative;
+			display: block;
 			height: 100%;
 			padding: 10px;
 			background-color: $white;
 			text-align: center;
 			max-width: 100%;
+			@include mt;
 			@include media-breakpoint-down(xl) {
 				&::after {
 					content: '';
@@ -35,6 +37,9 @@
 			color: $body-color;
 			&:hover {
 				color: $body-color;
+				@include media-breakpoint-down(xl) {
+					color: $white;
+				}
 			}
 			@include media-breakpoint-down(xl) {
 				position: absolute;

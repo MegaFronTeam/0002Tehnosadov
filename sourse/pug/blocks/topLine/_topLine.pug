@@ -3,7 +3,7 @@ mixin topLine()
 	+b.topLine.section#topLine&attributes(attributes)
 		.container
 			.row
-				.col-md-auto
+				.col-lg-auto
 					+e.logo
 						a(href="/")
 							img(src="img/svg/logo.svg", alt="")
@@ -14,7 +14,7 @@ mixin topLine()
 							+icon('search')
 				.topLine-menu.col-auto
 					.row
-						.col-auto.d-md-none
+						.col-auto.d-lg-none
 									+menu-toggle()
 						.col-auto
 							+e.BUTTON.location

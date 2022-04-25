@@ -13,6 +13,7 @@
 			border-bottom: 1px solid $gray;
 		}
 		.toggle-menu-mobile {
+			width: rem(24);
 			span {
 				width: rem(24);
 				height: 3px;
@@ -33,7 +34,7 @@
 		}
 	
 		&__logo {
-			@include media-breakpoint-down(md) {
+			@include media-breakpoint-down(lg) {
 				margin-top: 81px;
 				width: 100%;
 				a {
@@ -44,7 +45,7 @@
 				margin: 0 15px;
 				width: 205px;
 				height: 24px;
-				@include media-breakpoint-down(md) {
+				@include media-breakpoint-down(lg) {
 					display: block;
 					margin-left: auto;
 					margin-right: auto ;
@@ -53,7 +54,7 @@
 		}
 		.search-col {
 			background-color:$white;
-			@include media-breakpoint-down(md) {
+			@include media-breakpoint-down(lg) {
 				position: fixed;
 				top: 0;
 				left: 0;
@@ -72,7 +73,7 @@
 			width: 100%;
 			margin-bottom: 0;	
 			border: 1px solid #ddd;
-			@include media-breakpoint-down(md) {
+			@include media-breakpoint-down(lg) {
 				background-color:$white;
 				padding: rem(14);
 				z-index: 500;
@@ -125,6 +126,9 @@
 			.icon {
 				margin-right: $grid-gutter-width;
 				font-size: rem(24);
+				@include media-breakpoint-down(lg) {
+					margin-right:0;
+				}
 			} 
 		}
 
@@ -163,7 +167,7 @@
 		
 		&-menu {
 			& > .row {
-				@include media-breakpoint-down(md) {
+				@include media-breakpoint-down(lg) {
 					position: fixed;
 					padding: rem(14);
 					display: flex;
@@ -182,6 +186,9 @@
 				position: relative;
 				margin-right: rem(10);
 				@include media-breakpoint-up(xl) {
+					margin-right: 0;
+				}
+				@include media-breakpoint-down(lg) {
 					margin-right: 0;
 				}
 				span {

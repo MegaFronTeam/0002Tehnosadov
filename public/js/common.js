@@ -438,6 +438,7 @@ function eventHandler() {
 			nextEl: '.hero-slider-button-next',
 			prevEl: '.hero-slider-button-prev',
 		},
+		loop: true,
 	});
 
 	const sliderWrap = document.querySelectorAll('.sliderAutoWidthWrap');

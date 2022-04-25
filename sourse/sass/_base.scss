@@ -121,7 +121,13 @@ body {
 
 .section-title {
 	margin-bottom: var(--sTPB);
+	.row {
+		align-items:center;
+	}
 	h2 {
+		// line-height: rem(36);
+		// height: 100%;
+		margin-bottom: 0;
 		padding-left: $grid-gutter-width;
 		border-left: 5px solid $red;
 	}
