@@ -129,10 +129,13 @@
 			}
 		}
 
-		&__to-call {
+		.topLine-menu .topLine__to-call {
 			// @include media-breakpoint-down(xl) {
 			// 	margin-right: calc($grid-gutter-width * 3);
 			// }
+			a {
+				flex-direction: row;
+			}
 			.icon {
 				color: $green;
 			}
