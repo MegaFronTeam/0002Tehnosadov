@@ -6,6 +6,10 @@
 	z-index: 301;
 	.container{
 		position: relative;
+		@include media-breakpoint-down(md) {
+			display: none;
+		}
+
 	}
 
 	.menu-item {
@@ -20,8 +24,10 @@
 		@include media-breakpoint-down(xl) {
 			max-width:rem(200);
 		}
+		@include media-breakpoint-down(lg) {
+			display: none;
+		}
 	}
-	
 	@include media-breakpoint-up(xl) {
 	}
 
@@ -75,6 +81,7 @@
 	height: 100%;
 	width: 100%;
 	font-weight: 700;
+	
 	&:hover {
 		background-color: $red;
 	}

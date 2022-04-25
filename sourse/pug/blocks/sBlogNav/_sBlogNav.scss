@@ -7,18 +7,19 @@
 	padding: $grid-gutter-width;
 	background: #fff;
 	border: 1px solid #ddd;
-	overflow-y: scroll;
+	// overflow-y: scroll;
 	@include media-breakpoint-up(lg) {
 		max-width: 330px;
-	}
-	&__sticky-wrap {
-		overflow-y: scroll;
 	}
 	&__title {
 		border-bottom: 1px solid #ddd;
     padding-bottom: $grid-gutter-width;;
 		margin-bottom: $grid-gutter-width;
     font-weight: bold;
+	}
+	nav {
+		overflow-y: auto;
+		max-height: 100vh;
 	}
 	ul {
 		padding: 0;

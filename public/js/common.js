@@ -675,11 +675,17 @@ function eventHandler() {
 	var sProductItemSwiper = new Swiper(".sProductItem__slider-thumbs--js", {
 		spaceBetween: 10,
 		slidesPerView: 4,
-		freeMode: true,
-		watchSlidesProgress: true,
+		loop: true,
+		breakpoints: {
+			992: {
+				direction: "vertical",
+			},
+		}
 	});
 	var sProductItemSwiperThumbs = new Swiper(".sProductItem__slider--js", {
 		spaceBetween: 10,
+		slidesPerView: 1,
+		loop: true,
 		thumbs: {
 			swiper: sProductItemSwiper,
 		},

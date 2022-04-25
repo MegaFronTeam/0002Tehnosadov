@@ -14,18 +14,19 @@ mixin topLine()
 							+icon('search')
 				.topLine-menu.col-auto
 					.row
-						.col-auto.d-lg-none
+						.col-auto.d-md-none
+									+menu-toggle()
 						.col-auto
 							+e.BUTTON.location
 								+icon('geo')
 								.topLine__location-text
-									p <span>Москва</span>Выбрать другой город							
+									p <span>Москва</span>Выбрать другой город
 						.col-auto
 							+e.to-call
 								a(href='tel:+74951208090')
 									+icon('phone')
 									.topLine__to-call-text
-										p <span> +7 861 206 10 07</span> с 09:00 до 20:00							
+										p <span> +7 861 206 10 07</span> с 09:00 до 20:00
 						.col-auto.topLine-menu__item
 							a(href="#") 
 								+icon('login')
