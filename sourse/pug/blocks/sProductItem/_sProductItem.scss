@@ -4,32 +4,50 @@
 	// --sPB: ;
 	// --sTPB: ;
 	&__slider-wrap {
-		display: flex;
-	}
-	&__slider-thumbs {
-		background: #fff;
-    border: 1px solid #ddd;
-		.swiper-wrapper {
+		height: 100%;
+		margin-bottom: rem(10);
+		@include media-breakpoint-up(lg) {
 			display: flex;
-			flex-direction: column;
-		}
-		.swiper-slide {
-			height: auto;
+			align-items: flex-start;
+			flex-direction: row-reverse;
+			margin-bottom: 0;
 		}
 	}
-	&__slider {
+	&__slider-thumbs--js {
+		@include media-breakpoint-up(md) {
+		}
+		@include media-breakpoint-up(lg) {
+			height: 559px;
+			width: 15%;
+			margin-right: var(--bs-gutter-x);
+		}
+		img {
+			width: 100%;
+			height: 100%;
+		}
+	}
+	&__slider--js {
+		@include media-breakpoint-up(lg) {
+			height: 100%;
+			width: calc(85%  - var(--bs-gutter-x));
+		}
+		img {
+			width: 100%;
+			height: 100%;
+			object-fit: contain;
+		}
+	}
+	&__slider-thumbs, &__slider {
 		background: #fff;
     border: 1px solid #ddd;
-	}
-	&__img-wrap {
-		@include block(110, 110);
-		img {
-			position: absolute;
-			top: 0;
-			left: 0;
-			height: 100%;
-			width: 100%;
+		.swiper-slide {
+			display: flex;
+			align-items: center;
+			justify-content: center;
 		}
+	}
+	.swiper-slide-thumb-active {
+		border: 1px solid #ddd;
 	}
 	&__info-wrap {
 		background-color: $white;
@@ -38,36 +56,15 @@
 		&:not(:last-child) {
 			margin-bottom: rem(10);
 		}
-		table {
-			width: 100%;
-			td {
-				padding: rem(10) 0;
-				&:first-child {
-					p {
-						font-weight: 700;
-					}
-				}
-				&:last-child {
-					text-align: right;
-				}
+		a {
+			color: currentColor;
+			&:hover {
+				color: #787878;
+
 			}
-			p {
-				font-size: rem(14);
-				margin-bottom: 0;
-				&.price {
-					font-weight: 700;
-					color: $red;
-					font-size: rem(18);
-				}
-			}
-			a {
-				font-size: rem(14);
-				color: $blue;
-				font-weight: 700;
-				&:hover {
-					text-decoration: underline;
-				}
-			}
+		}
+		p {
+			margin-bottom: 0;
 		}
 		.rating-info {
 			justify-content: flex-end;
@@ -79,6 +76,94 @@
 		.addBlock {
 			justify-content: start;
 		}
+	}
+	&__row {
+		margin: rem(20) 0;
+	}
+	&__title {
+		font-weight: 700;
+		font-size: rem(14);
+	}
+	&__link {
+		font-weight: 700;
+		color: $blue;
+	}
+	&__price {
+		font-weight: 700;
+		color: $red;
+		font-size: rem(18);
+	}
+	&__addToCard {
+		@extend .product-card__to-cart;
+		width: 100%;
+		height: 100%;
+		font-size: rem(14);
+		.icon {
+			margin-right: 0;
+			font-size: rem(17);
+		}
+		span {
+			margin-right: auto;
+			margin-left: auto;
+		}
+	}
+	&__installment {
+		width: 100%;
+		background-color: $yellow;
+		font-weight: 700;
+		padding: rem(10);
+		&:hover {
+			background-color: #f5cf14;
+		}
+	}
+	.product-card {
+		&__to-buy {
+			margin-bottom: 0;
+			.icon {
+				// font-size: rem(24);
+			}
+		}
+	}
+	&__col-help {
+		text-align: right;
+		align-self: center;
+		p {
+			// font-weight: 700;
+		}
+		a {
+			color: $blue;
+			border-bottom: 1px solid transparent;
+			&:hover {
+				color: $blue;
+				border-bottom-color: $blue;
+			}
+		}
+	}
+	.icon {
+		font-size: rem(24);
+	}
+	.icon-cards {
+		// font-size: rem(30);
+		align-self: center;
+		color: $red;
+	}
+	.icon-car {
+		// font-size: rem(30);
+		align-self: center;
+	}
+	&__variants {
+		margin-top: rem(44);
+		a {
+			color: $blue;
+			border-bottom: 1px solid transparent;
+			&:hover {
+				color: $blue;
+				border-bottom-color: $blue;
+			}
+		}
+	}
+	&__haveInStock {
+		color: #7FA54D;
 	}
 	@include media-breakpoint-up(xl) {}
 	@include media-breakpoint-up(lg) {}
