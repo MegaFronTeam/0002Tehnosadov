@@ -5,6 +5,7 @@
 3. https://megafronteam.github.io/0002Tehnosadov/public/03-blog.html
 3. https://megafronteam.github.io/0002Tehnosadov/public/03-blog-item.html
 3. https://megafronteam.github.io/0002Tehnosadov/public/09-forms-register.html
+3. https://megafronteam.github.io/0002Tehnosadov/public/11-compare.html
 ----
 СЕРВИСНЫЙ ЦЕНТР:
 ----
