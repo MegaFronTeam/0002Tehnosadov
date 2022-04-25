@@ -542,7 +542,9 @@ iframe {
 .swiper-scrollbar {
 	height: 10px;
 	position: relative;
+	border-radius: 1.25rem;
 	width: 100%;
+	background: #dddddd;
 }
 .swiper-scrollbar .swiper-scrollbar-drag {
 	background: #009fe4;
