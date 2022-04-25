@@ -5,6 +5,20 @@ mixin sProductItem(data)
 			.row
 				.col-12.col-lg-6
 					+e.slider-wrap
+						+e.slider--js.swiper
+							.swiper-wrapper
+								.swiper-slide
+									+img('img/sProductItem-img-1.png')
+								.swiper-slide
+									+img('img/sProductItem-img-1.png')
+								.swiper-slide
+									+img('img/sProductItem-img-1.png')
+								.swiper-slide
+									+img('img/sProductItem-img-1.png')
+								.swiper-slide
+									+img('img/sProductItem-img-1.png')
+								.swiper-slide
+									+img('img/sProductItem-img-1.png')
 						+e.slider-thumbs--js.swiper
 							.swiper-wrapper
 								.swiper-slide
@@ -16,14 +30,15 @@ mixin sProductItem(data)
 								.swiper-slide
 									+e.img-wrap
 										+img('img/sProductItem-img-1.png')
-						+e.slider--js.swiper
-							.swiper-wrapper
 								.swiper-slide
-									+img('img/sProductItem-img-1.png')
+									+e.img-wrap
+										+img('img/sProductItem-img-1.png')
 								.swiper-slide
-									+img('img/sProductItem-img-1.png')
+									+e.img-wrap
+										+img('img/sProductItem-img-1.png')
 								.swiper-slide
-									+img('img/sProductItem-img-1.png')
+									+e.img-wrap
+										+img('img/sProductItem-img-1.png')
 				.col-12.col-md-6.col-lg-3
 					+e.info-wrap
 						+e.row.row 
