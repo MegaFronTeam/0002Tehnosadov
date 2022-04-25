@@ -478,16 +478,25 @@ function eventHandler() {
 		$('.sCatalogNav').toggleClass('visible');
 	});
 
-	$(".main-categories a").hover(function() {
-		const path = $(this).data('path');
-		$('[data-target="garden"]').addClass('visible')
-		// $('[data-target="${path}').addClass('visible')
-		// $(`[data-target="${path}"]`).addClass('visible');
-	});
+	function tocPoss(element) {
+    var rect = element.getBoundingClientRect()
+    return rect.top <= 0
+  }
 
-	// document.querySelectorAll('.main-categories li').forEach(function (tabsMenu) {
-	// 	tabsMenu.addEventListener('hover')
-	// });
+  $(window).scroll(function () {
+    $('.sArticle h2').each(function (index, element) {
+      if (tocPoss(element)) {
+        let toc_id = $(this).attr('id')
+        $('.blog-nav__item a').each(function () {
+          let toc_link = $(this).attr('href').replace('#', '')
+          if (toc_link == toc_id) {
+            $(this).addClass('scrolled')
+            $('.blog-nav__item a').not(this).removeClass('scrolled')
+          }
+        })
+      }
+    })
+  })
 
 	$('.sBlogNav__sticky-wrap--js').hcSticky({
     stickTo: $('.hc-container'),
