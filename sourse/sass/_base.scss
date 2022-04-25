@@ -527,7 +527,7 @@ iframe {
 // 		filter: blur(5);
 // 	}
 // }
-.txt-crop{
+.txt-crop {
 	text-overflow: ellipsis;
 	overflow: hidden;
 	line-clamp: var(--lines-num, 1);
@@ -535,4 +535,15 @@ iframe {
 	// display: box;
 	word-wrap: break-word;
 	box-orient: vertical;
+}
+.swiper-scrollbar {
+	height: 10px;
+	position: relative;
+	width: 100%;
+}
+.swiper-scrollbar .swiper-scrollbar-drag {
+	background: #009fe4;
+	border-radius: 1.25rem;
+	cursor: pointer;
+	height: 0.625rem;
 }

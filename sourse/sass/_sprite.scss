@@ -47,6 +47,14 @@
 	font-size:math.div(16,10)*1rem;
 	width: math.div(20,16)*1em;
 }
+.icon-chevron-left {
+	font-size:math.div(8,10)*1rem;
+	width: math.div(5,8)*1em;
+}
+.icon-chevron-right {
+	font-size:math.div(8,10)*1rem;
+	width: math.div(6,8)*1em;
+}
 .icon-close {
 	font-size:math.div(20,10)*1rem;
 	width: math.div(20,20)*1em;
@@ -66,6 +74,10 @@
 .icon-ddgroup-icon-3 {
 	font-size:math.div(24,10)*1rem;
 	width: math.div(26,24)*1em;
+}
+.icon-delete-btn {
+	font-size:math.div(20,10)*1rem;
+	width: math.div(18,20)*1em;
 }
 .icon-fastview {
 	font-size:math.div(40,10)*1rem;

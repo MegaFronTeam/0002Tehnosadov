@@ -2,7 +2,7 @@
 .sCompare {
 	line-height: 1.46;
 
-	--sPT: #{rem(43)};
+	--sPT: #{rem(0)};
 	--sPB: #{rem(30)};
 	@include media-breakpoint-up(xxl) {
 		--sPB: #{rem(80)};
@@ -14,6 +14,24 @@
 
 	position: relative;
 	z-index: 1;
+	&__category-row {
+		display: flex;
+		margin-bottom: rem(28);
+	}
+	&__category-item {
+		padding: 1rem;
+		border: 1px solid #dddddd;
+		background: rgba(255, 255, 255, 0.1);
+		text-decoration: none !important;
+		color: #444444;
+		border-radius: 5px;
+		margin-right: rem(14);
+		.count{
+			color: #ff3300;
+			margin-left: 5px;
+			font-size: 12px;
+		}
+	}
 	&__bg {
 		position: absolute;
 		z-index: -1;
@@ -73,25 +91,49 @@
 		line-height: calc(34 / 25);
 		color: $black;
 	}
+	&__show-btn {
+		display: flex;
+		align-items: center;
+		span {
+			font-weight: bold;
+			margin-right: 16px;
+		}
+		a {
+			color: #009fe4;
+			margin-right: 16px;
+			&.active {
+				font-weight: bold;
+			}
+		}
+	}
 	&__clean-btn {
 		display: inline-flex;
 		align-items: center;
 		white-space: nowrap;
+		// margin-left: auto;
+		width: auto;
+		// &:before {
+		// 	flex-shrink: 0;
+		// 	content: "";
+		// 	display: inline-block;
+		// 	width: rem(15);
+		// 	height: rem(15);
+		// 	margin-right: rem(20);
 
-		&:before {
-			flex-shrink: 0;
-			content: "";
-			display: inline-block;
-			width: rem(15);
-			height: rem(15);
-			margin-right: rem(20);
+		// 	background-image: url(../img/svg/sCompare-clean.svg);
+		// 	background-repeat: no-repeat;
+		// 	background-position: center;
+		// 	background-size: contain;
+		// }
 
-			background-image: url(../img/svg/sCompare-clean.svg);
-			background-repeat: no-repeat;
-			background-position: center;
-			background-size: contain;
+		color: #009fe4;
+		&:hover {
+			color: #ff3300;
 		}
-
+		.icon {
+			font-size: rem(15);
+			margin-right: rem(10);
+		}
 		text-decoration: none;
 		font-size: rem(17);
 		// color: $gray-550;
@@ -136,10 +178,10 @@
 	&__col {
 		//-
 		&--chars {
-			// padding-top: calc(var(--comp-card-h) + var(--comp-card-mb));
-			@include media-breakpoint-up(lg){
-				padding-top: rem(500);
-			}
+			padding-top: calc(var(--comp-card-h) + var(--comp-card-mb));
+			// @include media-breakpoint-up(lg){
+			// 	padding-top: rem(500);
+			// }
 			width: 100%;
 			position: absolute;
 			top: 0;
@@ -151,6 +193,9 @@
 				width: 33.3%;
 			}
 			@include media-breakpoint-up(xl) {
+				width: 35%;
+			}
+			@include media-breakpoint-up(xxl) {
 				width: 25%;
 			}
 			@include media-breakpoint-up(base) {
@@ -162,8 +207,11 @@
 			@include media-breakpoint-up(lg) {
 				width: 66.6%;
 			}
-			@include media-breakpoint-up(xl) {
+			@include media-breakpoint-up(xxl) {
 				width: 75%;
+			}
+			@include media-breakpoint-up(xl) {
+				width: 65%;
 			}
 			@include media-breakpoint-up(base) {
 				width: calc(100% - #{rem(301)} - var(--bs-gutter-x));
@@ -172,12 +220,17 @@
 		}
 	}
 	&__c-title {
-		font-size: rem(24);
-		line-height: 1;
-		@include media-breakpoint-up(base) {
-			font-size: rem(25);
-			line-height: calc(34 / 25);
+		@include media-breakpoint-up(xl) {
+			font-size: rem(24);
 		}
+		font-size: rem(20);
+		line-height: 1;
+		// @include media-breakpoint-up(base) {
+		// 	font-size: rem(25);
+
+		// }
+		line-height: calc(34 / 25);
+		font-weight: 600;
 		color: $headings-color;
 		height: var(--c-title-h);
 		margin-bottom: var(--c-title-mb);
@@ -194,6 +247,7 @@
 		// color: $gray-550;
 
 		@include media-breakpoint-down(lg) {
+			font-weight: 600;
 			text-overflow: ellipsis;
 			overflow: hidden;
 			line-clamp: 1;
@@ -272,11 +326,14 @@
 			width: calc(100% * 0.5);
 		}
 		@include media-breakpoint-up(xl) {
-			width: calc(100% / 3);
+			width: calc(100% / 3 - 10px);
 		}
-		@include media-breakpoint-up(base) {
-			width: calc(100% / 4);
+		@include media-breakpoint-up(xxl) {
+			width: calc(100% / 5 - 10px);
 		}
+		// @include media-breakpoint-up(base) {
+		// 	width: calc(100% / 4);
+		// }
 	}
 
 	//
@@ -284,7 +341,9 @@
 		margin-bottom: calc(
 			var(--c-items-mb) + var(--c-title-h) + var(--c-title-mb) - var(--c-item-h) - var(--slide-char-pt)
 		);
-
+		&:last-child {
+			margin-bottom: 0;
+		}
 		@include media-breakpoint-up(lg) {
 			margin-bottom: calc(var(--c-items-mb) + var(--c-title-h) + var(--c-title-mb));
 			&:first-child {
@@ -325,13 +384,51 @@
 
 .compare-card {
 	background-color: $white;
+	position: relative;
 	// border: 1px solid $gray-120;
-
+	border: 1px solid #dddddd;
 	margin-bottom: calc(var(--comp-card-mb) + var(--c-title-h) + var(--c-title-mb) + var(--c-item-fs) * var(--c-item-lh));
 	@include media-breakpoint-up(lg) {
 		margin-bottom: calc(var(--comp-card-mb) + var(--c-title-h) + var(--c-title-mb));
 	}
-
+	&__btns-block {
+		position: absolute;
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+		width: 40px;
+		height: 90px;
+		top: rem(14);
+		right: rem(14);
+		z-index: 2;
+	}
+	&__card-btn {
+		width: 40px;
+		height: 40px;
+		position: relative;
+		background: rgba(89, 180, 0, 0.2);
+		border-radius: 50%;
+		border: none;
+		padding: 0;
+		-webkit-box-shadow: 0 0 5px 0 rgb(68 68 68 / 20%);
+		box-shadow: 0 0 5px 0 rgb(68 68 68 / 20%);
+		-webkit-transition: 0.3s !important;
+		-o-transition: 0.3s !important;
+		transition: 0.3s !important;
+		cursor: pointer;
+		&:hover {
+			background: rgba(89, 180, 0, 0.5);
+		}
+		svg,
+		.icon {
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			width: 23px;
+			height: 23px;
+			transform: translate(-50%, -50%);
+		}
+	}
 	//--btn-img-o: 1;
 	@include mt();
 	&:hover {
@@ -416,14 +513,13 @@
 		color: #009fe4 !important;
 
 		font-size: rem(14);
-		line-height: calccalc(20/14);
+		line-height: calc(20 / 14);
 		height: rem(80);
-		margin-bottom: rem(16);
+		// margin-bottom: rem(16);
 		@include media-breakpoint-up(sm) {
-			font-size: rem(17);
 			line-height: 1.46;
-			height: rem(96);
-			margin-bottom: rem(30);
+			height: rem(100);
+			// margin-bottom: rem(30);
 		}
 
 		@extend .txt-crop;
@@ -507,7 +603,7 @@
 			font-size: rem(12);
 			@include mt();
 			color: transparent;
-			// stroke: $gray-550;
+			stroke: #9c9c9c;
 		}
 
 		background-color: transparent;
