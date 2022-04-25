@@ -45,13 +45,12 @@ mixin sAccountReg(data)
 					+input(``,`password`,`Подтверждение пароля*:`)
 					+input(``,`text`,`E-Mail*:`)
 					.form-wrap__input-wrap.form-group
-						label
-							span.form-wrap__input-title Защита от автоматической регистрации*:
-							.sAccount__captcha-wrap
-								+b.captcha
-									input(type='hidden' name='captcha_sid' value='0d30ef1086f3c4e156bfdd01d9427c83')
-									img(src='/bitrix/tools/captcha.php?captcha_sid=0d30ef1086f3c4e156bfdd01d9427c83' width='180' height='40' alt='CAPTCHA')
-								input.form-wrap__input.form-control(name='text' type='text' placeholder='')
+						span.form-wrap__input-title Защита от автоматической регистрации*:
+						.sAccount__captcha-wrap
+							+b.captcha
+								input(type='hidden' name='captcha_sid' value='0d30ef1086f3c4e156bfdd01d9427c83')
+								img(src='/bitrix/tools/captcha.php?captcha_sid=0d30ef1086f3c4e156bfdd01d9427c83' width='180' height='40' alt='CAPTCHA')
+							input.form-wrap__input.form-control(name='text' type='text' placeholder='')
 					.sAccount__reg-btn-wrap
 						a.sAccount__reg-btn.btn.btn-main(href="#") Регистрация
 						a.sAccount__link(href="#") Вход

@@ -30,3 +30,35 @@ mixin sAllCategories(data)
 					+e.toggle.BUTTON(data-open="Все категории" data-close="Скрыть")  Все категории
 						//- +e.P.text Все категории
 	// end sAllCategories
+
+
+mixin sAllCategories2(data)
+	// start sAllCategories
+	+b.SECTION.sAllCategories.section#sAllCategories&attributes(attributes)
+		+e.container.container.sliderAutoWidthWrap
+			.row
+				+e.col-slider.col-12.col-sm-10
+					+b.sliderCategotiesLinks--js.swiper
+						.swiper-wrapper
+							.swiper-slide
+								+allCategoriesItem('AL-KO')
+							.swiper-slide
+								+allCategoriesItem('Denzel')
+							.swiper-slide
+								+allCategoriesItem('STIGA')
+							.swiper-slide
+								+allCategoriesItem('Daewoo Power Products')
+							.swiper-slide
+								+allCategoriesItem('Greenworks')
+							.swiper-slide
+								+allCategoriesItem('OMI Robotics')
+							.swiper-slide
+								+allCategoriesItem('Сибртех')
+							.swiper-slide
+								+allCategoriesItem('Hecht')
+							.swiper-slide
+								+allCategoriesItem('RYOBI')
+				+e.col-btn.col
+					+e.toggle.BUTTON(data-open="Все категории" data-close="Скрыть")  Все категории
+						//- +e.P.text Все категории
+	// end sAllCategories

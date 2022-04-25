@@ -52,7 +52,11 @@
 		margin-right: 2px;
 		font-size: rem(16);
 		fill: transparent;
-		stroke: #A8C828;
+		color: #A8C828;
+		stroke: currentColor;
+		&:first-of-type {
+			fill: currentColor;
+		}
 	}
 }
 

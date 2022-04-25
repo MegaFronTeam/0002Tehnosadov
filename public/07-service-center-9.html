@@ -1,0 +1,686 @@
+<!DOCTYPE html>
+<html lang="ru">
+	<head>
+		<meta charset="utf-8">
+		<title>Ремонт мотопомп</title>
+		<meta name="description" content="о чем страница">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width,initial-scale=1.0,  shrink-to-fit=no">
+		<link type="image/ico" href="img/favicon.ico" rel="shortcut icon"><meta name="format-detection" content="telephone=no"> 
+		<link href="libs/swiper/swiper.min.css" rel="stylesheet"/>
+		<link href="libs/@fancyapps/ui/fancybox.css" rel="stylesheet"/>
+		<link href="libs/ion-rangeslider/css/ion.rangeSlider.min.css" rel="stylesheet"/>
+		<link href="css/main.min.css?v=0.0.1" rel="stylesheet"/><link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap" rel="stylesheet">
+	</head>
+	<body>
+		<div class="main-wrapper">
+			<!-- start topLine-->
+			<div class="topLine section" id="topLine">
+				<div class="container">
+					<div class="row">
+						<div class="col-lg-auto">
+							<div class="topLine__logo"><a href="/"><img src="img/svg/logo.svg" alt=""/></a>
+							</div>
+						</div>
+						<div class="col search-col">
+							<form class="topLine__search">
+								<input type="text" name="Имя" placeholder="Что будем искать?"/>
+								<button>
+									<svg class="icon icon-search ">
+										<use xlink:href="img/svg/sprite.svg#search"></use>
+									</svg>
+								</button>
+							</form>
+						</div>
+						<div class="topLine-menu col-auto">
+							<div class="row">
+								<div class="col-auto d-lg-none">
+									<div class="toggle-menu-mobile toggle-menu-mobile--js d-lg-none"><span></span>
+									</div>
+								</div>
+								<div class="col-auto">
+									<button class="topLine__location">
+										<svg class="icon icon-geo ">
+											<use xlink:href="img/svg/sprite.svg#geo"></use>
+										</svg>
+										<div class="topLine__location-text">
+											<p><span>Москва</span>Выбрать другой город</p>
+										</div>
+									</button>
+								</div>
+								<div class="col-auto">
+									<div class="topLine__to-call"><a href="tel:+74951208090">
+											<svg class="icon icon-phone ">
+												<use xlink:href="img/svg/sprite.svg#phone"></use>
+											</svg>
+											<div class="topLine__to-call-text">
+												<p><span> +7 861 206 10 07</span> с 09:00 до 20:00</p>
+											</div></a>
+									</div>
+								</div>
+								<div class="col-auto topLine-menu__item"><a href="#"> 
+										<svg class="icon icon-login ">
+											<use xlink:href="img/svg/sprite.svg#login"></use>
+										</svg><span>Кабинет</span></a></div>
+								<div class="col-auto topLine-menu__item"><a href="#">
+										<svg class="icon icon-compare ">
+											<use xlink:href="img/svg/sprite.svg#compare"></use>
+										</svg><span>Сравнения</span>
+										<div class="counting">0</div></a></div>
+								<div class="col-auto topLine-menu__item"><a href="#">
+										<svg class="icon icon-bookmarks ">
+											<use xlink:href="img/svg/sprite.svg#bookmarks"></use>
+										</svg><span>Закладки</span>
+										<div class="counting">00</div></a></div>
+								<div class="col-auto topLine-menu__item"><a href="#"> 
+										<svg class="icon icon-cart ">
+											<use xlink:href="img/svg/sprite.svg#cart"></use>
+										</svg><span>Корзина</span>
+										<div class="counting">0</div></a></div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- end topLine-->
+			<!-- start top-nav-->
+			<div class="top-nav block-with-lazy">
+				<div class="container">
+					<div class="row">
+						<div class="top-nav__col-catalog col">
+							<button class="catalog-btn catalog-btn--js"><span></span>Каталог товаров</button>
+						</div>
+						<div class="col order-lg-0 order-last">
+							<div class="menu-mobile menu-mobile--js">
+								<div class="menu-mobile__inner">
+									<div class="toggle-menu-mobile toggle-menu-mobile--js d-lg-none"><span></span>
+									</div>
+									<ul class="menu" itemscope="itemscope" itemtype="http://schema.org/SiteNavigationElement">
+										<li class="menu-item menu-item--blue" itemprop="item"><a href="#" itemprop="url">Акции</a></li>
+										<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Оплата</a></li>
+										<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Доставка</a></li>
+										<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Контакты</a></li>
+										<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Сервисный центр</a></li>
+										<li class="menu-item menu-item--yellow" itemprop="item"><a href="#" itemprop="url">Рассрочка</a></li>
+									</ul>
+								</div>
+							</div>
+						</div>
+						<div class="col-auto d-lg-none">
+							<div class="toggle-menu-mobile toggle-menu-mobile--js d-lg-none"><span></span>
+							</div>
+						</div>
+					</div>
+					<!-- start sCatalogNav-->
+					<div class="sCatalogNav"> 
+						<ul class="main-categories">
+							<li><a href="#">Садовая техника</a>
+								<div class="submenu">
+									<a class="submenu__title" href="#">Садовая техника
+									</a>
+									<ul>
+										<li><a href="#">Триммеры</a></li>
+										<li><a href="#">Газонокосилки</a>
+											<ul>
+												<li> <a href="#">Роботы газонокосилки</a></li>
+												<li><a href="#">Механические газонокосилки</a></li>
+												<li><a href="#">Газонокосилки аккумуляторные</a></li>
+												<li><a href="#">Газонокосилки электрические</a></li>
+												<li><a href="#">Газонокосилки бензиновые</a></li>
+											</ul>
+										</li>
+										<li><a href="#">Сенокосилки</a></li>
+										<li><a href="#">Воздуходувки и садовые пылесосы</a></li>
+										<li><a href="#">Опрыскиватели</a></li>
+										<li><a href="#">Садовые ножницы и кусторезы</a></li>
+										<li><a href="#">Садовые измельчители травы и веток</a></li>
+										<li><a href="#">Мини-тракторы</a></li>
+										<li><a href="#">Культиваторы и Мотоблоки</a></li>
+										<li><a href="#">Вертикуттеры и аэраторы</a></li>
+										<li><a href="#">Мойки высокого давления</a></li>
+									</ul>
+								</div>
+							</li>
+							<li><a href="#">Водоснабжение и полив</a>
+								<div class="submenu">
+									<a class="submenu__title" href="#">Водоснабжение и полив
+									</a>
+									<ul>
+										<li><a href="#">Триммеры</a></li>
+										<li><a href="#">Газонокосилки</a>
+											<ul>
+												<li> <a href="#">Роботы газонокосилки</a></li>
+												<li><a href="#">Механические газонокосилки</a></li>
+												<li><a href="#">Газонокосилки аккумуляторные</a></li>
+												<li><a href="#">Газонокосилки электрические</a></li>
+												<li><a href="#">Газонокосилки бензиновые</a></li>
+											</ul>
+										</li>
+										<li><a href="#">Сенокосилки</a></li>
+										<li><a href="#">Воздуходувки и садовые пылесосы</a></li>
+										<li><a href="#">Опрыскиватели</a></li>
+										<li><a href="#">Садовые ножницы и кусторезы</a></li>
+										<li><a href="#">Садовые измельчители травы и веток</a></li>
+										<li><a href="#">Мини-тракторы</a></li>
+										<li><a href="#">Культиваторы и Мотоблоки</a></li>
+										<li><a href="#">Вертикуттеры и аэраторы</a></li>
+										<li><a href="#">Мойки высокого давления</a></li>
+									</ul>
+								</div>
+							</li>
+							<li><a href="#">Расходные материалы и аксессуары</a>
+								<div class="submenu">
+									<a class="submenu__title" href="#">Расходные материалы и аксессуары
+									</a>
+									<ul>
+										<li><a href="#">Триммеры</a></li>
+										<li><a href="#">Газонокосилки</a>
+											<ul>
+												<li> <a href="#">Роботы газонокосилки</a></li>
+												<li><a href="#">Механические газонокосилки</a></li>
+												<li><a href="#">Газонокосилки аккумуляторные</a></li>
+												<li><a href="#">Газонокосилки электрические</a></li>
+												<li><a href="#">Газонокосилки бензиновые</a></li>
+											</ul>
+										</li>
+										<li><a href="#">Сенокосилки</a></li>
+										<li><a href="#">Воздуходувки и садовые пылесосы</a></li>
+										<li><a href="#">Опрыскиватели</a></li>
+										<li><a href="#">Садовые ножницы и кусторезы</a></li>
+										<li><a href="#">Садовые измельчители травы и веток</a></li>
+										<li><a href="#">Мини-тракторы</a></li>
+										<li><a href="#">Культиваторы и Мотоблоки</a></li>
+										<li><a href="#">Вертикуттеры и аэраторы</a></li>
+										<li><a href="#">Мойки высокого давления</a></li>
+									</ul>
+								</div>
+							</li>
+							<li><a href="#">Силовое оборудование</a>
+								<div class="submenu">
+									<a class="submenu__title" href="#">Силовое оборудование
+									</a>
+									<ul>
+										<li><a href="#">Триммеры</a></li>
+										<li><a href="#">Газонокосилки</a>
+											<ul>
+												<li> <a href="#">Роботы газонокосилки</a></li>
+												<li><a href="#">Механические газонокосилки</a></li>
+												<li><a href="#">Газонокосилки аккумуляторные</a></li>
+												<li><a href="#">Газонокосилки электрические</a></li>
+												<li><a href="#">Газонокосилки бензиновые</a></li>
+											</ul>
+										</li>
+										<li><a href="#">Сенокосилки</a></li>
+										<li><a href="#">Воздуходувки и садовые пылесосы</a></li>
+										<li><a href="#">Опрыскиватели</a></li>
+										<li><a href="#">Садовые ножницы и кусторезы</a></li>
+										<li><a href="#">Садовые измельчители травы и веток</a></li>
+										<li><a href="#">Мини-тракторы</a></li>
+										<li><a href="#">Культиваторы и Мотоблоки</a></li>
+										<li><a href="#">Вертикуттеры и аэраторы</a></li>
+										<li><a href="#">Мойки высокого давления</a></li>
+									</ul>
+								</div>
+							</li>
+							<li><a href="#">Строительные инструменты</a>
+								<div class="submenu">
+									<a class="submenu__title" href="#">Строительные инструменты
+									</a>
+									<ul>
+										<li><a href="#">Триммеры</a></li>
+										<li><a href="#">Газонокосилки</a>
+											<ul>
+												<li> <a href="#">Роботы газонокосилки</a></li>
+												<li><a href="#">Механические газонокосилки</a></li>
+												<li><a href="#">Газонокосилки аккумуляторные</a></li>
+												<li><a href="#">Газонокосилки электрические</a></li>
+												<li><a href="#">Газонокосилки бензиновые</a></li>
+											</ul>
+										</li>
+										<li><a href="#">Сенокосилки</a></li>
+										<li><a href="#">Воздуходувки и садовые пылесосы</a></li>
+										<li><a href="#">Опрыскиватели</a></li>
+										<li><a href="#">Садовые ножницы и кусторезы</a></li>
+										<li><a href="#">Садовые измельчители травы и веток</a></li>
+										<li><a href="#">Мини-тракторы</a></li>
+										<li><a href="#">Культиваторы и Мотоблоки</a></li>
+										<li><a href="#">Вертикуттеры и аэраторы</a></li>
+										<li><a href="#">Мойки высокого давления</a></li>
+									</ul>
+								</div>
+							</li>
+							<li><a href="#">Снегоуборочная техника</a>
+								<div class="submenu">
+									<a class="submenu__title" href="#">Снегоуборочная техника
+									</a>
+									<ul>
+										<li><a href="#">Триммеры</a></li>
+										<li><a href="#">Газонокосилки</a>
+											<ul>
+												<li> <a href="#">Роботы газонокосилки</a></li>
+												<li><a href="#">Механические газонокосилки</a></li>
+												<li><a href="#">Газонокосилки аккумуляторные</a></li>
+												<li><a href="#">Газонокосилки электрические</a></li>
+												<li><a href="#">Газонокосилки бензиновые</a></li>
+											</ul>
+										</li>
+										<li><a href="#">Сенокосилки</a></li>
+										<li><a href="#">Воздуходувки и садовые пылесосы</a></li>
+										<li><a href="#">Опрыскиватели</a></li>
+										<li><a href="#">Садовые ножницы и кусторезы</a></li>
+										<li><a href="#">Садовые измельчители травы и веток</a></li>
+										<li><a href="#">Мини-тракторы</a></li>
+										<li><a href="#">Культиваторы и Мотоблоки</a></li>
+										<li><a href="#">Вертикуттеры и аэраторы</a></li>
+										<li><a href="#">Мойки высокого давления</a></li>
+									</ul>
+								</div>
+							</li>
+							<li><a href="#"> Обогрев и вентиляция</a>
+								<div class="submenu">
+									<a class="submenu__title" href="#"> Обогрев и вентиляция
+									</a>
+									<ul>
+										<li><a href="#">Триммеры</a></li>
+										<li><a href="#">Газонокосилки</a>
+											<ul>
+												<li> <a href="#">Роботы газонокосилки</a></li>
+												<li><a href="#">Механические газонокосилки</a></li>
+												<li><a href="#">Газонокосилки аккумуляторные</a></li>
+												<li><a href="#">Газонокосилки электрические</a></li>
+												<li><a href="#">Газонокосилки бензиновые</a></li>
+											</ul>
+										</li>
+										<li><a href="#">Сенокосилки</a></li>
+										<li><a href="#">Воздуходувки и садовые пылесосы</a></li>
+										<li><a href="#">Опрыскиватели</a></li>
+										<li><a href="#">Садовые ножницы и кусторезы</a></li>
+										<li><a href="#">Садовые измельчители травы и веток</a></li>
+										<li><a href="#">Мини-тракторы</a></li>
+										<li><a href="#">Культиваторы и Мотоблоки</a></li>
+										<li><a href="#">Вертикуттеры и аэраторы</a></li>
+										<li><a href="#">Мойки высокого давления</a></li>
+									</ul>
+								</div>
+							</li>
+							<li><a href="#">Продукция STIHL и Viking</a>
+								<div class="submenu">
+									<a class="submenu__title" href="#">Продукция STIHL и Viking
+									</a>
+									<ul>
+										<li><a href="#">Триммеры</a></li>
+										<li><a href="#">Газонокосилки</a>
+											<ul>
+												<li> <a href="#">Роботы газонокосилки</a></li>
+												<li><a href="#">Механические газонокосилки</a></li>
+												<li><a href="#">Газонокосилки аккумуляторные</a></li>
+												<li><a href="#">Газонокосилки электрические</a></li>
+												<li><a href="#">Газонокосилки бензиновые</a></li>
+											</ul>
+										</li>
+										<li><a href="#">Сенокосилки</a></li>
+										<li><a href="#">Воздуходувки и садовые пылесосы</a></li>
+										<li><a href="#">Опрыскиватели</a></li>
+										<li><a href="#">Садовые ножницы и кусторезы</a></li>
+										<li><a href="#">Садовые измельчители травы и веток</a></li>
+										<li><a href="#">Мини-тракторы</a></li>
+										<li><a href="#">Культиваторы и Мотоблоки</a></li>
+										<li><a href="#">Вертикуттеры и аэраторы</a></li>
+										<li><a href="#">Мойки высокого давления</a></li>
+									</ul>
+								</div>
+							</li>
+							<li><a href="#">Сварочное оборудование</a>
+								<div class="submenu">
+									<a class="submenu__title" href="#">Сварочное оборудование
+									</a>
+									<ul>
+										<li><a href="#">Триммеры</a></li>
+										<li><a href="#">Газонокосилки</a>
+											<ul>
+												<li> <a href="#">Роботы газонокосилки</a></li>
+												<li><a href="#">Механические газонокосилки</a></li>
+												<li><a href="#">Газонокосилки аккумуляторные</a></li>
+												<li><a href="#">Газонокосилки электрические</a></li>
+												<li><a href="#">Газонокосилки бензиновые</a></li>
+											</ul>
+										</li>
+										<li><a href="#">Сенокосилки</a></li>
+										<li><a href="#">Воздуходувки и садовые пылесосы</a></li>
+										<li><a href="#">Опрыскиватели</a></li>
+										<li><a href="#">Садовые ножницы и кусторезы</a></li>
+										<li><a href="#">Садовые измельчители травы и веток</a></li>
+										<li><a href="#">Мини-тракторы</a></li>
+										<li><a href="#">Культиваторы и Мотоблоки</a></li>
+										<li><a href="#">Вертикуттеры и аэраторы</a></li>
+										<li><a href="#">Мойки высокого давления</a></li>
+									</ul>
+								</div>
+							</li>
+							<li><a href="#">Садовый инвентарь и инструменты</a>
+								<div class="submenu">
+									<a class="submenu__title" href="#">Садовый инвентарь и инструменты
+									</a>
+									<ul>
+										<li><a href="#">Триммеры</a></li>
+										<li><a href="#">Газонокосилки</a>
+											<ul>
+												<li> <a href="#">Роботы газонокосилки</a></li>
+												<li><a href="#">Механические газонокосилки</a></li>
+												<li><a href="#">Газонокосилки аккумуляторные</a></li>
+												<li><a href="#">Газонокосилки электрические</a></li>
+												<li><a href="#">Газонокосилки бензиновые</a></li>
+											</ul>
+										</li>
+										<li><a href="#">Сенокосилки</a></li>
+										<li><a href="#">Воздуходувки и садовые пылесосы</a></li>
+										<li><a href="#">Опрыскиватели</a></li>
+										<li><a href="#">Садовые ножницы и кусторезы</a></li>
+										<li><a href="#">Садовые измельчители травы и веток</a></li>
+										<li><a href="#">Мини-тракторы</a></li>
+										<li><a href="#">Культиваторы и Мотоблоки</a></li>
+										<li><a href="#">Вертикуттеры и аэраторы</a></li>
+										<li><a href="#">Мойки высокого давления</a></li>
+									</ul>
+								</div>
+							</li>
+							<li><a href="#">Мототехника</a>
+								<div class="submenu">
+									<a class="submenu__title" href="#">Мототехника
+									</a>
+									<ul>
+										<li><a href="#">Триммеры</a></li>
+										<li><a href="#">Газонокосилки</a>
+											<ul>
+												<li> <a href="#">Роботы газонокосилки</a></li>
+												<li><a href="#">Механические газонокосилки</a></li>
+												<li><a href="#">Газонокосилки аккумуляторные</a></li>
+												<li><a href="#">Газонокосилки электрические</a></li>
+												<li><a href="#">Газонокосилки бензиновые</a></li>
+											</ul>
+										</li>
+										<li><a href="#">Сенокосилки</a></li>
+										<li><a href="#">Воздуходувки и садовые пылесосы</a></li>
+										<li><a href="#">Опрыскиватели</a></li>
+										<li><a href="#">Садовые ножницы и кусторезы</a></li>
+										<li><a href="#">Садовые измельчители травы и веток</a></li>
+										<li><a href="#">Мини-тракторы</a></li>
+										<li><a href="#">Культиваторы и Мотоблоки</a></li>
+										<li><a href="#">Вертикуттеры и аэраторы</a></li>
+										<li><a href="#">Мойки высокого давления</a></li>
+									</ul>
+								</div>
+							</li>
+						</ul>
+					</div>
+					<!-- end sCatalogNav-->
+				</div>
+			</div>
+			<!-- end top-nav-->
+			<div class="page-head">
+				<div class="container">
+					<nav aria-label="breadcrumb">
+						<ol class="breadcrumb" itemscope="itemscope" itemtype="http://schema.org/BreadcrumbList">
+							<li class="breadcrumb-item" itemprop="itemListElement" itemscope="itemscope" itemtype="http://schema.org/ListItem"><a href="/" itemprop="item"><span itemprop="name">Главная</span>
+									<meta itemprop="position" content="1"/></a></li>
+							<li class="breadcrumb-item" itemprop="itemListElement" itemscope="itemscope" itemtype="http://schema.org/ListItem"><a href="#" itemprop="item"><span itemprop="name">Сервисный центр</span>
+									<meta itemprop="position" content="2"/></a></li>
+							<li class="breadcrumb-item active" itemprop="itemListElement" itemscope="itemscope" itemtype="http://schema.org/ListItem"><a href="#" itemprop="item"><span itemprop="name">Ремонт мотопомп</span>
+									<meta itemprop="position" content="3"/></a></li>
+						</ol>
+					</nav>
+					<h1>Ремонт мотопомп</h1>
+				</div>
+			</div>
+			<div class="container page-container">
+				<div class="row">
+					<div class="col-xl-2 col-lg-3">
+						<div class="sidebar">
+							<div class="sidebar__mob-title">Содержание
+								<svg class="icon icon-chevron-down ">
+									<use xlink:href="img/svg/sprite.svg#chevron-down"></use>
+								</svg>
+							</div>
+							<ul>
+								<li><a href="#">Сервис</a>
+								</li>
+								<li><a href="#">Ремонт аэраторов, скарификаторов и вертикуттеров</a>
+								</li>
+								<li><a href="#">Ремонт бензопил</a>
+								</li>
+								<li><a href="#">Ремонт газонокосилок</a>
+								</li>
+								<li><a href="#">Ремонт генераторов и электростанций</a>
+								</li>
+								<li><a href="#">Ремонт измельчителей</a>
+								</li>
+								<li><a href="#">Ремонт кусторезов</a>
+								</li>
+								<li><a href="#">Ремонт минитракторов и райдеров</a>
+								</li>
+								<li><a class="active" href="#">Ремонт мотопомп</a>
+								</li>
+								<li><a href="#">Ремонт садовых опрыскивателей</a>
+								</li>
+								<li><a href="#">Ремонт садовых пылесосов и воздуходувок</a>
+								</li>
+								<li><a href="#">Ремонт снегоуборщиков</a>
+								</li>
+								<li><a href="#">Ремонт триммеров</a>
+								</li>
+							</ul>
+						</div>
+					</div>
+					<div class="col-xl-10 col-lg-9">
+						<div class="mainside">
+							<!-- start sService-->
+							<div class="sService" id="sService">
+								<p>Неработоспособность мотопомпы может быть вызвана различными факторами. Поэтому мы&nbsp;проводим полную диагностику всех узлов мотопомпы, составляем список предстоящих работ для устранения поломок, согласуем с&nbsp;заказчиком перечень работ, срок выполнения и&nbsp;стоимость. После проведения ремонта все демонтированные детали выдаются клиенту вместе с&nbsp;отремонтированной техникой.</p>
+								<p><strong>Ориентировочная стоимость основных работ</strong></p>
+								<table>
+									<tr>
+										<th>Виды работ</th>
+										<th>Стоимость, руб.</th>
+									</tr>
+									<tr>
+										<td>Замена всасывающего патрубка </td>
+										<td>800</td>
+									</tr>
+									<tr>
+										<td>Замена свечи</td>
+										<td>150</td>
+									</tr>
+									<tr>
+										<td>Замена уплотнительной прокладки</td>
+										<td>670</td>
+									</tr>
+									<tr>
+										<td>Чистка жиклера карбюратора</td>
+										<td>300</td>
+									</tr>
+									<tr>
+										<td>Чистка топливной системы</td>
+										<td>830</td>
+									</tr>
+									<tr>
+										<td>Замена крыльчатки</td>
+										<td>1100</td>
+									</tr>
+									<tr>
+										<td>Замена обратного клапана</td>
+										<td>300</td>
+									</tr>
+									<tr>
+										<td>Ремонт карбюратора (2 кат. сложности)</td>
+										<td>800</td>
+									</tr>
+									<tr>
+										<td>Замена стартера (4 кат. сложности)</td>
+										<td>700</td>
+									</tr>
+									<tr>
+										<td>Замена шатуна</td>
+										<td>750</td>
+									</tr>
+									<tr>
+										<td>Чистка мотопомпы</td>
+										<td>300</td>
+									</tr>
+									<tr>
+										<td>Замена воздушного фильтра</td>
+										<td>250</td>
+									</tr>
+									<tr>
+										<td>Замена топливного фильтра (1 кат. сложности)</td>
+										<td>200</td>
+									</tr>
+								</table>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<footer class="footer">
+				<div class="container">
+					<div class="footer__top row">
+						<div class="col-12 col-sm-6 col-lg-4 col-xl-3">
+							<div class="footer__title">Кабинет покупателя
+							</div>
+							<ul>
+								<li> <a href="#">Войти</a></li>
+								<li> <a href="#">Регистрация</a></li>
+								<li> <a href="#">Политика конфидециальности</a></li>
+							</ul>
+						</div>
+						<div class="col-3 d-none d-xl-block"></div>
+						<div class="col-12 col-sm-6 col-lg-4 col-xl-3">
+							<div class="footer__title">Информация для покупателя
+							</div>
+							<ul>
+								<li> <a href="#">Сервисный центр</a></li>
+								<li> <a href="#">Отзывы</a></li>
+								<li> <a href="#">Вопросы и ответы</a></li>
+							</ul>
+						</div>
+						<div class="footer__contacts col col-lg-4 col-xl-3">
+							<div class="footer__title">Контакты
+							</div>
+							<address> 
+								<p>г. Москва, Дмитровское шоссе 62с5 </p>
+								<p>Тел.: <a href="tel:+74954773236">+7 495 477 32 36</a></p>
+								<p>E-mail: <a href="mailto:dmitrovka@tehnosadov.ru">dmitrovka@tehnosadov.ru</a></p>
+								<p>ПН-ПТ: с&nbsp;09:00 до&nbsp;20:00</p>
+								<p>СБ-ВС: с&nbsp;10:00 до&nbsp;18:00</p>
+							</address>
+							<p>E-mail: <a href="mailto:info@tehnosadov.ru">info@tehnosadov.ru</a></p>
+						</div>
+					</div>
+					<div class="footer__bottom row">
+						<div class="col">
+							<div class="footer__title">Товары для дома и&nbsp;сада &laquo;Техносадов&raquo; <sup class="reg">&reg;</sup> 2018-2022
+							</div>
+							<p>Сайт носит информационный характер и&nbsp;не&nbsp;является публичной офертой, определяемой положениями ч.2&nbsp;ст.&nbsp;437&nbsp;ГК РФ. Внешний вид, цвет и&nbsp;характеристики товаров указаны ориентировочно, могут не&nbsp;совпадать с&nbsp;обновленными моделями&nbsp;&mdash; уточняйте информацию у&nbsp;менеджеров при заказе.</p>
+						</div>
+						<div class="col-12 col-lg-auto d-flex align-items-center justify-content-center">
+							<div class="soc">
+								<a class="soc__item" href="https://vk.com/tehnosadov" target="_blank">
+									<svg class="icon icon-vk ">
+										<use xlink:href="img/svg/sprite.svg#vk"></use>
+									</svg>
+								</a>
+								<a class="soc__item" href="https://youtube.com/channel/UC4Q_1trBaz7TReyeksjy7UA" target="_blank">
+									<svg class="icon icon-youtube ">
+										<use xlink:href="img/svg/sprite.svg#youtube"></use>
+									</svg>
+								</a>
+								<a class="soc__item" href="https://t.me/tehnosadov_bot" target="_blank">
+									<svg class="icon icon-telegram ">
+										<use xlink:href="img/svg/sprite.svg#telegram"></use>
+									</svg>
+								</a>
+								<a class="soc__item" href="https://api.whatsapp.com/message/BICUPZKPJ3TRH1" target="_blank">
+									<svg class="icon icon-whatsapp ">
+										<use xlink:href="img/svg/sprite.svg#whatsapp"></use>
+									</svg>
+								</a>
+								<a class="soc__item" href="https://ok.ru/group/60953239879731" target="_blank">
+									<svg class="icon icon-ok ">
+										<use xlink:href="img/svg/sprite.svg#ok"></use>
+									</svg>
+								</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</footer>
+		</div>
+		<!--  start modals-->
+		<div id="one-click-order" style="display: none">
+			<div class="modal-win">
+				<div class="form-wrap">
+					<form>
+						<div class="form-wrap__title form-data h3">Быстрый заказ
+						</div>
+						<div class="form-wrap__input-wrap form-group">
+							<label><span class="form-wrap__input-title">ФИО: </span><input class="form-wrap__input form-control" name="text" type="text" placeholder="" required="required"/>
+							</label>
+						</div>
+						<!-- +e.input-wrap-->
+						<div class="form-wrap__input-wrap form-group">
+							<label><span class="form-wrap__input-title">Телефон: </span><input class="form-wrap__input form-control" name="number" type="tel" placeholder="" step="any" required="required"/>
+							</label>
+						</div>
+						<!-- +e.input-wrap-->
+						<button class="form-wrap__btn btn-main" type="submit">Купить
+						</button>
+					</form>
+				</div>
+			</div>
+		</div>
+		<div id="added-to-cart" style="display: none">
+			<div class="modal-win">
+				<div class="modal-win__title form-data h3">Товар добавлен в корзину
+				</div>
+				<table class="modal-basket">
+					<tbody>
+						<tr class="modal-basket__item">
+							<td class="modal-basket__img-wrap"><img src="img/to-cart-1.jpg" alt="" loading="lazy"/>
+							</td>
+							<td class="modal-basket__name"><a href="#">Штыковая укороченная лопата FISKARS SolidTM 1026667</a>
+							</td>
+							<td class="modal-basket__number">1
+							</td>
+						</tr>
+						<tr class="modal-basket__item">
+							<td class="modal-basket__img-wrap"><img src="img/to-cart-2.jpg" alt="" loading="lazy"/>
+							</td>
+							<td class="modal-basket__name"><a href="#">Аккумуляторная газонокосилка PATRIOT РТ 330 Li</a>
+							</td>
+							<td class="modal-basket__number">35
+							</td>
+						</tr>
+					</tbody>
+				</table>
+				<div class="modal-basket__price">
+					<p>Общая стоимость</p>
+					<div class="modal-basket__total">13 140 руб.</div>
+				</div>
+				<div class="modal-basket__buttons">
+					<a class="modal-win__btn modal-win__btn--green" href="#">Продолжить покупки
+					</a>
+					<a class="modal-win__btn modal-win__btn--blue" href="#">Перейти в корзину
+					</a>
+				</div>
+			</div>
+		</div>
+		<!-- end modals-->
+		<script src="libs/jquery/jquery.min.js"></script>
+		<script src="libs/@fancyapps/ui/fancybox.umd.js"> </script>
+		<script src="libs/swiper/swiper-bundle.min.js"></script>
+		<script src="libs/hc-sticky/hc-sticky.js"></script>
+		<script src="libs/ion-rangeslider/js/ion.rangeSlider.min.js"> </script>
+		<script src="js/common.js?v=0.0.1"></script>
+	</body>
+</html>

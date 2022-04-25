@@ -269,12 +269,12 @@ const JSCCommon = {
 								$(this).toggleClass('active');
 							});
 						}
-						else {
-							$(this.parentElement).removeClass('active');
-							$(this.parentElement).find('.dd-content-js').slideUp(function () {
-								$(this).removeClass('active');
-							});
-						}
+						// else {
+						// 	$(this.parentElement).removeClass('active');
+						// 	$(this.parentElement).find('.dd-content-js').slideUp(function () {
+						// 		$(this).removeClass('active');
+						// 	});
+						// }
 					});
 
 				});
@@ -516,6 +516,10 @@ function eventHandler() {
 		}
 	});
 
+	$('.sidebar__mob-title').click(function(){
+		$(this).toggleClass('active');
+		$(this).next().slideToggle();
+	});
 	// var scrollSpy = new bootstrap.ScrollSpy(document.body, {
 	// 	target: '.sBlogNav'
 	// })
@@ -537,7 +541,13 @@ function eventHandler() {
 	for (const el of catLinks) {
 		let slider = el.querySelector('.sliderCategotiesLinks--js');
 
-		const sliderCategotiesLinks = new Swiper(slider, { slidesPerView: 'auto' });
+		const sliderCategotiesLinks = new Swiper(slider, 
+			{ 
+				slidesPerView: 'auto', 
+				autoplay: {
+					delay: 5000,
+				}, 
+			});
 
 		el.addEventListener("click", function (event) {
 			let target = event.target.closest(".sAllCategories__toggle");
@@ -647,30 +657,30 @@ function eventHandler() {
 		}
 	});
 	const sProductDescswiper = new Swiper('.sProductDesc__slider--js', {
-		slidesPerView: 1,
+		slidesPerView: 'auto',
+		// slidesPerView: 1,
 		spaceBetween: 10,
-		breakpoints: {
-			640: {
-				slidesPerView: 2,
-			},
-			768: {
-				slidesPerView: 3,
-			},
-			992: {
-				slidesPerView: 4,
-			},
-			1200: {
-				slidesPerView: 5,
-			},
-			1600: {
-				slidesPerView: 6,
-			},
-		},
+		observer: true,
+		// breakpoints: {
+		// 	// 640: {
+		// 	// 	slidesPerView: 2,
+		// 	// },
+		// 	// 768: {
+		// 	// 	slidesPerView: 3,
+		// 	// },
+		// 	992: {
+		// 		slidesPerView: 4,
+		// 	},
+		// 	1200: {
+		// 	slidesPerView: 'auto',
+		// 		},
+		// },
 	});
 
 	const sProductDescSwiper2 = new Swiper('.sProductDesc__slider--js2', {
 		slidesPerView: 'auto',
 		spaceBetween: 10,
+		observer: true,
 	});
 
 	var sProductItemSwiper = new Swiper(".sProductItem__slider-thumbs--js", {

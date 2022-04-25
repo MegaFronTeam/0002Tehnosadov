@@ -490,6 +490,9 @@ iframe {
 	padding: rem(14);
 	height: 100%;
 	background-color: #ffffff;
+	@include media-breakpoint-down(lg){
+		// margin-bottom: rem(28);
+	}
 }
 .ymaps-2-1-79-gototech {
 	display: none !important;
@@ -545,7 +548,9 @@ iframe {
 .swiper-scrollbar {
 	height: 10px;
 	position: relative;
+	border-radius: 1.25rem;
 	width: 100%;
+	background: #dddddd;
 }
 .swiper-scrollbar .swiper-scrollbar-drag {
 	background: #009fe4;

@@ -42,6 +42,8 @@ mixin page-head(title, ...items)
 
 mixin sidebar(active,...items)
 	+b.sidebar
+		+e.mob-title Содержание
+			+icon(`chevron-down`)
 		ul
 			each item,id in items
 				li
