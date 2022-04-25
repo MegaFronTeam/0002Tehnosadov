@@ -1,6 +1,4 @@
- 
-	  
-.soc{
+.soc {
 	@include roww(40px, m);
 	display: flex;
 	&__item {
@@ -53,8 +51,8 @@
 		color: inherit;
 		width: rem(40);
 		height: rem(40);
-    max-width: 40px;
-    border: 1px solid #ddd;
+		max-width: 40px;
+		border: 1px solid #ddd;
 		position: relative;
 		background: none !important;
 		// border: none !important;
@@ -118,9 +116,37 @@
 	// padding: rem(14);
 	height: 100%;
 	background-color: #ffffff;
+	&__mob-title {
+		@include media-breakpoint-up(lg) {
+			display: none;
+		}
+		padding: rem(14);
+		padding-right: rem(28);
+		cursor: pointer;
+		position: relative;
+		.icon {
+			font-size: 8px;
+			position: absolute;
+			right: rem(12);
+			top: 50%;
+			transform: translateY(-50%);
+			transition-duration: 0.4s;
+			color: transparent;
+			stroke: $body-color;
+		}
+		&.active {
+			.icon {
+				transform: translateY(-50%) scaleY(-1);
+			}
+		}
+	}
 	ul {
 		margin-bottom: 0;
 		list-style-type: none;
+		@include media-breakpoint-up(lg){
+			display: block !important;
+		}
+		display: none;
 	}
 	li {
 		// margin-bottom: 16px;
@@ -133,7 +159,7 @@
 		padding: rem(14);
 		padding-top: rem(10);
 		padding-bottom: rem(10);
-		&.active{
+		&.active {
 			background-color: #dddddd;
 			color: $body-color;
 			pointer-events: none;

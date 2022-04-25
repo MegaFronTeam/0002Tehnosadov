@@ -515,6 +515,10 @@ function eventHandler() {
 		}
 	});
 
+	$('.sidebar__mob-title').click(function(){
+		$(this).toggleClass('active');
+		$(this).next().slideToggle();
+	});
 	// var scrollSpy = new bootstrap.ScrollSpy(document.body, {
 	// 	target: '.sBlogNav'
 	// })
