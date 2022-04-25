@@ -1,11 +1,11 @@
 {
 	"nav":[
-		{ "name":"Акции", "url":"#"},
+		{ "name":"Акции", "url":"#", "class": "menu-item--blue"},
 		{	"name":"Оплата", "url":"#"},
 		{"name":"Доставка", "url":"#"},
 		{"name":"Контакты", "url":"#"} ,
 		{"name":"Сервисный центр", "url":"#"} ,
-		{"name":"Рассрочка", "url":"#"}
+		{"name":"Рассрочка", "url":"#", "class": "menu-item--yellow"}
 	],
 	"social":[
 		"vk","youtube","telegram","whatsapp", "ok"

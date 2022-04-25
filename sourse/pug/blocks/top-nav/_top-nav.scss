@@ -3,16 +3,23 @@
 	// 
 	background-color: $body-color;
 	color: $white;
+	z-index: 301;
+	.container{
+		position: relative;
+	}
 
 	.menu-item {
 		font-weight: 700;
 		
 	}
 
-	&__catalog {
-		display: flex;
-		align-items: center;
+	&__col-catalog {
+		// display: flex;
+		// align-items: center;
 		max-width:rem(312);
+		@include media-breakpoint-down(xl) {
+			max-width:rem(200);
+		}
 	}
 	
 	@include media-breakpoint-up(xl) {

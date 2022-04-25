@@ -3,38 +3,46 @@ mixin topLine()
 	+b.topLine.section#topLine&attributes(attributes)
 		.container
 			.row
-				.col-auto
+				.col-md-auto
 					+e.logo
 						a(href="/")
 							img(src="img/svg/logo.svg", alt="")
-				.col
+				.col.search-col
 					+e.search.FORM
 						input(type="text" name="Имя" placeholder="Что будем искать?")
 						button
 							+icon('search')
-				.col-auto
-					+e.BUTTON.location
-						+icon('geo')
-						.topLine__location-text
-							p <span>Москва</span>Выбрать другой город							
-				.col-auto
-					+e.to-call
-						+icon('phone')
-						.topLine__to-call-text
-							p <span> +7 861 206 10 07</span> с 09:00 до 20:00							
-						a(href='tel:+74951208090').stretched-link
-				+b.topLine-menu.col-auto
-					ul
-						li
-							+icon('login')
-							a(href="#").stretched-link Кабинет
-						li.counting
-							+icon('compare')
-							a(href="#").stretched-link Сравнения
-						li.counting
-							+icon('bookmarks')
-							a(href="#").stretched-link Закладки
-						li.counting
-							+icon('cart')
-							a(href="#").stretched-link Корзина
+				.topLine-menu.col-auto
+					.row
+						.col-auto.d-lg-none
+						.col-auto
+							+e.BUTTON.location
+								+icon('geo')
+								.topLine__location-text
+									p <span>Москва</span>Выбрать другой город							
+						.col-auto
+							+e.to-call
+								a(href='tel:+74951208090')
+									+icon('phone')
+									.topLine__to-call-text
+										p <span> +7 861 206 10 07</span> с 09:00 до 20:00							
+						.col-auto.topLine-menu__item
+							a(href="#") 
+								+icon('login')
+								span Кабинет
+						.col-auto.topLine-menu__item
+							a(href="#")
+								+icon('compare')
+								span Сравнения
+								.counting 0
+						.col-auto.topLine-menu__item
+							a(href="#")
+								+icon('bookmarks')
+								span Закладки
+								.counting 00
+						.col-auto.topLine-menu__item
+							a(href="#") 
+								+icon('cart')
+								span Корзина
+								.counting 0
 	// end topLine

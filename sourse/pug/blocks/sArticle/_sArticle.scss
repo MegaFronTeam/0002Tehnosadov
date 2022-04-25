@@ -6,6 +6,9 @@
 	padding: 1rem;
 	background: #fff;
 	border: 1px solid #ddd;
+	@include media-breakpoint-down(lg) {
+		margin-top: rem(10);
+	}
 	h2 {
 		position: relative;
 		padding-left: rem(40);

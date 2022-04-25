@@ -20,11 +20,11 @@
 			<div class="topLine section" id="topLine">
 				<div class="container">
 					<div class="row">
-						<div class="col-auto">
+						<div class="col-md-auto">
 							<div class="topLine__logo"><a href="/"><img src="img/svg/logo.svg" alt=""/></a>
 							</div>
 						</div>
-						<div class="col">
+						<div class="col search-col">
 							<form class="topLine__search">
 								<input type="text" name="Имя" placeholder="Что будем искать?"/>
 								<button>
@@ -34,49 +34,49 @@
 								</button>
 							</form>
 						</div>
-						<div class="col-auto">
-							<button class="topLine__location">
-								<svg class="icon icon-geo ">
-									<use xlink:href="img/svg/sprite.svg#geo"></use>
-								</svg>
-								<div class="topLine__location-text">
-									<p><span>Москва</span>Выбрать другой город							</p>
-								</div>
-							</button>
-						</div>
-						<div class="col-auto">
-							<div class="topLine__to-call">
-								<svg class="icon icon-phone ">
-									<use xlink:href="img/svg/sprite.svg#phone"></use>
-								</svg>
-								<div class="topLine__to-call-text">
-									<p><span> +7 861 206 10 07</span> с 09:00 до 20:00							</p>
-								</div><a class="stretched-link" href="tel:+74951208090"></a>
-							</div>
-						</div>
 						<div class="topLine-menu col-auto">
-							<ul>
-								<li>
-									<svg class="icon icon-login ">
-										<use xlink:href="img/svg/sprite.svg#login"></use>
-									</svg><a class="stretched-link" href="#">Кабинет</a>
-								</li>
-								<li class="counting">
-									<svg class="icon icon-compare ">
-										<use xlink:href="img/svg/sprite.svg#compare"></use>
-									</svg><a class="stretched-link" href="#">Сравнения</a>
-								</li>
-								<li class="counting">
-									<svg class="icon icon-bookmarks ">
-										<use xlink:href="img/svg/sprite.svg#bookmarks"></use>
-									</svg><a class="stretched-link" href="#">Закладки</a>
-								</li>
-								<li class="counting">
-									<svg class="icon icon-cart ">
-										<use xlink:href="img/svg/sprite.svg#cart"></use>
-									</svg><a class="stretched-link" href="#">Корзина</a>
-								</li>
-							</ul>
+							<div class="row">
+								<div class="col-auto d-lg-none"></div>
+								<div class="col-auto">
+									<button class="topLine__location">
+										<svg class="icon icon-geo ">
+											<use xlink:href="img/svg/sprite.svg#geo"></use>
+										</svg>
+										<div class="topLine__location-text">
+											<p><span>Москва</span>Выбрать другой город							</p>
+										</div>
+									</button>
+								</div>
+								<div class="col-auto">
+									<div class="topLine__to-call"><a href="tel:+74951208090">
+											<svg class="icon icon-phone ">
+												<use xlink:href="img/svg/sprite.svg#phone"></use>
+											</svg>
+											<div class="topLine__to-call-text">
+												<p><span> +7 861 206 10 07</span> с 09:00 до 20:00							</p>
+											</div></a>
+									</div>
+								</div>
+								<div class="col-auto topLine-menu__item"><a href="#"> 
+										<svg class="icon icon-login ">
+											<use xlink:href="img/svg/sprite.svg#login"></use>
+										</svg><span>Кабинет</span></a></div>
+								<div class="col-auto topLine-menu__item"><a href="#">
+										<svg class="icon icon-compare ">
+											<use xlink:href="img/svg/sprite.svg#compare"></use>
+										</svg><span>Сравнения</span>
+										<div class="counting">0</div></a></div>
+								<div class="col-auto topLine-menu__item"><a href="#">
+										<svg class="icon icon-bookmarks ">
+											<use xlink:href="img/svg/sprite.svg#bookmarks"></use>
+										</svg><span>Закладки</span>
+										<div class="counting">00</div></a></div>
+								<div class="col-auto topLine-menu__item"><a href="#"> 
+										<svg class="icon icon-cart ">
+											<use xlink:href="img/svg/sprite.svg#cart"></use>
+										</svg><span>Корзина</span>
+										<div class="counting">0</div></a></div>
+							</div>
 						</div>
 					</div>
 				</div>
@@ -86,7 +86,7 @@
 			<div class="top-nav block-with-lazy">
 				<div class="container">
 					<div class="row">
-						<div class="top-nav__catalog col">
+						<div class="top-nav__col-catalog col">
 							<button class="catalog-btn catalog-btn--js"><span></span>Каталог товаров</button>
 						</div>
 						<div class="col order-lg-0 order-last">
@@ -95,12 +95,12 @@
 									<div class="toggle-menu-mobile toggle-menu-mobile--js d-lg-none"><span></span>
 									</div>
 									<ul class="menu" itemscope="itemscope" itemtype="http://schema.org/SiteNavigationElement">
-										<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Акции</a></li>
+										<li class="menu-item menu-item--blue" itemprop="item"><a href="#" itemprop="url">Акции</a></li>
 										<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Оплата</a></li>
 										<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Доставка</a></li>
 										<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Контакты</a></li>
 										<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Сервисный центр</a></li>
-										<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Рассрочка</a></li>
+										<li class="menu-item menu-item--yellow" itemprop="item"><a href="#" itemprop="url">Рассрочка</a></li>
 									</ul>
 								</div>
 							</div>
@@ -110,6 +110,309 @@
 							</div>
 						</div>
 					</div>
+					<!-- start sCatalogNav-->
+					<div class="sCatalogNav"> 
+						<ul class="main-categories">
+							<li><a href="#">Садовая техника</a>
+								<div class="submenu">
+									<a class="submenu__title" href="#">Садовая техника
+									</a>
+									<ul>
+										<li><a href="#">Триммеры</a></li>
+										<li><a href="#">Газонокосилки</a>
+											<ul>
+												<li> <a href="#">Роботы газонокосилки</a></li>
+												<li><a href="#">Механические газонокосилки</a></li>
+												<li><a href="#">Газонокосилки аккумуляторные</a></li>
+												<li><a href="#">Газонокосилки электрические</a></li>
+												<li><a href="#">Газонокосилки бензиновые</a></li>
+											</ul>
+										</li>
+										<li><a href="#">Сенокосилки</a></li>
+										<li><a href="#">Воздуходувки и садовые пылесосы</a></li>
+										<li><a href="#">Опрыскиватели</a></li>
+										<li><a href="#">Садовые ножницы и кусторезы</a></li>
+										<li><a href="#">Садовые измельчители травы и веток</a></li>
+										<li><a href="#">Мини-тракторы</a></li>
+										<li><a href="#">Культиваторы и Мотоблоки</a></li>
+										<li><a href="#">Вертикуттеры и аэраторы</a></li>
+										<li><a href="#">Мойки высокого давления</a></li>
+									</ul>
+								</div>
+							</li>
+							<li><a href="#">Водоснабжение и полив</a>
+								<div class="submenu">
+									<a class="submenu__title" href="#">Водоснабжение и полив
+									</a>
+									<ul>
+										<li><a href="#">Триммеры</a></li>
+										<li><a href="#">Газонокосилки</a>
+											<ul>
+												<li> <a href="#">Роботы газонокосилки</a></li>
+												<li><a href="#">Механические газонокосилки</a></li>
+												<li><a href="#">Газонокосилки аккумуляторные</a></li>
+												<li><a href="#">Газонокосилки электрические</a></li>
+												<li><a href="#">Газонокосилки бензиновые</a></li>
+											</ul>
+										</li>
+										<li><a href="#">Сенокосилки</a></li>
+										<li><a href="#">Воздуходувки и садовые пылесосы</a></li>
+										<li><a href="#">Опрыскиватели</a></li>
+										<li><a href="#">Садовые ножницы и кусторезы</a></li>
+										<li><a href="#">Садовые измельчители травы и веток</a></li>
+										<li><a href="#">Мини-тракторы</a></li>
+										<li><a href="#">Культиваторы и Мотоблоки</a></li>
+										<li><a href="#">Вертикуттеры и аэраторы</a></li>
+										<li><a href="#">Мойки высокого давления</a></li>
+									</ul>
+								</div>
+							</li>
+							<li><a href="#">Расходные материалы и аксессуары</a>
+								<div class="submenu">
+									<a class="submenu__title" href="#">Расходные материалы и аксессуары
+									</a>
+									<ul>
+										<li><a href="#">Триммеры</a></li>
+										<li><a href="#">Газонокосилки</a>
+											<ul>
+												<li> <a href="#">Роботы газонокосилки</a></li>
+												<li><a href="#">Механические газонокосилки</a></li>
+												<li><a href="#">Газонокосилки аккумуляторные</a></li>
+												<li><a href="#">Газонокосилки электрические</a></li>
+												<li><a href="#">Газонокосилки бензиновые</a></li>
+											</ul>
+										</li>
+										<li><a href="#">Сенокосилки</a></li>
+										<li><a href="#">Воздуходувки и садовые пылесосы</a></li>
+										<li><a href="#">Опрыскиватели</a></li>
+										<li><a href="#">Садовые ножницы и кусторезы</a></li>
+										<li><a href="#">Садовые измельчители травы и веток</a></li>
+										<li><a href="#">Мини-тракторы</a></li>
+										<li><a href="#">Культиваторы и Мотоблоки</a></li>
+										<li><a href="#">Вертикуттеры и аэраторы</a></li>
+										<li><a href="#">Мойки высокого давления</a></li>
+									</ul>
+								</div>
+							</li>
+							<li><a href="#">Силовое оборудование</a>
+								<div class="submenu">
+									<a class="submenu__title" href="#">Силовое оборудование
+									</a>
+									<ul>
+										<li><a href="#">Триммеры</a></li>
+										<li><a href="#">Газонокосилки</a>
+											<ul>
+												<li> <a href="#">Роботы газонокосилки</a></li>
+												<li><a href="#">Механические газонокосилки</a></li>
+												<li><a href="#">Газонокосилки аккумуляторные</a></li>
+												<li><a href="#">Газонокосилки электрические</a></li>
+												<li><a href="#">Газонокосилки бензиновые</a></li>
+											</ul>
+										</li>
+										<li><a href="#">Сенокосилки</a></li>
+										<li><a href="#">Воздуходувки и садовые пылесосы</a></li>
+										<li><a href="#">Опрыскиватели</a></li>
+										<li><a href="#">Садовые ножницы и кусторезы</a></li>
+										<li><a href="#">Садовые измельчители травы и веток</a></li>
+										<li><a href="#">Мини-тракторы</a></li>
+										<li><a href="#">Культиваторы и Мотоблоки</a></li>
+										<li><a href="#">Вертикуттеры и аэраторы</a></li>
+										<li><a href="#">Мойки высокого давления</a></li>
+									</ul>
+								</div>
+							</li>
+							<li><a href="#">Строительные инструменты</a>
+								<div class="submenu">
+									<a class="submenu__title" href="#">Строительные инструменты
+									</a>
+									<ul>
+										<li><a href="#">Триммеры</a></li>
+										<li><a href="#">Газонокосилки</a>
+											<ul>
+												<li> <a href="#">Роботы газонокосилки</a></li>
+												<li><a href="#">Механические газонокосилки</a></li>
+												<li><a href="#">Газонокосилки аккумуляторные</a></li>
+												<li><a href="#">Газонокосилки электрические</a></li>
+												<li><a href="#">Газонокосилки бензиновые</a></li>
+											</ul>
+										</li>
+										<li><a href="#">Сенокосилки</a></li>
+										<li><a href="#">Воздуходувки и садовые пылесосы</a></li>
+										<li><a href="#">Опрыскиватели</a></li>
+										<li><a href="#">Садовые ножницы и кусторезы</a></li>
+										<li><a href="#">Садовые измельчители травы и веток</a></li>
+										<li><a href="#">Мини-тракторы</a></li>
+										<li><a href="#">Культиваторы и Мотоблоки</a></li>
+										<li><a href="#">Вертикуттеры и аэраторы</a></li>
+										<li><a href="#">Мойки высокого давления</a></li>
+									</ul>
+								</div>
+							</li>
+							<li><a href="#">Снегоуборочная техника</a>
+								<div class="submenu">
+									<a class="submenu__title" href="#">Снегоуборочная техника
+									</a>
+									<ul>
+										<li><a href="#">Триммеры</a></li>
+										<li><a href="#">Газонокосилки</a>
+											<ul>
+												<li> <a href="#">Роботы газонокосилки</a></li>
+												<li><a href="#">Механические газонокосилки</a></li>
+												<li><a href="#">Газонокосилки аккумуляторные</a></li>
+												<li><a href="#">Газонокосилки электрические</a></li>
+												<li><a href="#">Газонокосилки бензиновые</a></li>
+											</ul>
+										</li>
+										<li><a href="#">Сенокосилки</a></li>
+										<li><a href="#">Воздуходувки и садовые пылесосы</a></li>
+										<li><a href="#">Опрыскиватели</a></li>
+										<li><a href="#">Садовые ножницы и кусторезы</a></li>
+										<li><a href="#">Садовые измельчители травы и веток</a></li>
+										<li><a href="#">Мини-тракторы</a></li>
+										<li><a href="#">Культиваторы и Мотоблоки</a></li>
+										<li><a href="#">Вертикуттеры и аэраторы</a></li>
+										<li><a href="#">Мойки высокого давления</a></li>
+									</ul>
+								</div>
+							</li>
+							<li><a href="#"> Обогрев и вентиляция</a>
+								<div class="submenu">
+									<a class="submenu__title" href="#"> Обогрев и вентиляция
+									</a>
+									<ul>
+										<li><a href="#">Триммеры</a></li>
+										<li><a href="#">Газонокосилки</a>
+											<ul>
+												<li> <a href="#">Роботы газонокосилки</a></li>
+												<li><a href="#">Механические газонокосилки</a></li>
+												<li><a href="#">Газонокосилки аккумуляторные</a></li>
+												<li><a href="#">Газонокосилки электрические</a></li>
+												<li><a href="#">Газонокосилки бензиновые</a></li>
+											</ul>
+										</li>
+										<li><a href="#">Сенокосилки</a></li>
+										<li><a href="#">Воздуходувки и садовые пылесосы</a></li>
+										<li><a href="#">Опрыскиватели</a></li>
+										<li><a href="#">Садовые ножницы и кусторезы</a></li>
+										<li><a href="#">Садовые измельчители травы и веток</a></li>
+										<li><a href="#">Мини-тракторы</a></li>
+										<li><a href="#">Культиваторы и Мотоблоки</a></li>
+										<li><a href="#">Вертикуттеры и аэраторы</a></li>
+										<li><a href="#">Мойки высокого давления</a></li>
+									</ul>
+								</div>
+							</li>
+							<li><a href="#">Продукция STIHL и Viking</a>
+								<div class="submenu">
+									<a class="submenu__title" href="#">Продукция STIHL и Viking
+									</a>
+									<ul>
+										<li><a href="#">Триммеры</a></li>
+										<li><a href="#">Газонокосилки</a>
+											<ul>
+												<li> <a href="#">Роботы газонокосилки</a></li>
+												<li><a href="#">Механические газонокосилки</a></li>
+												<li><a href="#">Газонокосилки аккумуляторные</a></li>
+												<li><a href="#">Газонокосилки электрические</a></li>
+												<li><a href="#">Газонокосилки бензиновые</a></li>
+											</ul>
+										</li>
+										<li><a href="#">Сенокосилки</a></li>
+										<li><a href="#">Воздуходувки и садовые пылесосы</a></li>
+										<li><a href="#">Опрыскиватели</a></li>
+										<li><a href="#">Садовые ножницы и кусторезы</a></li>
+										<li><a href="#">Садовые измельчители травы и веток</a></li>
+										<li><a href="#">Мини-тракторы</a></li>
+										<li><a href="#">Культиваторы и Мотоблоки</a></li>
+										<li><a href="#">Вертикуттеры и аэраторы</a></li>
+										<li><a href="#">Мойки высокого давления</a></li>
+									</ul>
+								</div>
+							</li>
+							<li><a href="#">Сварочное оборудование</a>
+								<div class="submenu">
+									<a class="submenu__title" href="#">Сварочное оборудование
+									</a>
+									<ul>
+										<li><a href="#">Триммеры</a></li>
+										<li><a href="#">Газонокосилки</a>
+											<ul>
+												<li> <a href="#">Роботы газонокосилки</a></li>
+												<li><a href="#">Механические газонокосилки</a></li>
+												<li><a href="#">Газонокосилки аккумуляторные</a></li>
+												<li><a href="#">Газонокосилки электрические</a></li>
+												<li><a href="#">Газонокосилки бензиновые</a></li>
+											</ul>
+										</li>
+										<li><a href="#">Сенокосилки</a></li>
+										<li><a href="#">Воздуходувки и садовые пылесосы</a></li>
+										<li><a href="#">Опрыскиватели</a></li>
+										<li><a href="#">Садовые ножницы и кусторезы</a></li>
+										<li><a href="#">Садовые измельчители травы и веток</a></li>
+										<li><a href="#">Мини-тракторы</a></li>
+										<li><a href="#">Культиваторы и Мотоблоки</a></li>
+										<li><a href="#">Вертикуттеры и аэраторы</a></li>
+										<li><a href="#">Мойки высокого давления</a></li>
+									</ul>
+								</div>
+							</li>
+							<li><a href="#">Садовый инвентарь и инструменты</a>
+								<div class="submenu">
+									<a class="submenu__title" href="#">Садовый инвентарь и инструменты
+									</a>
+									<ul>
+										<li><a href="#">Триммеры</a></li>
+										<li><a href="#">Газонокосилки</a>
+											<ul>
+												<li> <a href="#">Роботы газонокосилки</a></li>
+												<li><a href="#">Механические газонокосилки</a></li>
+												<li><a href="#">Газонокосилки аккумуляторные</a></li>
+												<li><a href="#">Газонокосилки электрические</a></li>
+												<li><a href="#">Газонокосилки бензиновые</a></li>
+											</ul>
+										</li>
+										<li><a href="#">Сенокосилки</a></li>
+										<li><a href="#">Воздуходувки и садовые пылесосы</a></li>
+										<li><a href="#">Опрыскиватели</a></li>
+										<li><a href="#">Садовые ножницы и кусторезы</a></li>
+										<li><a href="#">Садовые измельчители травы и веток</a></li>
+										<li><a href="#">Мини-тракторы</a></li>
+										<li><a href="#">Культиваторы и Мотоблоки</a></li>
+										<li><a href="#">Вертикуттеры и аэраторы</a></li>
+										<li><a href="#">Мойки высокого давления</a></li>
+									</ul>
+								</div>
+							</li>
+							<li><a href="#">Мототехника</a>
+								<div class="submenu">
+									<a class="submenu__title" href="#">Мототехника
+									</a>
+									<ul>
+										<li><a href="#">Триммеры</a></li>
+										<li><a href="#">Газонокосилки</a>
+											<ul>
+												<li> <a href="#">Роботы газонокосилки</a></li>
+												<li><a href="#">Механические газонокосилки</a></li>
+												<li><a href="#">Газонокосилки аккумуляторные</a></li>
+												<li><a href="#">Газонокосилки электрические</a></li>
+												<li><a href="#">Газонокосилки бензиновые</a></li>
+											</ul>
+										</li>
+										<li><a href="#">Сенокосилки</a></li>
+										<li><a href="#">Воздуходувки и садовые пылесосы</a></li>
+										<li><a href="#">Опрыскиватели</a></li>
+										<li><a href="#">Садовые ножницы и кусторезы</a></li>
+										<li><a href="#">Садовые измельчители травы и веток</a></li>
+										<li><a href="#">Мини-тракторы</a></li>
+										<li><a href="#">Культиваторы и Мотоблоки</a></li>
+										<li><a href="#">Вертикуттеры и аэраторы</a></li>
+										<li><a href="#">Мойки высокого давления</a></li>
+									</ul>
+								</div>
+							</li>
+						</ul>
+					</div>
+					<!-- end sCatalogNav-->
 				</div>
 			</div>
 			<!-- end top-nav-->
@@ -117,67 +420,6 @@
 			<header class="header" id="header">
 			</header>
 			<!-- end header-->
-			<!-- start sCatalogNav-->
-			<section class="sCatalogNav section" id="sCatalogNav">
-				<div class="sCatalogNav__container container">
-					<div class="sCatalogNav__wrap">
-						<ul class="main-categories">
-							<li><a href="#" data-path="garden">Садовая техника</a></li>
-							<li><a href="#" data-path="watering">Водоснабжение и полив</a></li>
-							<li><a href="#">Расходные материалы и аксессуары</a></li>
-							<li><a href="#">Силовое оборудование</a></li>
-							<li><a href="#">Строительные инструменты</a></li>
-							<li><a href="#">Снегоуборочная техника</a></li>
-							<li><a href="#">Обогрев и вентиляция</a></li>
-							<li><a href="#">Продукция STIHL и Viking</a></li>
-							<li><a href="#">Сварочное оборудование</a></li>
-							<li><a href="#">Садовый инвентарь и инструменты</a></li>
-							<li><a href="#">Мототехника</a></li>
-						</ul>
-						<div class="submenu" data-target="garden">
-							<a class="submenu__title" href="#">Садовая техника
-							</a>
-							<ul>
-								<li><a href="#">Триммеры</a></li>
-								<li><a href="#">Газонокосилки</a>
-									<ul>
-										<li> <a href="#">Роботы газонокосилки</a></li>
-										<li><a href="#">Механические газонокосилки</a></li>
-										<li><a href="#">Газонокосилки аккумуляторные</a></li>
-										<li><a href="#">Газонокосилки электрические</a></li>
-										<li><a href="#">Газонокосилки бензиновые</a></li>
-									</ul>
-								</li>
-								<li><a href="#">Сенокосилки</a></li>
-								<li><a href="#">Воздуходувки и садовые пылесосы</a></li>
-								<li><a href="#">Опрыскиватели</a></li>
-								<li><a href="#">Садовые ножницы и кусторезы</a></li>
-								<li><a href="#">Садовые измельчители травы и веток</a></li>
-								<li><a href="#">Мини-тракторы</a></li>
-								<li><a href="#">Культиваторы и Мотоблоки</a></li>
-								<li><a href="#">Вертикуттеры и аэраторы</a></li>
-								<li><a href="#">Мойки высокого давления</a></li>
-							</ul>
-						</div>
-						<div class="submenu invisible" data-target="watering">
-							<a class="submenu__title" href="#">Водоснабжение и полив
-							</a>
-							<ul>
-								<li><a href="#">Мотопомпы</a></li>
-								<li><a href="#">Насосы и станции водоснабжения</a></li>
-								<li><a href="#">Дождеватели и распылители</a></li>
-								<li><a href="#">Полив и комплектующие</a></li>
-								<li><a href="#">Принадлежности для насосов</a></li>
-								<li><a href="#">Садовые шланги</a></li>
-								<li><a href="#">Наконечники, пистолеты и распылители</a></li>
-								<li><a href="#">Шланги</a></li>
-								<li><a href="#">Катушки и тележки для шлангов</a></li>
-							</ul>
-						</div>
-					</div>
-				</div>
-			</section>
-			<!-- end sCatalogNav-->
 			<!-- start headerBlock-->
 			<div class="headerBlock section" id="headerBlock">
 				<div class="container">
@@ -348,8 +590,8 @@
 								<div class="product-card">
 									<div class="product-card__img-wrap"><a href="#"><img src="img/product-card-1.jpg" alt="" loading="lazy"/></a>
 									</div>
-									<div class="product-card__rating-info">
-										<div class="product-card__stars">
+									<div class="rating-info">
+										<div class="rating-info__stars">
 											<svg class="icon icon-star ">
 												<use xlink:href="img/svg/sprite.svg#star"></use>
 											</svg>
@@ -365,8 +607,6 @@
 											<svg class="icon icon-star ">
 												<use xlink:href="img/svg/sprite.svg#star"></use>
 											</svg><span>(0)</span>
-										</div>
-										<div class="product-card__item-number">5004754
 										</div>
 									</div>
 									<a class="product-card__title-link" href="#">
@@ -403,8 +643,8 @@
 								<div class="product-card">
 									<div class="product-card__img-wrap"><a href="#"><img src="img/product-card-1.jpg" alt="" loading="lazy"/></a>
 									</div>
-									<div class="product-card__rating-info">
-										<div class="product-card__stars">
+									<div class="rating-info">
+										<div class="rating-info__stars">
 											<svg class="icon icon-star ">
 												<use xlink:href="img/svg/sprite.svg#star"></use>
 											</svg>
@@ -420,8 +660,6 @@
 											<svg class="icon icon-star ">
 												<use xlink:href="img/svg/sprite.svg#star"></use>
 											</svg><span>(0)</span>
-										</div>
-										<div class="product-card__item-number">5004754
 										</div>
 									</div>
 									<a class="product-card__title-link" href="#">
@@ -464,8 +702,8 @@
 								<div class="product-card">
 									<div class="product-card__img-wrap"><a href="#"><img src="img/product-card-1.jpg" alt="" loading="lazy"/></a>
 									</div>
-									<div class="product-card__rating-info">
-										<div class="product-card__stars">
+									<div class="rating-info">
+										<div class="rating-info__stars">
 											<svg class="icon icon-star ">
 												<use xlink:href="img/svg/sprite.svg#star"></use>
 											</svg>
@@ -481,8 +719,6 @@
 											<svg class="icon icon-star ">
 												<use xlink:href="img/svg/sprite.svg#star"></use>
 											</svg><span>(0)</span>
-										</div>
-										<div class="product-card__item-number">5004754
 										</div>
 									</div>
 									<a class="product-card__title-link" href="#">
@@ -519,8 +755,8 @@
 								<div class="product-card">
 									<div class="product-card__img-wrap"><a href="#"><img src="img/product-card-1.jpg" alt="" loading="lazy"/></a>
 									</div>
-									<div class="product-card__rating-info">
-										<div class="product-card__stars">
+									<div class="rating-info">
+										<div class="rating-info__stars">
 											<svg class="icon icon-star ">
 												<use xlink:href="img/svg/sprite.svg#star"></use>
 											</svg>
@@ -536,8 +772,6 @@
 											<svg class="icon icon-star ">
 												<use xlink:href="img/svg/sprite.svg#star"></use>
 											</svg><span>(0)</span>
-										</div>
-										<div class="product-card__item-number">5004754
 										</div>
 									</div>
 									<a class="product-card__title-link" href="#">
@@ -580,8 +814,8 @@
 								<div class="product-card">
 									<div class="product-card__img-wrap"><a href="#"><img src="img/product-card-1.jpg" alt="" loading="lazy"/></a>
 									</div>
-									<div class="product-card__rating-info">
-										<div class="product-card__stars">
+									<div class="rating-info">
+										<div class="rating-info__stars">
 											<svg class="icon icon-star ">
 												<use xlink:href="img/svg/sprite.svg#star"></use>
 											</svg>
@@ -597,8 +831,6 @@
 											<svg class="icon icon-star ">
 												<use xlink:href="img/svg/sprite.svg#star"></use>
 											</svg><span>(0)</span>
-										</div>
-										<div class="product-card__item-number">5004754
 										</div>
 									</div>
 									<a class="product-card__title-link" href="#">
@@ -635,8 +867,8 @@
 								<div class="product-card">
 									<div class="product-card__img-wrap"><a href="#"><img src="img/product-card-1.jpg" alt="" loading="lazy"/></a>
 									</div>
-									<div class="product-card__rating-info">
-										<div class="product-card__stars">
+									<div class="rating-info">
+										<div class="rating-info__stars">
 											<svg class="icon icon-star ">
 												<use xlink:href="img/svg/sprite.svg#star"></use>
 											</svg>
@@ -652,8 +884,6 @@
 											<svg class="icon icon-star ">
 												<use xlink:href="img/svg/sprite.svg#star"></use>
 											</svg><span>(0)</span>
-										</div>
-										<div class="product-card__item-number">5004754
 										</div>
 									</div>
 									<a class="product-card__title-link" href="#">
@@ -696,8 +926,8 @@
 								<div class="product-card">
 									<div class="product-card__img-wrap"><a href="#"><img src="img/product-card-1.jpg" alt="" loading="lazy"/></a>
 									</div>
-									<div class="product-card__rating-info">
-										<div class="product-card__stars">
+									<div class="rating-info">
+										<div class="rating-info__stars">
 											<svg class="icon icon-star ">
 												<use xlink:href="img/svg/sprite.svg#star"></use>
 											</svg>
@@ -713,8 +943,6 @@
 											<svg class="icon icon-star ">
 												<use xlink:href="img/svg/sprite.svg#star"></use>
 											</svg><span>(0)</span>
-										</div>
-										<div class="product-card__item-number">5004754
 										</div>
 									</div>
 									<a class="product-card__title-link" href="#">
@@ -751,8 +979,8 @@
 								<div class="product-card">
 									<div class="product-card__img-wrap"><a href="#"><img src="img/product-card-1.jpg" alt="" loading="lazy"/></a>
 									</div>
-									<div class="product-card__rating-info">
-										<div class="product-card__stars">
+									<div class="rating-info">
+										<div class="rating-info__stars">
 											<svg class="icon icon-star ">
 												<use xlink:href="img/svg/sprite.svg#star"></use>
 											</svg>
@@ -768,8 +996,6 @@
 											<svg class="icon icon-star ">
 												<use xlink:href="img/svg/sprite.svg#star"></use>
 											</svg><span>(0)</span>
-										</div>
-										<div class="product-card__item-number">5004754
 										</div>
 									</div>
 									<a class="product-card__title-link" href="#">
@@ -806,8 +1032,8 @@
 								<div class="product-card">
 									<div class="product-card__img-wrap"><a href="#"><img src="img/product-card-1.jpg" alt="" loading="lazy"/></a>
 									</div>
-									<div class="product-card__rating-info">
-										<div class="product-card__stars">
+									<div class="rating-info">
+										<div class="rating-info__stars">
 											<svg class="icon icon-star ">
 												<use xlink:href="img/svg/sprite.svg#star"></use>
 											</svg>
@@ -823,8 +1049,6 @@
 											<svg class="icon icon-star ">
 												<use xlink:href="img/svg/sprite.svg#star"></use>
 											</svg><span>(0)</span>
-										</div>
-										<div class="product-card__item-number">5004754
 										</div>
 									</div>
 									<a class="product-card__title-link" href="#">
@@ -898,8 +1122,8 @@
 								<div class="product-card">
 									<div class="product-card__img-wrap"><a href="#"><img src="img/product-card-1.jpg" alt="" loading="lazy"/></a>
 									</div>
-									<div class="product-card__rating-info">
-										<div class="product-card__stars">
+									<div class="rating-info">
+										<div class="rating-info__stars">
 											<svg class="icon icon-star ">
 												<use xlink:href="img/svg/sprite.svg#star"></use>
 											</svg>
@@ -915,8 +1139,6 @@
 											<svg class="icon icon-star ">
 												<use xlink:href="img/svg/sprite.svg#star"></use>
 											</svg><span>(0)</span>
-										</div>
-										<div class="product-card__item-number">5004754
 										</div>
 									</div>
 									<a class="product-card__title-link" href="#">
@@ -953,8 +1175,8 @@
 								<div class="product-card">
 									<div class="product-card__img-wrap"><a href="#"><img src="img/product-card-1.jpg" alt="" loading="lazy"/></a>
 									</div>
-									<div class="product-card__rating-info">
-										<div class="product-card__stars">
+									<div class="rating-info">
+										<div class="rating-info__stars">
 											<svg class="icon icon-star ">
 												<use xlink:href="img/svg/sprite.svg#star"></use>
 											</svg>
@@ -970,8 +1192,6 @@
 											<svg class="icon icon-star ">
 												<use xlink:href="img/svg/sprite.svg#star"></use>
 											</svg><span>(0)</span>
-										</div>
-										<div class="product-card__item-number">5004754
 										</div>
 									</div>
 									<a class="product-card__title-link" href="#">
@@ -1014,8 +1234,8 @@
 								<div class="product-card">
 									<div class="product-card__img-wrap"><a href="#"><img src="img/product-card-1.jpg" alt="" loading="lazy"/></a>
 									</div>
-									<div class="product-card__rating-info">
-										<div class="product-card__stars">
+									<div class="rating-info">
+										<div class="rating-info__stars">
 											<svg class="icon icon-star ">
 												<use xlink:href="img/svg/sprite.svg#star"></use>
 											</svg>
@@ -1031,8 +1251,6 @@
 											<svg class="icon icon-star ">
 												<use xlink:href="img/svg/sprite.svg#star"></use>
 											</svg><span>(0)</span>
-										</div>
-										<div class="product-card__item-number">5004754
 										</div>
 									</div>
 									<a class="product-card__title-link" href="#">
@@ -1069,8 +1287,8 @@
 								<div class="product-card">
 									<div class="product-card__img-wrap"><a href="#"><img src="img/product-card-1.jpg" alt="" loading="lazy"/></a>
 									</div>
-									<div class="product-card__rating-info">
-										<div class="product-card__stars">
+									<div class="rating-info">
+										<div class="rating-info__stars">
 											<svg class="icon icon-star ">
 												<use xlink:href="img/svg/sprite.svg#star"></use>
 											</svg>
@@ -1086,8 +1304,6 @@
 											<svg class="icon icon-star ">
 												<use xlink:href="img/svg/sprite.svg#star"></use>
 											</svg><span>(0)</span>
-										</div>
-										<div class="product-card__item-number">5004754
 										</div>
 									</div>
 									<a class="product-card__title-link" href="#">
@@ -1130,8 +1346,8 @@
 								<div class="product-card">
 									<div class="product-card__img-wrap"><a href="#"><img src="img/product-card-1.jpg" alt="" loading="lazy"/></a>
 									</div>
-									<div class="product-card__rating-info">
-										<div class="product-card__stars">
+									<div class="rating-info">
+										<div class="rating-info__stars">
 											<svg class="icon icon-star ">
 												<use xlink:href="img/svg/sprite.svg#star"></use>
 											</svg>
@@ -1147,8 +1363,6 @@
 											<svg class="icon icon-star ">
 												<use xlink:href="img/svg/sprite.svg#star"></use>
 											</svg><span>(0)</span>
-										</div>
-										<div class="product-card__item-number">5004754
 										</div>
 									</div>
 									<a class="product-card__title-link" href="#">
@@ -1185,8 +1399,8 @@
 								<div class="product-card">
 									<div class="product-card__img-wrap"><a href="#"><img src="img/product-card-1.jpg" alt="" loading="lazy"/></a>
 									</div>
-									<div class="product-card__rating-info">
-										<div class="product-card__stars">
+									<div class="rating-info">
+										<div class="rating-info__stars">
 											<svg class="icon icon-star ">
 												<use xlink:href="img/svg/sprite.svg#star"></use>
 											</svg>
@@ -1202,8 +1416,6 @@
 											<svg class="icon icon-star ">
 												<use xlink:href="img/svg/sprite.svg#star"></use>
 											</svg><span>(0)</span>
-										</div>
-										<div class="product-card__item-number">5004754
 										</div>
 									</div>
 									<a class="product-card__title-link" href="#">
@@ -1246,8 +1458,8 @@
 								<div class="product-card">
 									<div class="product-card__img-wrap"><a href="#"><img src="img/product-card-1.jpg" alt="" loading="lazy"/></a>
 									</div>
-									<div class="product-card__rating-info">
-										<div class="product-card__stars">
+									<div class="rating-info">
+										<div class="rating-info__stars">
 											<svg class="icon icon-star ">
 												<use xlink:href="img/svg/sprite.svg#star"></use>
 											</svg>
@@ -1263,8 +1475,6 @@
 											<svg class="icon icon-star ">
 												<use xlink:href="img/svg/sprite.svg#star"></use>
 											</svg><span>(0)</span>
-										</div>
-										<div class="product-card__item-number">5004754
 										</div>
 									</div>
 									<a class="product-card__title-link" href="#">
@@ -1301,8 +1511,8 @@
 								<div class="product-card">
 									<div class="product-card__img-wrap"><a href="#"><img src="img/product-card-1.jpg" alt="" loading="lazy"/></a>
 									</div>
-									<div class="product-card__rating-info">
-										<div class="product-card__stars">
+									<div class="rating-info">
+										<div class="rating-info__stars">
 											<svg class="icon icon-star ">
 												<use xlink:href="img/svg/sprite.svg#star"></use>
 											</svg>
@@ -1318,8 +1528,6 @@
 											<svg class="icon icon-star ">
 												<use xlink:href="img/svg/sprite.svg#star"></use>
 											</svg><span>(0)</span>
-										</div>
-										<div class="product-card__item-number">5004754
 										</div>
 									</div>
 									<a class="product-card__title-link" href="#">
@@ -1356,8 +1564,8 @@
 								<div class="product-card">
 									<div class="product-card__img-wrap"><a href="#"><img src="img/product-card-1.jpg" alt="" loading="lazy"/></a>
 									</div>
-									<div class="product-card__rating-info">
-										<div class="product-card__stars">
+									<div class="rating-info">
+										<div class="rating-info__stars">
 											<svg class="icon icon-star ">
 												<use xlink:href="img/svg/sprite.svg#star"></use>
 											</svg>
@@ -1373,8 +1581,6 @@
 											<svg class="icon icon-star ">
 												<use xlink:href="img/svg/sprite.svg#star"></use>
 											</svg><span>(0)</span>
-										</div>
-										<div class="product-card__item-number">5004754
 										</div>
 									</div>
 									<a class="product-card__title-link" href="#">
@@ -1497,9 +1703,9 @@
 			<!-- end sPopCategories-->
 			<!-- start sAllCategories-->
 			<section class="sAllCategories section" id="sAllCategories">
-				<div class="container sliderAutoWidthWrap">
+				<div class="sAllCategories__container container sliderAutoWidthWrap">
 					<div class="row">
-						<div class="col-10">
+						<div class="sAllCategories__col-slider col-12 col-sm-10">
 							<div class="sliderCategotiesLinks sliderCategotiesLinks--js swiper">
 								<div class="swiper-wrapper">
 									<div class="swiper-slide">
@@ -1553,7 +1759,7 @@
 								</div>
 							</div>
 						</div>
-						<div class="col">
+						<div class="sAllCategories__col-btn col">
 							<button class="sAllCategories__toggle" data-open="Все категории" data-close="Скрыть"> Все категории
 							</button>
 						</div>
@@ -1591,8 +1797,8 @@
 								<div class="product-card">
 									<div class="product-card__img-wrap"><a href="#"><img src="img/product-card-1.jpg" alt="" loading="lazy"/></a>
 									</div>
-									<div class="product-card__rating-info">
-										<div class="product-card__stars">
+									<div class="rating-info">
+										<div class="rating-info__stars">
 											<svg class="icon icon-star ">
 												<use xlink:href="img/svg/sprite.svg#star"></use>
 											</svg>
@@ -1608,8 +1814,6 @@
 											<svg class="icon icon-star ">
 												<use xlink:href="img/svg/sprite.svg#star"></use>
 											</svg><span>(0)</span>
-										</div>
-										<div class="product-card__item-number">5004754
 										</div>
 									</div>
 									<a class="product-card__title-link" href="#">
@@ -1646,8 +1850,8 @@
 								<div class="product-card">
 									<div class="product-card__img-wrap"><a href="#"><img src="img/product-card-1.jpg" alt="" loading="lazy"/></a>
 									</div>
-									<div class="product-card__rating-info">
-										<div class="product-card__stars">
+									<div class="rating-info">
+										<div class="rating-info__stars">
 											<svg class="icon icon-star ">
 												<use xlink:href="img/svg/sprite.svg#star"></use>
 											</svg>
@@ -1663,8 +1867,6 @@
 											<svg class="icon icon-star ">
 												<use xlink:href="img/svg/sprite.svg#star"></use>
 											</svg><span>(0)</span>
-										</div>
-										<div class="product-card__item-number">5004754
 										</div>
 									</div>
 									<a class="product-card__title-link" href="#">
@@ -1707,8 +1909,8 @@
 								<div class="product-card">
 									<div class="product-card__img-wrap"><a href="#"><img src="img/product-card-1.jpg" alt="" loading="lazy"/></a>
 									</div>
-									<div class="product-card__rating-info">
-										<div class="product-card__stars">
+									<div class="rating-info">
+										<div class="rating-info__stars">
 											<svg class="icon icon-star ">
 												<use xlink:href="img/svg/sprite.svg#star"></use>
 											</svg>
@@ -1724,8 +1926,6 @@
 											<svg class="icon icon-star ">
 												<use xlink:href="img/svg/sprite.svg#star"></use>
 											</svg><span>(0)</span>
-										</div>
-										<div class="product-card__item-number">5004754
 										</div>
 									</div>
 									<a class="product-card__title-link" href="#">
@@ -1762,8 +1962,8 @@
 								<div class="product-card">
 									<div class="product-card__img-wrap"><a href="#"><img src="img/product-card-1.jpg" alt="" loading="lazy"/></a>
 									</div>
-									<div class="product-card__rating-info">
-										<div class="product-card__stars">
+									<div class="rating-info">
+										<div class="rating-info__stars">
 											<svg class="icon icon-star ">
 												<use xlink:href="img/svg/sprite.svg#star"></use>
 											</svg>
@@ -1779,8 +1979,6 @@
 											<svg class="icon icon-star ">
 												<use xlink:href="img/svg/sprite.svg#star"></use>
 											</svg><span>(0)</span>
-										</div>
-										<div class="product-card__item-number">5004754
 										</div>
 									</div>
 									<a class="product-card__title-link" href="#">
@@ -1823,8 +2021,8 @@
 								<div class="product-card">
 									<div class="product-card__img-wrap"><a href="#"><img src="img/product-card-1.jpg" alt="" loading="lazy"/></a>
 									</div>
-									<div class="product-card__rating-info">
-										<div class="product-card__stars">
+									<div class="rating-info">
+										<div class="rating-info__stars">
 											<svg class="icon icon-star ">
 												<use xlink:href="img/svg/sprite.svg#star"></use>
 											</svg>
@@ -1840,8 +2038,6 @@
 											<svg class="icon icon-star ">
 												<use xlink:href="img/svg/sprite.svg#star"></use>
 											</svg><span>(0)</span>
-										</div>
-										<div class="product-card__item-number">5004754
 										</div>
 									</div>
 									<a class="product-card__title-link" href="#">
@@ -1878,8 +2074,8 @@
 								<div class="product-card">
 									<div class="product-card__img-wrap"><a href="#"><img src="img/product-card-1.jpg" alt="" loading="lazy"/></a>
 									</div>
-									<div class="product-card__rating-info">
-										<div class="product-card__stars">
+									<div class="rating-info">
+										<div class="rating-info__stars">
 											<svg class="icon icon-star ">
 												<use xlink:href="img/svg/sprite.svg#star"></use>
 											</svg>
@@ -1895,8 +2091,6 @@
 											<svg class="icon icon-star ">
 												<use xlink:href="img/svg/sprite.svg#star"></use>
 											</svg><span>(0)</span>
-										</div>
-										<div class="product-card__item-number">5004754
 										</div>
 									</div>
 									<a class="product-card__title-link" href="#">
@@ -1939,8 +2133,8 @@
 								<div class="product-card">
 									<div class="product-card__img-wrap"><a href="#"><img src="img/product-card-1.jpg" alt="" loading="lazy"/></a>
 									</div>
-									<div class="product-card__rating-info">
-										<div class="product-card__stars">
+									<div class="rating-info">
+										<div class="rating-info__stars">
 											<svg class="icon icon-star ">
 												<use xlink:href="img/svg/sprite.svg#star"></use>
 											</svg>
@@ -1956,8 +2150,6 @@
 											<svg class="icon icon-star ">
 												<use xlink:href="img/svg/sprite.svg#star"></use>
 											</svg><span>(0)</span>
-										</div>
-										<div class="product-card__item-number">5004754
 										</div>
 									</div>
 									<a class="product-card__title-link" href="#">
@@ -1994,8 +2186,8 @@
 								<div class="product-card">
 									<div class="product-card__img-wrap"><a href="#"><img src="img/product-card-1.jpg" alt="" loading="lazy"/></a>
 									</div>
-									<div class="product-card__rating-info">
-										<div class="product-card__stars">
+									<div class="rating-info">
+										<div class="rating-info__stars">
 											<svg class="icon icon-star ">
 												<use xlink:href="img/svg/sprite.svg#star"></use>
 											</svg>
@@ -2011,8 +2203,6 @@
 											<svg class="icon icon-star ">
 												<use xlink:href="img/svg/sprite.svg#star"></use>
 											</svg><span>(0)</span>
-										</div>
-										<div class="product-card__item-number">5004754
 										</div>
 									</div>
 									<a class="product-card__title-link" href="#">
@@ -2049,8 +2239,8 @@
 								<div class="product-card">
 									<div class="product-card__img-wrap"><a href="#"><img src="img/product-card-1.jpg" alt="" loading="lazy"/></a>
 									</div>
-									<div class="product-card__rating-info">
-										<div class="product-card__stars">
+									<div class="rating-info">
+										<div class="rating-info__stars">
 											<svg class="icon icon-star ">
 												<use xlink:href="img/svg/sprite.svg#star"></use>
 											</svg>
@@ -2066,8 +2256,6 @@
 											<svg class="icon icon-star ">
 												<use xlink:href="img/svg/sprite.svg#star"></use>
 											</svg><span>(0)</span>
-										</div>
-										<div class="product-card__item-number">5004754
 										</div>
 									</div>
 									<a class="product-card__title-link" href="#">
@@ -2141,8 +2329,8 @@
 								<div class="product-card">
 									<div class="product-card__img-wrap"><a href="#"><img src="img/product-card-1.jpg" alt="" loading="lazy"/></a>
 									</div>
-									<div class="product-card__rating-info">
-										<div class="product-card__stars">
+									<div class="rating-info">
+										<div class="rating-info__stars">
 											<svg class="icon icon-star ">
 												<use xlink:href="img/svg/sprite.svg#star"></use>
 											</svg>
@@ -2158,8 +2346,6 @@
 											<svg class="icon icon-star ">
 												<use xlink:href="img/svg/sprite.svg#star"></use>
 											</svg><span>(0)</span>
-										</div>
-										<div class="product-card__item-number">5004754
 										</div>
 									</div>
 									<a class="product-card__title-link" href="#">
@@ -2196,8 +2382,8 @@
 								<div class="product-card">
 									<div class="product-card__img-wrap"><a href="#"><img src="img/product-card-1.jpg" alt="" loading="lazy"/></a>
 									</div>
-									<div class="product-card__rating-info">
-										<div class="product-card__stars">
+									<div class="rating-info">
+										<div class="rating-info__stars">
 											<svg class="icon icon-star ">
 												<use xlink:href="img/svg/sprite.svg#star"></use>
 											</svg>
@@ -2213,8 +2399,6 @@
 											<svg class="icon icon-star ">
 												<use xlink:href="img/svg/sprite.svg#star"></use>
 											</svg><span>(0)</span>
-										</div>
-										<div class="product-card__item-number">5004754
 										</div>
 									</div>
 									<a class="product-card__title-link" href="#">
@@ -2257,8 +2441,8 @@
 								<div class="product-card">
 									<div class="product-card__img-wrap"><a href="#"><img src="img/product-card-1.jpg" alt="" loading="lazy"/></a>
 									</div>
-									<div class="product-card__rating-info">
-										<div class="product-card__stars">
+									<div class="rating-info">
+										<div class="rating-info__stars">
 											<svg class="icon icon-star ">
 												<use xlink:href="img/svg/sprite.svg#star"></use>
 											</svg>
@@ -2274,8 +2458,6 @@
 											<svg class="icon icon-star ">
 												<use xlink:href="img/svg/sprite.svg#star"></use>
 											</svg><span>(0)</span>
-										</div>
-										<div class="product-card__item-number">5004754
 										</div>
 									</div>
 									<a class="product-card__title-link" href="#">
@@ -2312,8 +2494,8 @@
 								<div class="product-card">
 									<div class="product-card__img-wrap"><a href="#"><img src="img/product-card-1.jpg" alt="" loading="lazy"/></a>
 									</div>
-									<div class="product-card__rating-info">
-										<div class="product-card__stars">
+									<div class="rating-info">
+										<div class="rating-info__stars">
 											<svg class="icon icon-star ">
 												<use xlink:href="img/svg/sprite.svg#star"></use>
 											</svg>
@@ -2329,8 +2511,6 @@
 											<svg class="icon icon-star ">
 												<use xlink:href="img/svg/sprite.svg#star"></use>
 											</svg><span>(0)</span>
-										</div>
-										<div class="product-card__item-number">5004754
 										</div>
 									</div>
 									<a class="product-card__title-link" href="#">
@@ -2373,8 +2553,8 @@
 								<div class="product-card">
 									<div class="product-card__img-wrap"><a href="#"><img src="img/product-card-1.jpg" alt="" loading="lazy"/></a>
 									</div>
-									<div class="product-card__rating-info">
-										<div class="product-card__stars">
+									<div class="rating-info">
+										<div class="rating-info__stars">
 											<svg class="icon icon-star ">
 												<use xlink:href="img/svg/sprite.svg#star"></use>
 											</svg>
@@ -2390,8 +2570,6 @@
 											<svg class="icon icon-star ">
 												<use xlink:href="img/svg/sprite.svg#star"></use>
 											</svg><span>(0)</span>
-										</div>
-										<div class="product-card__item-number">5004754
 										</div>
 									</div>
 									<a class="product-card__title-link" href="#">
@@ -2428,8 +2606,8 @@
 								<div class="product-card">
 									<div class="product-card__img-wrap"><a href="#"><img src="img/product-card-1.jpg" alt="" loading="lazy"/></a>
 									</div>
-									<div class="product-card__rating-info">
-										<div class="product-card__stars">
+									<div class="rating-info">
+										<div class="rating-info__stars">
 											<svg class="icon icon-star ">
 												<use xlink:href="img/svg/sprite.svg#star"></use>
 											</svg>
@@ -2445,8 +2623,6 @@
 											<svg class="icon icon-star ">
 												<use xlink:href="img/svg/sprite.svg#star"></use>
 											</svg><span>(0)</span>
-										</div>
-										<div class="product-card__item-number">5004754
 										</div>
 									</div>
 									<a class="product-card__title-link" href="#">
@@ -2489,8 +2665,8 @@
 								<div class="product-card">
 									<div class="product-card__img-wrap"><a href="#"><img src="img/product-card-1.jpg" alt="" loading="lazy"/></a>
 									</div>
-									<div class="product-card__rating-info">
-										<div class="product-card__stars">
+									<div class="rating-info">
+										<div class="rating-info__stars">
 											<svg class="icon icon-star ">
 												<use xlink:href="img/svg/sprite.svg#star"></use>
 											</svg>
@@ -2506,8 +2682,6 @@
 											<svg class="icon icon-star ">
 												<use xlink:href="img/svg/sprite.svg#star"></use>
 											</svg><span>(0)</span>
-										</div>
-										<div class="product-card__item-number">5004754
 										</div>
 									</div>
 									<a class="product-card__title-link" href="#">
@@ -2544,8 +2718,8 @@
 								<div class="product-card">
 									<div class="product-card__img-wrap"><a href="#"><img src="img/product-card-1.jpg" alt="" loading="lazy"/></a>
 									</div>
-									<div class="product-card__rating-info">
-										<div class="product-card__stars">
+									<div class="rating-info">
+										<div class="rating-info__stars">
 											<svg class="icon icon-star ">
 												<use xlink:href="img/svg/sprite.svg#star"></use>
 											</svg>
@@ -2561,8 +2735,6 @@
 											<svg class="icon icon-star ">
 												<use xlink:href="img/svg/sprite.svg#star"></use>
 											</svg><span>(0)</span>
-										</div>
-										<div class="product-card__item-number">5004754
 										</div>
 									</div>
 									<a class="product-card__title-link" href="#">
@@ -2599,8 +2771,8 @@
 								<div class="product-card">
 									<div class="product-card__img-wrap"><a href="#"><img src="img/product-card-1.jpg" alt="" loading="lazy"/></a>
 									</div>
-									<div class="product-card__rating-info">
-										<div class="product-card__stars">
+									<div class="rating-info">
+										<div class="rating-info__stars">
 											<svg class="icon icon-star ">
 												<use xlink:href="img/svg/sprite.svg#star"></use>
 											</svg>
@@ -2616,8 +2788,6 @@
 											<svg class="icon icon-star ">
 												<use xlink:href="img/svg/sprite.svg#star"></use>
 											</svg><span>(0)</span>
-										</div>
-										<div class="product-card__item-number">5004754
 										</div>
 									</div>
 									<a class="product-card__title-link" href="#">

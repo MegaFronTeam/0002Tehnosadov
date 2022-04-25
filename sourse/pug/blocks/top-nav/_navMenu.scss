@@ -28,30 +28,30 @@
 		}
 	}
 
-	li {
-		&:first-child {
-			a {
-				padding: rem(20) rem(40);
-				background-color: $blue;
-				text-decoration: underline;
-				text-decoration-color: transparent;
-				&:hover {
-					background-color: #008dcb;
-					text-decoration-color: $white;
-				}
-			}
-		}
-		&:last-child {
-			a {
-				background-color: $yellow;
-				color:$body-color;
-				&:hover {
-					background-color: $red;
-					color: $white;
-				}
+	
+	.menu-item--blue {
+		a {
+			padding: rem(20) rem(40);
+			background-color: $blue;
+			text-decoration: underline;
+			text-decoration-color: transparent;
+			&:hover {
+				background-color: #008dcb;
+				text-decoration-color: $white;
 			}
 		}
 	}
+	.menu-item--yellow {
+		a {
+			background-color: $yellow;
+			color:$body-color;
+			&:hover {
+				background-color: $red;
+				color: $white;
+			}
+		}
+	}
+	
 }
 
 

@@ -38,6 +38,24 @@
 	@include media-breakpoint-down(xl) {}
 } // end.sHit
 
+.rating-info {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: $grid-gutter-width;
+	&__stars {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+	}
+	.icon {
+		margin-right: 2px;
+		font-size: rem(16);
+		fill: transparent;
+		stroke: #A8C828;
+	}
+}
+
 .product-card {
 	display: block;	
 	background-color: $white;
@@ -53,17 +71,17 @@
 			display: block;
 		}
 	}
-	&__rating-info {
-		display: flex;
-		justify-content: space-between;
-		align-items: center;
-		padding: $grid-gutter-width;
-	}
-	&__stars {
-		display: flex;
-		justify-content: space-between;
-		align-items: center;
-	}
+	// &__rating-info {
+	// 	display: flex;
+	// 	justify-content: space-between;
+	// 	align-items: center;
+	// 	padding: $grid-gutter-width;
+	// }
+	// &__stars {
+	// 	display: flex;
+	// 	justify-content: space-between;
+	// 	align-items: center;
+	// }
 	.icon {
 		margin-right: 2px;
 		font-size: rem(16);

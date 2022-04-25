@@ -24,19 +24,30 @@ mixin buttonsNotAvailable()
 		+e.BUTTON.notify Сообщить о поступлении
 		+e.unavailability Нет наличии
 
+mixin ratingInfo()
+	+b.rating-info
+		+e.stars
+			+icon('star')
+			+icon('star')
+			+icon('star')
+			+icon('star')
+			+icon('star')
+			span (0)
+
 mixin productCard(img, sku, title, price, aval)
 	+b.product-card
 		+e.img-wrap
 			a(href="#")
 				+img(`img/product-card-${img}.jpg`)
-		+e.rating-info
-			+e.stars
-				+icon('star')
-				+icon('star')
-				+icon('star')
-				+icon('star')
-				+icon('star')
-				span (0)
+		+ratingInfo()
+		//- +e.rating-info
+		//- 	+e.stars
+		//- 		+icon('star')
+		//- 		+icon('star')
+		//- 		+icon('star')
+		//- 		+icon('star')
+		//- 		+icon('star')
+		//- 		span (0)
 			+e.item-number= sku
 		+e(href="#").title-link
 			+e.title!= title
