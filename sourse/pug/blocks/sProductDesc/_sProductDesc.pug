@@ -18,8 +18,28 @@ mixin sProductDesc(data)
 							+icon('ddgroup-icon-3')
 							| Отзывы(С авторизацией)
 				.tabs__wrap
-					.tabs__content
+					.tabs__content.active
 						+e.content
+							+e.slider--js.swiper
+								.swiper-wrapper
+									.swiper-slide
+										+productCard('1', '5004754', 'Комплект аккумуляторная цепная пила Husqvarna 120i 9670982-01 + Аккумулятор Husqvarna BLi200 9670919-01 + Зарядное устройство Husqvarna QC 330 9670914-01', '33 589 руб.', '')
+									.swiper-slide
+										+productCard('1', '5004754', 'Комплект аккумуляторная цепная пила Husqvarna 120i 9670982-01 + Аккумулятор Husqvarna BLi200 9670919-01 + Зарядное устройство Husqvarna QC 330 9670914-01', '33 589 руб.', '')
+									.swiper-slide
+										+productCard('1', '5004754', 'Комплект аккумуляторная цепная пила Husqvarna 120i 9670982-01 + Аккумулятор Husqvarna BLi200 9670919-01 + Зарядное устройство Husqvarna QC 330 9670914-01', '33 589 руб.', '')
+									.swiper-slide
+										+productCard('1', '5004754', 'Комплект аккумуляторная цепная пила Husqvarna 120i 9670982-01 + Аккумулятор Husqvarna BLi200 9670919-01 + Зарядное устройство Husqvarna QC 330 9670914-01', '33 589 руб.', '')
+									.swiper-slide
+										+productCard('1', '5004754', 'Комплект аккумуляторная цепная пила Husqvarna 120i 9670982-01 + Аккумулятор Husqvarna BLi200 9670919-01 + Зарядное устройство Husqvarna QC 330 9670914-01', '33 589 руб.', 'aval')
+									.swiper-slide
+										+productCard('1', '5004754', 'Комплект аккумуляторная цепная пила Husqvarna 120i 9670982-01 + Аккумулятор Husqvarna BLi200 9670919-01 + Зарядное устройство Husqvarna QC 330 9670914-01', '33 589 руб.', 'aval')
+									.swiper-slide
+										+productCard('1', '5004754', 'Комплект аккумуляторная цепная пила Husqvarna 120i 9670982-01 + Аккумулятор Husqvarna BLi200 9670919-01 + Зарядное устройство Husqvarna QC 330 9670914-01', '33 589 руб.', 'aval')
+									.swiper-slide
+										+productCard('1', '5004754', 'Комплект аккумуляторная цепная пила Husqvarna 120i 9670982-01 + Аккумулятор Husqvarna BLi200 9670919-01 + Зарядное устройство Husqvarna QC 330 9670914-01', '33 589 руб.', 'aval')
+									.swiper-slide
+										+productCard('1', '5004754', 'Комплект аккумуляторная цепная пила Husqvarna 120i 9670982-01 + Аккумулятор Husqvarna BLi200 9670919-01 + Зарядное устройство Husqvarna QC 330 9670914-01', '33 589 руб.', 'aval')
 					.tabs__content
 						+e.content
 							p Каталог садовой техники для сада и&nbsp;огорода предлагает широкий ассортимент товаров:
@@ -70,7 +90,7 @@ mixin sProductDesc2(data)
 							+icon('ddgroup-icon-2')
 							| Дополнительно
 				.tabs__wrap
-					.tabs__content
+					.tabs__content.active
 						+e.content
 							+b.techsheet
 								+e.title Бренд:

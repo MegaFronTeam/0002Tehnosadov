@@ -53,10 +53,16 @@
 				top: 50%;
 				transform: translateY(-63%);
 			}
+			label {
+				display: flex;
+				align-items: center;
+				span {
+					font-weight: 700;
+					color: $blue;
+				}
+			}
 		}
 		select {
-			font-weight: 700;
-			color: $blue;
 			option {
 				color: $body-color;
 			}

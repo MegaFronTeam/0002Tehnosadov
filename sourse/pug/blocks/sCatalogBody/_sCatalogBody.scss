@@ -7,11 +7,16 @@
 		--bs-gutter-y: #{rem(10)};
 		margin-bottom: rem(30);
 	}
+	&__col-card {
+		@include media-breakpoint-up(xxl) {
+			width: 20%;
+		}
+	}
 	.pagination-wrapper {
 		ul {
 			justify-content: center;
 			gap: rem(10);
-			margin-bottom: rem(10);
+			margin-bottom: rem(30);
 			li {
 				.page-numbers {
 					color: $body-color;

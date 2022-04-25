@@ -50,6 +50,7 @@
 		}
 	}
 	&__btn {
+		@include mt;
 		color: inherit;
 		width: rem(40);
 		height: rem(40);
@@ -72,6 +73,9 @@
 			background-color: currentColor;
 			@include a-cent;
 			position: absolute;
+		}
+		&:hover {
+			border-color: $body-color;
 		}
 		&--plus::after {
 			transform: rotate(90deg);
@@ -96,6 +100,7 @@
 			font-weight: 700;
 		}
 	}
+	
 }
 
 .page-head {
@@ -109,6 +114,16 @@
 	&--article {
 		h1 {
 			font-weight: 700;
+		}
+	}
+	nav {
+		position: relative;
+		overflow: auto;
+		.breadcrumb {
+			flex-wrap: nowrap;
+			@include media-breakpoint-down(lg) {
+				width: rem(1472);
+			}
 		}
 	}
 }

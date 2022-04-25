@@ -38,6 +38,7 @@
 		background-color: $white;
 		border: 1px solid $gray;
 		min-height: rem(200);
+		overflow: hidden;
 		p {
 			margin-bottom: 0;
 			&:not(:last-of-type) {
@@ -122,6 +123,20 @@
 		}
 		&__value {
 			font-weight: 500;
+		}
+	}
+	.swiper-slide {
+		width: calc(100% - 40px);
+		@include media-breakpoint-up(md) {
+			width: calc(33% - 40px);
+		}
+		@include media-breakpoint-up(xl) {
+			width: 290px;
+		}
+	}
+	.sProductDesc__slider {
+		@include media-breakpoint-down(md) {
+			overflow: unset;
 		}
 	}
 	@include media-breakpoint-up(xl) {}

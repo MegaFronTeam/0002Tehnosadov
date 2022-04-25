@@ -9,6 +9,9 @@
 	.swiper-slide {
 		width: 246px;
 		margin-right: $grid-gutter-width;
+		@include media-breakpoint-up(xl) {
+			width: 250px;
+		}
 	}
 	.blog-item {
 		height: rem(325);
