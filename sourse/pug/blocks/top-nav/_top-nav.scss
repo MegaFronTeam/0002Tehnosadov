@@ -17,6 +17,9 @@
 		// display: flex;
 		// align-items: center;
 		max-width:rem(312);
+		@include media-breakpoint-down(xl) {
+			max-width:rem(200);
+		}
 	}
 	
 	@include media-breakpoint-up(xl) {
