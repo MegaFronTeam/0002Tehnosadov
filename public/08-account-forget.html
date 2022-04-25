@@ -2,7 +2,7 @@
 <html lang="ru">
 	<head>
 		<meta charset="utf-8">
-		<title>Регистрация</title>
+		<title>Авторизация</title>
 		<meta name="description" content="о чем страница">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 		<meta name="viewport" content="width=device-width,initial-scale=1.0,  shrink-to-fit=no">
@@ -14,7 +14,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap" rel="stylesheet">
 	</head>
-	<body>
+	<body class="contact-page" data-bg="02-catalog.png">
 		<div class="main-wrapper">
 			<!-- start topLine-->
 			<div class="topLine section" id="topLine">
@@ -425,11 +425,11 @@
 						<ol class="breadcrumb" itemscope="itemscope" itemtype="http://schema.org/BreadcrumbList">
 							<li class="breadcrumb-item" itemprop="itemListElement" itemscope="itemscope" itemtype="http://schema.org/ListItem"><a href="/" itemprop="item"><span itemprop="name">Главная</span>
 									<meta itemprop="position" content="1"/></a></li>
-							<li class="breadcrumb-item active" itemprop="itemListElement" itemscope="itemscope" itemtype="http://schema.org/ListItem"><a href="#" itemprop="item"><span itemprop="name">personal</span>
+							<li class="breadcrumb-item active" itemprop="itemListElement" itemscope="itemscope" itemtype="http://schema.org/ListItem"><a href="#" itemprop="item"><span itemprop="name">Авторизация</span>
 									<meta itemprop="position" content="2"/></a></li>
 						</ol>
 					</nav>
-					<h1>Регистрация</h1>
+					<h1>Авторизация</h1>
 				</div>
 			</div>
 			<div class="container page-container">
@@ -453,71 +453,21 @@
 					</div>
 					<div class="col-xl-10 col-lg-9">
 						<div class="mainside">
-							<!-- start sRegister-->
-							<section class="sRegister section" id="sRegister">
-								<div class="container">
-									<div class="row">
-										<div class="col-6"> 
-											<div class="form-wrap">
-												<form>
-													<div class="sRegister__title">Регистрация нового пользователя</div>
-													<div class="form-wrap__input-wrap form-group">
-														<label><span class="form-wrap__input-title">Имя</span><input class="form-wrap__input form-control" name="text" type="text" placeholder=""/>
-														</label>
-													</div>
-													<!-- +e.input-wrap-->
-													<div class="form-wrap__input-wrap form-group">
-														<label><span class="form-wrap__input-title">Фамилия:</span><input class="form-wrap__input form-control" name="text" type="text" placeholder=""/>
-														</label>
-													</div>
-													<!-- +e.input-wrap-->
-													<div class="form-wrap__input-wrap form-group">
-														<label><span class="form-wrap__input-title">Логин (мин. 3 символа):</span><input class="form-wrap__input form-control" name="text" type="text" placeholder=""/>
-														</label>
-													</div>
-													<!-- +e.input-wrap-->
-													<div class="form-wrap__input-wrap form-group">
-														<label><span class="form-wrap__input-title">Пароль*:</span><input class="form-wrap__input form-control" name="text" type="text" placeholder=""/>
-														</label>
-													</div>
-													<!-- +e.input-wrap-->
-													<div class="form-wrap__input-wrap form-group">
-														<label><span class="form-wrap__input-title">Подтверждение пароля*:</span><input class="form-wrap__input form-control" name="text" type="text" placeholder=""/>
-														</label>
-													</div>
-													<!-- +e.input-wrap-->
-													<div class="form-wrap__input-wrap form-group">
-														<label><span class="form-wrap__input-title">E-Mail*:</span><input class="form-wrap__input form-control" name="text" type="text" placeholder=""/>
-														</label>
-													</div>
-													<!-- +e.input-wrap-->
-													<div class="form-wrap__input-wrap form-group">
-														<label><span class="form-wrap__input-title">Защита от автоматической регистрации*:</span><input class="form-wrap__input form-control" name="text" type="text" placeholder=""/>
-														</label>
-													</div>
-													<!-- +e.input-wrap-->
-													<div class="form-wrap__btn-wrap">
-														<button class="sRegister__btn btn">Регистрация</button><a href="#">Вход</a>
-													</div>
-												</form>
+							<div class="sAccount" id="sAccount">
+								<div class="sAccount__forget-wrap">
+									<p>Если вы&nbsp;забыли пароль, введите E-Mail.<br />Контрольная строка для смены пароля, а&nbsp;также ваши регистрационные данные, будут высланы вам по&nbsp;E-Mail.</p>
+									<div class="form-wrap">
+										<form>
+											<div class="form-wrap__input-wrap form-group">
+												<label><span class="form-wrap__input-title">E-mail*:</span><input class="form-wrap__input form-control" name="text" type="text" placeholder=""/>
+												</label>
 											</div>
-										</div>
-										<div class="col-6">
-											<div class="sRegister__title">Зарегистрируйтесь
-											</div>
-											<p>и&nbsp;Вы получите возможность:</p>
-											<ul> 
-												<li>Используйте введённые ранее данные</li>
-												<li>Отслеживайте статус заказа</li>
-												<li>Получайте персонализированные предложения</li>
-												<li>Один год дополнительной гарантии при регистрации товара</li>
-												<li>Сохраняйте историю заказов</li>
-											</ul>
-										</div>
+											<!-- +e.input-wrap-->
+											<div class="sAccount__login-btn-wrap"><a class="sAccount__send btn btn-main" href="#">Выслать</a><a class="sAccount__link" href="#">Назад</a></div>
+										</form>
 									</div>
 								</div>
-							</section>
-							<!-- end sRegister-->
+							</div>
 						</div>
 					</div>
 				</div>

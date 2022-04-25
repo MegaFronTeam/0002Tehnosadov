@@ -45,7 +45,13 @@
 	}
 	&__map-widget {
 		position: relative;
-		@include block(862, 300);
+		@include media-breakpoint-up(xl){
+			@include block(862, 300);
+		}
+		@include media-breakpoint-up(lg){
+			@include block(600, 300);
+		}
+		@include block(300, 300);
 		width: 100%;
 		& > * {
 			position: absolute !important;

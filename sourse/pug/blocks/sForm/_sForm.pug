@@ -9,6 +9,7 @@ mixin sForm()
 					+input(`Телефон:`)
 					+input(`E-mail:`)
 				.col-lg-6
-					+input(`Ваш вопрос:`,`textarea`)
+					.form-wrap__input-wrap.form-group.form-textarea
+						textarea.form-wrap__input.form-control(name='textarea' placeholder='Ваш вопрос:')
 			button.sForm__btn.btn.btn-main Спросить
 	// end sForm
