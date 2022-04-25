@@ -509,3 +509,30 @@ iframe {
 		background-color: #ff3300;
 	}
 }
+// .blured-ball-bg{
+// 	&:after{
+// 		content: '';
+// 		position: absolute;
+
+// 		max-width: 100%;
+// 		width: calc(#{rem(471)} * 2);
+// 		height: calc(#{rem(319)} * 2);
+// 		border-radius: 50%;
+// 		bottom: calc(100% - 160px);
+
+// 		left: 55%;
+// 		transform: translateX(-50%);
+
+// 		background: radial-gradient(50% 50% at 50% 50%,rgba(203, 201, 202, 0.25) 0,rgba(203, 201, 202, 0) 100%);
+// 		filter: blur(5);
+// 	}
+// }
+.txt-crop{
+	text-overflow: ellipsis;
+	overflow: hidden;
+	line-clamp: var(--lines-num, 1);
+	display: -webkit-box;
+	// display: box;
+	word-wrap: break-word;
+	box-orient: vertical;
+}

@@ -6,9 +6,7 @@ export default function effectInit(params) {
     setTranslate,
     setTransition,
     overwriteParams,
-    perspective,
-    recreateShadows,
-    getEffectParams
+    perspective
   } = params;
   on('beforeInit', () => {
     if (swiper.params.effect !== effect) return;
@@ -29,20 +27,6 @@ export default function effectInit(params) {
   on('setTransition', (_s, duration) => {
     if (swiper.params.effect !== effect) return;
     setTransition(duration);
-  });
-  on('transitionEnd', () => {
-    if (swiper.params.effect !== effect) return;
-
-    if (recreateShadows) {
-      if (!getEffectParams || !getEffectParams().slideShadows) return; // remove shadows
-
-      swiper.slides.each(slideEl => {
-        const $slideEl = swiper.$(slideEl);
-        $slideEl.find('.swiper-slide-shadow-top, .swiper-slide-shadow-right, .swiper-slide-shadow-bottom, .swiper-slide-shadow-left').remove();
-      }); // create new one
-
-      recreateShadows();
-    }
   });
   let requireUpdateOnVirtual;
   on('virtualUpdate', () => {
