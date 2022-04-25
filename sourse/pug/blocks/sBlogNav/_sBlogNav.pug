@@ -1,9 +1,9 @@
 mixin sBlogNav(data)
 	// start sBlogNav
 	+b.SECTION.sBlogNav.section#sBlogNav&attributes(attributes)
-		+e.sticky-wrap--js.custom-scroll
+		+e.sticky-wrap--js
 			+e.title Содержание
-			<nav class="blog-nav" title="Содеражние статьи">
+			nav.blog-nav.custom-scroll(title="Содеражние статьи")
 				ul.blog-nav__list.nav
 					li.blog-nav__item
 						a(href="#blog-nav-1").blog-nav__link Приготовление бензиново-масляной смеси

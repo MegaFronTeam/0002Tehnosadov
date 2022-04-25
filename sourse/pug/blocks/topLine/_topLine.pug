@@ -15,6 +15,10 @@ mixin topLine()
 				.topLine-menu.col-auto
 					.row
 						.col-auto.d-lg-none
+							.menu-mobile.menu-mobile--js
+								.menu-mobile__inner
+									+menu-toggle()
+									+mnu()
 						.col-auto
 							+e.BUTTON.location
 								+icon('geo')
