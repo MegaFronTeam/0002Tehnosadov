@@ -5,7 +5,6 @@
 3. https://megafronteam.github.io/0002Tehnosadov/public/04-contacts.html
 3. https://megafronteam.github.io/0002Tehnosadov/public/03-blog.html
 3. https://megafronteam.github.io/0002Tehnosadov/public/03-blog-item.html
-3. https://megafronteam.github.io/0002Tehnosadov/public/09-forms-register.html
 3. https://megafronteam.github.io/0002Tehnosadov/public/11-compare.html
 ----
 СЕРВИСНЫЙ ЦЕНТР:
@@ -30,8 +29,9 @@
 2. https://megafronteam.github.io/0002Tehnosadov/public/08-account-forget.html
 2. https://megafronteam.github.io/0002Tehnosadov/public/08-account-reg.html
 2. https://megafronteam.github.io/0002Tehnosadov/public/08-account-profile.html
+1. https://megafronteam.github.io/0002Tehnosadov/public/09-forms-register.html дублер
 ----
-1. https://megafronteam.github.io/0002Tehnosadov/public/09-forms-register.html
+
 1. https://megafronteam.github.io/0002Tehnosadov/public/10-basket.html
 1. https://megafronteam.github.io/0002Tehnosadov/public/10-order.html
 1. https://megafronteam.github.io/0002Tehnosadov/public/10-order-done.html

@@ -25,7 +25,17 @@
 	}
 	td{
 		padding: rem(8);
-		width: 50%;
+		@include media-breakpoint-up(lg){
+			width: 50%;
+		}
+		@include media-breakpoint-down(lg){
+			&:nth-child(1){
+				width: 65%;
+			}
+			&:nth-child(2){
+				width: 35%;
+			}
+		}
 		background-color: $white;
 		transition-duration: 0.3s;
 	}
