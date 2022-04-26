@@ -23,6 +23,12 @@
 			
 		}
 	}
+	
+	.col-6 {
+		@media (max-width: 440px) {
+			width: 100%;
+		}
+	}
 
 	@include media-breakpoint-up(xl) {}
 	@include media-breakpoint-up(lg) {}
@@ -41,14 +47,10 @@
 	height: 100%;
 	background-color: $white;
 	@include mt;
-	// @include media-breakpoint-down(sm) {
-	// 	margin-bottom: rem(20);
-	// }
 	&:hover {
 		box-shadow: 0 0 1rem rgb(68 68 68 / 50%);
 	}
 	&__img-wrap {
-		// height: 50%;
 		@include block(210,168);
 	}
 	img {
@@ -89,9 +91,13 @@
 				height: auto;
 			}
 		}
+		@include media-breakpoint-up(xxl) {
+			height: 405px;
+		}
+
 		@include media-breakpoint-up(xl) {
 			padding: rem(30);
-			height: 405px;
+			height: 350px;
 			justify-content: center;
 			&::after {
 				content: '';
