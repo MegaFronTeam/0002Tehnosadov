@@ -34,7 +34,7 @@ mixin ratingInfo()
 			+icon('star')
 			span (0)
 
-mixin productCard(img, sku, title, price, aval)
+mixin productCard(img, sku, title, price, aval, info)
 	+b.product-card
 		+e.img-wrap
 			a(href="#")
@@ -42,7 +42,18 @@ mixin productCard(img, sku, title, price, aval)
 		+ratingInfo()
 		+e(href="#").title-link
 			+e.title!= title
-		+e.info
+		if info
+			+e.info--2
+				table
+					tbody
+						tr
+							td Тип двигателя:
+							td питание от аккумулятора
+						tr
+							td Ширина ковша, см:
+							td 30
+		else
+			+e.info
 		+e.price Цена 
 			span= price
 		if aval

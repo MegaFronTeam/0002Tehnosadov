@@ -111,6 +111,21 @@
 	&__info {
 		padding-bottom: $grid-gutter-width;
 		border-bottom: 1px solid $gray;
+		table {
+			width: 100%;
+			td {
+				font-size: rem(12);
+				&:first-child {
+					font-weight: 700;
+				}
+				&:last-child {
+					text-align: right;
+				}
+			}
+		}
+		&--2 {
+			padding: rem(10);
+		}
 	}
 	&__price {
 		display: flex;
