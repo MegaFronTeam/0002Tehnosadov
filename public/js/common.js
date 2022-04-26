@@ -504,8 +504,9 @@ function eventHandler() {
 		responsive: {
 			768: {
 				disable: true
-			}
-		}
+			},
+		},
+		top: 10
 	});
 	$('.orderPage_side--js').hcSticky({
 		stickTo: $('.orderPage'),

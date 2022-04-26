@@ -40,15 +40,6 @@ mixin productCard(img, sku, title, price, aval)
 			a(href="#")
 				+img(`img/product-card-${img}.jpg`)
 		+ratingInfo()
-		//- +e.rating-info
-		//- 	+e.stars
-		//- 		+icon('star')
-		//- 		+icon('star')
-		//- 		+icon('star')
-		//- 		+icon('star')
-		//- 		+icon('star')
-		//- 		span (0)
-			+e.item-number= sku
 		+e(href="#").title-link
 			+e.title!= title
 		+e.info
@@ -61,7 +52,7 @@ mixin productCard(img, sku, title, price, aval)
 
 mixin sHit(title)
 	// start sHit
-	+b.SECTION.sHit.section#sHit&attributes(attributes)
+	+b.SECTION.sHit.section&attributes(attributes)
 		.container.sliderAutoWidthWrap
 			+b.section-title
 				.row

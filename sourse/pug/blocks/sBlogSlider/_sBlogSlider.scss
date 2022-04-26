@@ -3,7 +3,15 @@
 		// --sPT: ;
 		// --sPB: ;
 		// --sTPB: ;
+.sliderAutoWidthWrap {
+		padding: 0 !important;
+	}
+	.sliderAutoWidt {
+		margin: -10px;
+	}
 	.swiper-wrapper {
+		padding: 10px;
+		margin-left: -10px;
 		height: auto;
 	}
 	.swiper-slide {
@@ -16,6 +24,7 @@
 	.blog-item {
 		height: rem(325);
 		padding: $grid-gutter-width;
+		@include mt;
 		&:hover {
 			box-shadow: 0 0 1rem rgb(68 68 68 / 20%);
 		}
