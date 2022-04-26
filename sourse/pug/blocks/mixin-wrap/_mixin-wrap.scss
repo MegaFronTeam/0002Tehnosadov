@@ -82,11 +82,19 @@
 }
 
 .breadcrumb {
-	background-color: $white;
-	border: 1px solid $gray;
+	// background-color: $white;
+	// border: 1px solid $gray;
 	padding: rem(10);
-	margin-bottom: rem(20);
+	flex-wrap: nowrap;
+	&-slider--js {
+		background-color: $white;
+		border: 1px solid $gray;
+		overflow: hidden;
+		margin-bottom: rem(20);
+		padding-right: rem(20);
+	}
 	&-item {
+		width: max-content;
 		a {
 			color: $gray-800;
 		}
@@ -112,16 +120,6 @@
 	&--article {
 		h1 {
 			font-weight: 700;
-		}
-	}
-	nav {
-		position: relative;
-		overflow: auto;
-		.breadcrumb {
-			flex-wrap: nowrap;
-			@include media-breakpoint-down(lg) {
-				width: rem(1472);
-			}
 		}
 	}
 }
