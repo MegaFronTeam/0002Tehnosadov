@@ -16,7 +16,7 @@ mixin input(placeholder,  t='text', label, name= t)
 			+e.INPUT.input.form-control(name=name type=t)&attributes(attributes)
 			
 		else if t=='number'
-			+e.INPUT.input.form-control(name=name type=t placeholder=placeholder step='any')&attributes(attributes)
+			+e.INPUT.input.form-control(name=name type=t placeholder=placeholder)&attributes(attributes)
 		else if t=='date'
 			+e.INPUT.input.form-control(name=name type=t )&attributes(attributes)
 		else
