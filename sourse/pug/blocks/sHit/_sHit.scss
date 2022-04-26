@@ -17,7 +17,9 @@
 	}
 
 	.sliderAutoWidth {
-		height: 495px;
+		// height: 495px;
+		padding: 10px;
+		margin: -10px;
 		@include media-breakpoint-down(sm) {
 			overflow: visible;
 		}

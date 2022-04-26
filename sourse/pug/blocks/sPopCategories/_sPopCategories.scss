@@ -1,6 +1,6 @@
 // start .sPopCategories
 .sPopCategories {
-		// --sPT: ;
+		--sPT: calc(#{$grid-gutter-width} * 2);
 		// --sPB: ;
 		// --sTPB: ;
 		.row {

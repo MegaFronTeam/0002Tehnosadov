@@ -126,7 +126,11 @@
 } // end.sBasket
 
 .basket-item {
+	position: relative;
 	vertical-align: middle;
+	@include media-breakpoint-down(md) {
+		padding-bottom: rem(20);
+	}
 	&__img-wrap {
 		padding: $grid-gutter-width;
 		width: 15%;
@@ -164,8 +168,22 @@
 		@include media-breakpoint-down(md) {
 			width: 25%;
 		}
+	}
+	&__count, &__weight,&__price {
 		@include media-breakpoint-down(sm) {
-			width: 50%;
+			width:33%;
+		}
+	}
+	&__number {
+		@include media-breakpoint-down(sm) {
+			width: fit-content;
+			font-weight: bold;
+			// &::before {
+			// 	content: attr(data-label);
+			// 	margin-right: 10px;
+			// 	float: left;
+			// 	text-transform: uppercase;
+			// }
 		}
 	}
 	&__delete {
@@ -181,6 +199,11 @@
 		transition: .5s;
 		&:hover {
 			transform: rotate(180deg);
+		}
+		@include media-breakpoint-down(sm) {
+			position: absolute;
+			top: 10px;
+			right: 10px;
 		}
 	}
 }

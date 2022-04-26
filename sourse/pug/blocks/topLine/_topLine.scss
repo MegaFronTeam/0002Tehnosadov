@@ -137,6 +137,7 @@
 			background: transparent;
 			transition: color .3s ease-in-out;
 			width: 140px;
+			cursor: pointer;
 			@include media-breakpoint-up(xl) {
 				width: auto;
 			}
