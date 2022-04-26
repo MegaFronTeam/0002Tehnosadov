@@ -702,6 +702,10 @@ function eventHandler() {
 			swiper: sProductItemSwiper,
 		},
 	});
+
+	var breadcrumbSlider = new Swiper(".breadcrumb-slider--js", {
+		slidesPerView: 'auto',
+	});
 };
 if (document.readyState !== 'loading') {
 	eventHandler();
@@ -717,6 +721,7 @@ if (document.readyState !== 'loading') {
 // 		document.body.classList.remove('loaded_hiding');
 // 	}, 500);
 // }
+
 
 if (document.querySelector('.sContact__map-widget')) {
 	ymaps.ready(function () {
