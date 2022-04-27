@@ -56,7 +56,7 @@
 		fill: transparent;
 		color: #A8C828;
 		stroke: currentColor;
-		&:first-of-type {
+		&.active {
 			fill: currentColor;
 		}
 	}
