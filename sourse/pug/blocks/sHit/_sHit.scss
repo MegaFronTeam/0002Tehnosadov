@@ -59,7 +59,11 @@
 		fill: transparent;
 		color: #A8C828;
 		stroke: currentColor;
+<<<<<<< HEAD
 		&--filled {
+=======
+		&.active {
+>>>>>>> d05cf649176de7edcc3f34e94dc5e7032ef46f40
 			fill: currentColor;
 		}
 	}
