@@ -3,12 +3,6 @@
 		--sPT: calc(#{$grid-gutter-width} * 2);
 		--sPB: 0;
 		--sTPB: calc(#{$grid-gutter-width} * 2);
-	// .section-title {
-	// 	h2 {
-	// 		padding-left: $grid-gutter-width;
-	// 		border-left: 5px solid $red;
-	// 	}
-	// }
 	.hit-slider-button-prev {
 		margin-right: $grid-gutter-width;
 		.icon {
@@ -33,7 +27,8 @@
 	}
 
 	.swiper-slide {
-		max-width: 250px;
+		max-width: 250px;		
+		height: auto;
 		margin-right: $grid-gutter-width;
 	}
 
@@ -74,26 +69,26 @@
 	border: 1px solid $gray;
 	overflow: hidden;
 	transition: box-shadow .3s ease-in-out;
+	height:100%;
 	&:hover {
 		box-shadow: 0 0 1rem #bbb;
 	}
+	&__top {
+		position: absolute;
+		@include a-cent;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items:center
+	}
 	&__img-wrap {
-		text-align: center;
-		a {
-			display: block;
+		padding: 10px;
+		@include block(180,180);
+		img {
+			max-width: calc(100% - 20px);
+			max-height: calc(100% - 20px);
 		}
 	}
-	// &__rating-info {
-	// 	display: flex;
-	// 	justify-content: space-between;
-	// 	align-items: center;
-	// 	padding: $grid-gutter-width;
-	// }
-	// &__stars {
-	// 	display: flex;
-	// 	justify-content: space-between;
-	// 	align-items: center;
-	// }
 	.icon {
 		margin-right: 2px;
 		font-size: rem(16);
@@ -114,6 +109,7 @@
 		-webkit-line-clamp: 3;
 		-webkit-box-orient: vertical;
 		max-width: 250px;
+		height: 3.5em;
 		color: $body-color;
 	}
 	&__info {

@@ -36,8 +36,8 @@ mixin ratingInfo()
 
 mixin productCard(img, sku, title, price, aval, info)
 	+b.product-card
-		+e.img-wrap
-			a(href="#")
+		+e.img-wrap(href="#")
+			+e.top
 				+img(`img/product-card-${img}.jpg`)
 		+ratingInfo()
 		+e(href="#").title-link
