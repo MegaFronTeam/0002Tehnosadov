@@ -12,6 +12,9 @@
 		margin: -10px;
     padding: 20px;
 		margin-left: -20px;
+		@include media-breakpoint-down(xxl) {
+			overflow: visible;
+		}
 	}
 	.swiper-slide {
 		height: 170px;

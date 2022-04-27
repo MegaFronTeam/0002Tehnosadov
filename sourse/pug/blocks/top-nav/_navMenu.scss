@@ -31,7 +31,10 @@
 	
 	.menu-item--blue {
 		a {
-			padding: rem(20) rem(40);
+			@include media-breakpoint-up(lg){
+
+				padding: rem(20) rem(40);
+			}
 			background-color: $blue;
 			text-decoration: underline;
 			text-decoration-color: transparent;
@@ -57,21 +60,27 @@
 
 
 .toggle-menu-mobile {
-	--h: #{em(2)};
+	--h: 3px;
 	--color: #{$primary};
-	--position: calc(var(--h) * 2);
+	--position: calc(var(--h) * 3);
 	&.on span {
 		--color: transparent;
 	}
-
+	
 	&.on  { 
 		--position: 0; 
 		--rotate: 45deg;
+		 
+		span:after,
+		span:before {
+			
+			--color: #{$primary};
+		}
 	}
 	display: block;
 	height: calc(var(--h)* 12);
 	position: relative; 
-	font-size: 32px;
+	font-size: 24px;
 	width: 1em;
 	cursor: pointer;
 	span:after,

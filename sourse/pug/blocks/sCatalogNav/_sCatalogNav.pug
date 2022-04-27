@@ -2,10 +2,13 @@ mixin sCatalogNav(data)
 	// start sCatalogNav
 	+b.sCatalogNav 
 		ul.main-categories
+			li.catalog-menu-back.catalog-menu-back--main.d-lg-none Назад
 			- list = [`Садовая техника`,`Водоснабжение и полив`,`Расходные материалы и аксессуары`,`Силовое оборудование`,`Строительные инструменты`,`Снегоуборочная техника`,` Обогрев и вентиляция`,`Продукция STIHL и Viking`,`Сварочное оборудование`,`Садовый инвентарь и инструменты`,'Мототехника']
+			
 			each li in list
+
 				li
-					a(href="#")= li
+					+e.link(href="#")= li
 					+b.submenu()
 						+e.title(href="#")= li
 						ul

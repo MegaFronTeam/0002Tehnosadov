@@ -13,24 +13,24 @@
 			border-bottom: 1px solid $gray;
 		}
 		.toggle-menu-mobile {
-			width: rem(24);
-			span {
-				width: rem(24);
-				height: 3px;
-				border-radius: 10px;
-				&::before {
-					top: 6px;
-					width: rem(24);
-					height: 3px;
-					border-radius: 10px;
-				}
-				&::after {
-					width: rem(24);
-					height: 3px;
-					bottom: 6px;
-					border-radius: 10px;
-				}
-			}
+			// width: rem(24);
+			// span {
+			// 	width: rem(24);
+			// 	height: 3px;
+			// 	border-radius: 10px;
+			// 	&::before {
+			// 		top: 6px;
+			// 		width: rem(24);
+			// 		height: 3px;
+			// 		border-radius: 10px;
+			// 	}
+			// 	&::after {
+			// 		width: rem(24);
+			// 		height: 3px;
+			// 		bottom: 6px;
+			// 		border-radius: 10px;
+			// 	}
+			// }
 		}
 	
 		&__logo {
@@ -180,7 +180,7 @@
 					margin: 0 auto;
 					background-color: $white;
 					box-shadow: 0 -5px 1rem rgb(68 68 68 / 20%);
-					z-index: 500;
+					z-index: 1300;
 				}
 			}
 			&__item {	
