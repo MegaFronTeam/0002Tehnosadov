@@ -20,6 +20,9 @@
 		// height: 495px;
 		padding: 10px;
 		margin: -10px;
+		@include media-breakpoint-down(xxl) {
+			margin: -10px 0 -10px -10px;
+		}
 		@include media-breakpoint-down(sm) {
 			overflow: visible;
 		}
@@ -56,7 +59,7 @@
 		fill: transparent;
 		color: #A8C828;
 		stroke: currentColor;
-		&:first-of-type {
+		&--filled {
 			fill: currentColor;
 		}
 	}

@@ -12,6 +12,7 @@
 	
 	&__top {		
 		--bs-gutter-x: 20px;
+		padding-bottom: rem(20);
 	}
 	&__title {
 		// margin-right: rem(20);
@@ -52,12 +53,15 @@
 		}
 	}
 	&__contacts {
-		padding-bottom: rem(20);
-		border-bottom: 1px solid #ddd;
+		// padding-bottom: rem(20);
+		// border-bottom: 1px solid #ddd;
 	}
 	&__bottom {
 		padding: $grid-gutter-width 0;
-		align-self: center;
+		border-top: 1px solid #ddd;
+		.row {
+			align-self: center;
+		}
 		.footer__title {
 			border: none;
 		}
