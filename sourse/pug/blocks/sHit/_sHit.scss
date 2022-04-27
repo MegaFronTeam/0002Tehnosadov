@@ -21,6 +21,9 @@
 		padding: 10px;
 		margin: -10px;
 		@include media-breakpoint-down(xxl) {
+			overflow: visible;
+		}
+		@include media-breakpoint-down(xxl) {
 			margin: -10px 0 -10px -10px;
 		}
 		@include media-breakpoint-down(sm) {

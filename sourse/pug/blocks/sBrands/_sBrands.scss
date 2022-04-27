@@ -5,6 +5,9 @@
 		// --sTPB: ;
 	.sliderAutoWidth {
 		height: 110px;
+		@include media-breakpoint-down(xxl) {
+			overflow: visible;
+		}
 	}
 	.swiper-slide {
 		width: 250px;

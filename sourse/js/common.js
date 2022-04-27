@@ -58,7 +58,7 @@ const JSCCommon = {
 	toggleMenu() {
 		document.addEventListener("click", function (event) {
 			const toggle = document.querySelectorAll(".toggle-menu-mobile--js");
-			const menu = document.querySelector(".menu-mobile--js");
+			const menu = document.querySelector(".top-nav");
 			const toggleEv = event.target.closest(".toggle-menu-mobile--js");
 			if (!toggleEv) return;
 			toggle.forEach(el => el.classList.toggle("on"));
@@ -68,7 +68,7 @@ const JSCCommon = {
 	},
 	closeMenu() {
 		const toggle = document.querySelectorAll(".toggle-menu-mobile--js");
-		const menu = document.querySelector(".menu-mobile--js");
+		const menu = document.querySelector(".top-nav");
 		if (!menu) return;
 		if (menu.classList.contains("active")) {
 			toggle.forEach(element => element.classList.remove("on"));
@@ -78,19 +78,19 @@ const JSCCommon = {
 
 	},
 	mobileMenu() {
-		const menu = document.querySelector(".menu-mobile--js");
+		const menu =document.querySelector(".top-nav");
 		if (!menu) return;
 		this.toggleMenu();
-		document.addEventListener('mouseup', (event) => {
-			let container = event.target.closest(".menu-mobile--js.active"); // (1)
-			let link = event.target.closest(".menu-mobile .menu a"); // (1)
-			let toggle = event.target.closest('.toggle-menu-mobile--js.on'); // (1)
-			if (!container && !toggle) this.closeMenu();
-		}, { passive: true });
+		// document.addEventListener('mouseup', (event) => {
+		// 	let container = event.target.closest(".menu-mobile--js.active"); // (1)
+		// 	let link = event.target.closest(".menu-mobile .menu a"); // (1)
+		// 	let toggle = event.target.closest('.toggle-menu-mobile--js.on'); // (1)
+		// 	if (!container && !toggle) this.closeMenu();
+		// }, { passive: true });
 
-		window.addEventListener('resize', () => {
-			if (window.matchMedia("(min-width: 992px)").matches) this.closeMenu();
-		}, { passive: true });
+		// window.addEventListener('resize', () => {
+		// 	if (window.matchMedia("(min-width: 992px)").matches) this.closeMenu();
+		// }, { passive: true });
 	},
 
 	// tabs  .
@@ -474,7 +474,7 @@ function eventHandler() {
 		$('body').removeClass('fixed');
 	});
 
-	$('.catalog-btn--js').on('click', function () {
+	$('.catalog-btn--js, .catalog-menu-back--main').on('click', function () {
 		$('.catalog-btn--js').toggleClass('catalog-btn--active');
 		$('.sCatalogNav').toggleClass('visible');
 	});
@@ -706,6 +706,31 @@ function eventHandler() {
 	var breadcrumbSlider = new Swiper(".breadcrumb-slider--js", {
 		slidesPerView: 'auto',
 	});
+
+	let catalog = document.querySelector(".main-categories");
+	
+	catalog.addEventListener("click", function (event) {
+		event.preventDefault();
+		let target = event.target.closest(".sCatalogNav__link");
+
+		let submenu = target.nextElementSibling;
+
+		if (!target) return; 
+		let toggle = document.createElement("div");
+		toggle.classList.add("catalog-menu-back");
+		toggle.innerHTML = 'Назад';
+		submenu.insertAdjacentElement('afterbegin', toggle);
+
+		
+		submenu.classList.add('active');
+		toggle.addEventListener("click", function(){
+			
+			submenu.classList.remove('active');
+			setTimeout(() => this.remove(), 500)
+			
+		})
+	})
+
 };
 if (document.readyState !== 'loading') {
 	eventHandler();

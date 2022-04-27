@@ -1,0 +1,38 @@
+extends ../layout/main.pug
+
+include ../blocks/header/_header.pug
+include ../blocks/topLine/_topLine.pug
+include ../blocks/top-nav/_top-nav.pug 
+
+include ../blocks/sContact/_sContact.pug
+include ../blocks/sForm/_sForm.pug
+include ../blocks/sService/_sService.pug
+include ../blocks/footer/_footer.pug
+
+block variables
+	- let  mainPage= null
+	- let  bg= null
+
+block title
+	- let  title= 'Ремонт снегоуборщиков'
+	title= title
+block pagecontent
+	//- +mob-mnu()
+	
+	
+	+topLine
+	+top-nav()
+	//- +sMainCategories
+	+page-head(title, 'Главная', 'Сервисный центр',title)
+	.container.page-container
+		.row
+			.col-lg-2
+				+sidebar(`12`,`Сервис`,`Ремонт аэраторов, скарификаторов и вертикуттеров`,`Ремонт бензопил`,`Ремонт газонокосилок`,`Ремонт генераторов и электростанций`,`Ремонт измельчителей`,`Ремонт кусторезов`,`Ремонт минитракторов и райдеров`,`Ремонт мотопомп`,`Ремонт садовых опрыскивателей`,`Ремонт садовых пылесосов и воздуходувок`,`Ремонт снегоуборщиков`,`Ремонт триммеров`)
+			.col-lg-10
+				.mainside
+					+sService12
+	+footer
+      
+
+
+
