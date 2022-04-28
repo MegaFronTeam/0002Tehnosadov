@@ -1,34 +1,30 @@
-mixin sBlogNav(data)
-	// start sBlogNav
-	+b.SECTION.sBlogNav.section#sBlogNav&attributes(attributes)
-		+e.sticky-wrap--js
-			+e.title--js Содержание
-				+icon('chevron-down')
-			nav.blog-nav.custom-scroll(title="Содеражние статьи")
-				ul.blog-nav__list.nav
-					li.blog-nav__item
-						a(href="#blog-nav-1").blog-nav__link Приготовление бензиново-масляной смеси
-					li.blog-nav__item
-						a(href="#blog-nav-2").blog-nav__link Обкатка двигателя&nbsp;&mdash; почему это важно?
-					li.blog-nav__item
-						a(href="#blog-nav-3").blog-nav__link Выбор масла для редуктора
-					li.blog-nav__item
-						a(href="#blog-nav-4").blog-nav__link Обслуживание триммера в&nbsp;домашних условиях
-						ul
-							li
-								a(href="#blog-nav-5") Двигатель
-							li
-								a(href="#blog-nav-6") Режущий механизм
-							li
-								a(href="#blog-nav-7") Шпуля с&nbsp;леской
-							li
-								a(href="#blog-nav-8") Редуктор
-							li
-								a(href="#blog-nav-9") Защитный кожух
-					li.blog-nav__item
-						a(href="#blog-nav-10").blog-nav__link Триммер не&nbsp;заводится&nbsp;&mdash; что делать?
-					li.blog-nav__item
-						a(href="#blog-nav-11").blog-nav__link Типичные поломки и&nbsp;способы их&nbsp;устранения
-					li.blog-nav__item
-						a(href="#blog-nav-12").blog-nav__link Как продлить срок службы триммера?
-	// end sBlogNav
+mixin sBlogNav(data) 
+	+b.sticky-wrap--js
+		+e.title.d-none.d-lg-block Содержание 
+		nav.blog-nav.custom-scroll(title="Содеражние статьи")
+			ul.blog-nav__list.nav
+				li.blog-nav__item
+					a(href="#blog-nav-1").blog-nav__link Приготовление бензиново-масляной смеси
+				li.blog-nav__item
+					a(href="#blog-nav-2").blog-nav__link Обкатка двигателя&nbsp;&mdash; почему это важно?
+				li.blog-nav__item
+					a(href="#blog-nav-3").blog-nav__link Выбор масла для редуктора
+				li.blog-nav__item
+					a(href="#blog-nav-4").blog-nav__link Обслуживание триммера в&nbsp;домашних условиях
+					ul
+						li
+							a(href="#blog-nav-5") Двигатель
+						li
+							a(href="#blog-nav-6") Режущий механизм
+						li
+							a(href="#blog-nav-7") Шпуля с&nbsp;леской
+						li
+							a(href="#blog-nav-8") Редуктор
+						li
+							a(href="#blog-nav-9") Защитный кожух
+				li.blog-nav__item
+					a(href="#blog-nav-10").blog-nav__link Триммер не&nbsp;заводится&nbsp;&mdash; что делать?
+				li.blog-nav__item
+					a(href="#blog-nav-11").blog-nav__link Типичные поломки и&nbsp;способы их&nbsp;устранения
+				li.blog-nav__item
+					a(href="#blog-nav-12").blog-nav__link Как продлить срок службы триммера?

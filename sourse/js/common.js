@@ -508,7 +508,7 @@ function eventHandler() {
 		})
 	})
 
-	$('.sBlogNav__sticky-wrap--js').hcSticky({
+	$('.sticky-wrap--js').hcSticky({
 		stickTo: $('.hc-container'),
 		responsive: {
 			768: {

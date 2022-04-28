@@ -129,6 +129,9 @@
 	// padding: rem(14);
 	height: 100%;
 	background-color: #ffffff;
+	&__body{
+		display: none;
+	}
 	&__mob-title {
 		@include media-breakpoint-up(lg) {
 			display: none;
@@ -155,11 +158,7 @@
 	}
 	ul {
 		margin-bottom: 0;
-		list-style-type: none;
-		@include media-breakpoint-up(lg){
-			display: block !important;
-		}
-		display: none;
+		list-style-type: none; 
 	}
 	li {
 		// margin-bottom: 16px;

@@ -41,13 +41,17 @@ mixin page-head(title, ...items)
 
 
 mixin sidebar(active,...items)
-	+b.sidebar
+	+b.sidebar&attributes(attributes)
 		+e.mob-title Содержание
 			+icon(`chevron-down`)
-		ul
-			each item,id in items
-				li
-					if (id+1 ==active)
-						a.active(href="#")!=item
-					else
-						a(href="#")!=item
+		+e.body.d-lg-block
+			if block
+				block
+			else
+				ul
+					each item,id in items
+						li
+							if (id+1 ==active)
+								a.active(href="#")!=item
+							else
+								a(href="#")!=item

@@ -36,12 +36,13 @@ block pagecontent
 	+topLine()
 	+top-nav()
 	+page-head(title, 'Главная', 'Cтатьи',title).--article
-	.container
+	.container.page-container
 		.row
-			.col-lg-auto
-				+sBlogNav().hc-container
-			.col
-				+sArticle()(data-bs-spy="scroll", data-bs-target=".sBlogNav", data-bs-offset="0", class="scrollspy-example", tabindex="0")
+			.col-xxl-2.col-lg-3
+				+sidebar(`1`).hc-container
+					+sBlogNav()
+			.col-xxl-10.col-lg-9
+				+sArticle()
 		+sBlogSlider()
 	
 	+footer()
