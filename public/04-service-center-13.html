@@ -9,10 +9,10 @@
 		<link type="image/ico" href="img/favicon.ico" rel="shortcut icon"><meta name="format-detection" content="telephone=no"> 
 		<link href="libs/swiper/swiper.min.css" rel="stylesheet"/>
 		<link href="libs/@fancyapps/ui/fancybox.css" rel="stylesheet"/>
-		<link href="libs/ion-rangeslider/css/ion.rangeSlider.min.css" rel="stylesheet"/>
-		<link href="css/main.min.css?v=0.0.1" rel="stylesheet"/><link rel="preconnect" href="https://fonts.googleapis.com">
+		<link href="libs/ion-rangeslider/css/ion.rangeSlider.min.css" rel="stylesheet"/><link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap" rel="stylesheet">
+		<link href="css/main.min.css" rel="stylesheet"/>
 	</head>
 	<body>
 		<div class="main-wrapper">
@@ -41,14 +41,14 @@
 									</div>
 								</div>
 								<div class="col-auto">
-									<button class="topLine__location">
+									<div class="topLine__location">
 										<svg class="icon icon-geo ">
 											<use xlink:href="img/svg/sprite.svg#geo"></use>
 										</svg>
 										<div class="topLine__location-text">
 											<p><span>Москва</span>Выбрать другой город</p>
 										</div>
-									</button>
+									</div>
 								</div>
 								<div class="col-auto">
 									<div class="topLine__to-call"><a href="tel:+74951208090">
@@ -89,34 +89,27 @@
 			<div class="top-nav block-with-lazy">
 				<div class="container">
 					<div class="row">
-						<div class="top-nav__col-catalog col">
+						<div class="top-nav__col-catalog col-lg">
 							<button class="catalog-btn catalog-btn--js"><span></span>Каталог товаров</button>
 						</div>
-						<div class="col order-lg-0 order-last">
-							<div class="menu-mobile menu-mobile--js">
-								<div class="menu-mobile__inner">
-									<div class="toggle-menu-mobile toggle-menu-mobile--js d-lg-none"><span></span>
-									</div>
-									<ul class="menu" itemscope="itemscope" itemtype="http://schema.org/SiteNavigationElement">
-										<li class="menu-item menu-item--blue" itemprop="item"><a href="#" itemprop="url">Акции</a></li>
-										<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Оплата</a></li>
-										<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Доставка</a></li>
-										<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Контакты</a></li>
-										<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Сервисный центр</a></li>
-										<li class="menu-item menu-item--yellow" itemprop="item"><a href="#" itemprop="url">Рассрочка</a></li>
-									</ul>
-								</div>
-							</div>
-						</div>
-						<div class="col-auto d-lg-none">
-							<div class="toggle-menu-mobile toggle-menu-mobile--js d-lg-none"><span></span>
-							</div>
+						<div class="col-lg">
+							<ul class="menu" itemscope="itemscope" itemtype="http://schema.org/SiteNavigationElement">
+								<li class="menu-item menu-item--blue" itemprop="item"><a href="#" itemprop="url">Акции</a></li>
+								<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Оплата</a></li>
+								<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Доставка</a></li>
+								<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Контакты</a></li>
+								<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Сервисный центр</a></li>
+								<li class="menu-item menu-item--yellow" itemprop="item"><a href="#" itemprop="url">Рассрочка</a></li>
+							</ul>
 						</div>
 					</div>
 					<!-- start sCatalogNav-->
 					<div class="sCatalogNav"> 
 						<ul class="main-categories">
-							<li><a href="#">Садовая техника</a>
+							<li class="catalog-menu-back catalog-menu-back--main d-lg-none">Назад</li>
+							<li>
+								<a class="sCatalogNav__link" href="#">Садовая техника
+								</a>
 								<div class="submenu">
 									<a class="submenu__title" href="#">Садовая техника
 									</a>
@@ -143,7 +136,9 @@
 									</ul>
 								</div>
 							</li>
-							<li><a href="#">Водоснабжение и полив</a>
+							<li>
+								<a class="sCatalogNav__link" href="#">Водоснабжение и полив
+								</a>
 								<div class="submenu">
 									<a class="submenu__title" href="#">Водоснабжение и полив
 									</a>
@@ -170,7 +165,9 @@
 									</ul>
 								</div>
 							</li>
-							<li><a href="#">Расходные материалы и аксессуары</a>
+							<li>
+								<a class="sCatalogNav__link" href="#">Расходные материалы и аксессуары
+								</a>
 								<div class="submenu">
 									<a class="submenu__title" href="#">Расходные материалы и аксессуары
 									</a>
@@ -197,7 +194,9 @@
 									</ul>
 								</div>
 							</li>
-							<li><a href="#">Силовое оборудование</a>
+							<li>
+								<a class="sCatalogNav__link" href="#">Силовое оборудование
+								</a>
 								<div class="submenu">
 									<a class="submenu__title" href="#">Силовое оборудование
 									</a>
@@ -224,7 +223,9 @@
 									</ul>
 								</div>
 							</li>
-							<li><a href="#">Строительные инструменты</a>
+							<li>
+								<a class="sCatalogNav__link" href="#">Строительные инструменты
+								</a>
 								<div class="submenu">
 									<a class="submenu__title" href="#">Строительные инструменты
 									</a>
@@ -251,7 +252,9 @@
 									</ul>
 								</div>
 							</li>
-							<li><a href="#">Снегоуборочная техника</a>
+							<li>
+								<a class="sCatalogNav__link" href="#">Снегоуборочная техника
+								</a>
 								<div class="submenu">
 									<a class="submenu__title" href="#">Снегоуборочная техника
 									</a>
@@ -278,7 +281,9 @@
 									</ul>
 								</div>
 							</li>
-							<li><a href="#"> Обогрев и вентиляция</a>
+							<li>
+								<a class="sCatalogNav__link" href="#"> Обогрев и вентиляция
+								</a>
 								<div class="submenu">
 									<a class="submenu__title" href="#"> Обогрев и вентиляция
 									</a>
@@ -305,7 +310,9 @@
 									</ul>
 								</div>
 							</li>
-							<li><a href="#">Продукция STIHL и Viking</a>
+							<li>
+								<a class="sCatalogNav__link" href="#">Продукция STIHL и Viking
+								</a>
 								<div class="submenu">
 									<a class="submenu__title" href="#">Продукция STIHL и Viking
 									</a>
@@ -332,7 +339,9 @@
 									</ul>
 								</div>
 							</li>
-							<li><a href="#">Сварочное оборудование</a>
+							<li>
+								<a class="sCatalogNav__link" href="#">Сварочное оборудование
+								</a>
 								<div class="submenu">
 									<a class="submenu__title" href="#">Сварочное оборудование
 									</a>
@@ -359,7 +368,9 @@
 									</ul>
 								</div>
 							</li>
-							<li><a href="#">Садовый инвентарь и инструменты</a>
+							<li>
+								<a class="sCatalogNav__link" href="#">Садовый инвентарь и инструменты
+								</a>
 								<div class="submenu">
 									<a class="submenu__title" href="#">Садовый инвентарь и инструменты
 									</a>
@@ -386,7 +397,9 @@
 									</ul>
 								</div>
 							</li>
-							<li><a href="#">Мототехника</a>
+							<li>
+								<a class="sCatalogNav__link" href="#">Мототехника
+								</a>
 								<div class="submenu">
 									<a class="submenu__title" href="#">Мототехника
 									</a>
@@ -421,13 +434,13 @@
 			<!-- end top-nav-->
 			<div class="page-head">
 				<div class="container">
-					<nav aria-label="breadcrumb">
-						<ol class="breadcrumb" itemscope="itemscope" itemtype="http://schema.org/BreadcrumbList">
-							<li class="breadcrumb-item" itemprop="itemListElement" itemscope="itemscope" itemtype="http://schema.org/ListItem"><a href="/" itemprop="item"><span itemprop="name">Главная</span>
+					<nav class="swiper-container breadcrumb-slider--js" aria-label="breadcrumb">
+						<ol class="breadcrumb swiper-wrapper" itemscope="itemscope" itemtype="http://schema.org/BreadcrumbList">
+							<li class="swiper-slide breadcrumb-item" itemprop="itemListElement" itemscope="itemscope" itemtype="http://schema.org/ListItem"><a href="/" itemprop="item"><span itemprop="name">Главная</span>
 									<meta itemprop="position" content="1"/></a></li>
-							<li class="breadcrumb-item" itemprop="itemListElement" itemscope="itemscope" itemtype="http://schema.org/ListItem"><a href="#" itemprop="item"><span itemprop="name">Сервисный центр</span>
+							<li class="swiper-slide breadcrumb-item" itemprop="itemListElement" itemscope="itemscope" itemtype="http://schema.org/ListItem"><a href="#" itemprop="item"><span itemprop="name">Сервисный центр</span>
 									<meta itemprop="position" content="2"/></a></li>
-							<li class="breadcrumb-item active" itemprop="itemListElement" itemscope="itemscope" itemtype="http://schema.org/ListItem"><a href="#" itemprop="item"><span itemprop="name">Ремонт триммеров</span>
+							<li class="swiper-slide breadcrumb-item active" itemprop="itemListElement" itemscope="itemscope" itemtype="http://schema.org/ListItem"><a href="#" itemprop="item"><span itemprop="name">Ремонт триммеров</span>
 									<meta itemprop="position" content="3"/></a></li>
 						</ol>
 					</nav>
@@ -438,6 +451,11 @@
 				<div class="row">
 					<div class="col-lg-2">
 						<div class="sidebar">
+							<div class="sidebar__mob-title">Содержание
+								<svg class="icon icon-chevron-down ">
+									<use xlink:href="img/svg/sprite.svg#chevron-down"></use>
+								</svg>
+							</div>
 							<ul>
 								<li><a href="#">Сервис</a>
 								</li>
@@ -564,39 +582,41 @@
 							<p>E-mail: <a href="mailto:info@tehnosadov.ru">info@tehnosadov.ru</a></p>
 						</div>
 					</div>
-					<div class="footer__bottom row">
-						<div class="col">
-							<div class="footer__title">Товары для дома и&nbsp;сада &laquo;Техносадов&raquo; <sup class="reg">&reg;</sup> 2018-2022
+					<div class="footer__bottom">
+						<div class="row">
+							<div class="col">
+								<div class="footer__title">Товары для дома и&nbsp;сада &laquo;Техносадов&raquo; <sup class="reg">&reg;</sup> 2018-2022
+								</div>
+								<p>Сайт носит информационный характер и&nbsp;не&nbsp;является публичной офертой, определяемой положениями ч.2&nbsp;ст.&nbsp;437&nbsp;ГК РФ. Внешний вид, цвет и&nbsp;характеристики товаров указаны ориентировочно, могут не&nbsp;совпадать с&nbsp;обновленными моделями&nbsp;&mdash; уточняйте информацию у&nbsp;менеджеров при заказе.</p>
 							</div>
-							<p>Сайт носит информационный характер и&nbsp;не&nbsp;является публичной офертой, определяемой положениями ч.2&nbsp;ст.&nbsp;437&nbsp;ГК РФ. Внешний вид, цвет и&nbsp;характеристики товаров указаны ориентировочно, могут не&nbsp;совпадать с&nbsp;обновленными моделями&nbsp;&mdash; уточняйте информацию у&nbsp;менеджеров при заказе.</p>
-						</div>
-						<div class="col-12 col-lg-auto d-flex align-items-center justify-content-center">
-							<div class="soc">
-								<a class="soc__item" href="https://vk.com/tehnosadov" target="_blank">
-									<svg class="icon icon-vk ">
-										<use xlink:href="img/svg/sprite.svg#vk"></use>
-									</svg>
-								</a>
-								<a class="soc__item" href="https://youtube.com/channel/UC4Q_1trBaz7TReyeksjy7UA" target="_blank">
-									<svg class="icon icon-youtube ">
-										<use xlink:href="img/svg/sprite.svg#youtube"></use>
-									</svg>
-								</a>
-								<a class="soc__item" href="https://t.me/tehnosadov_bot" target="_blank">
-									<svg class="icon icon-telegram ">
-										<use xlink:href="img/svg/sprite.svg#telegram"></use>
-									</svg>
-								</a>
-								<a class="soc__item" href="https://api.whatsapp.com/message/BICUPZKPJ3TRH1" target="_blank">
-									<svg class="icon icon-whatsapp ">
-										<use xlink:href="img/svg/sprite.svg#whatsapp"></use>
-									</svg>
-								</a>
-								<a class="soc__item" href="https://ok.ru/group/60953239879731" target="_blank">
-									<svg class="icon icon-ok ">
-										<use xlink:href="img/svg/sprite.svg#ok"></use>
-									</svg>
-								</a>
+							<div class="col-12 col-lg-auto d-flex align-items-center justify-content-center">
+								<div class="soc">
+									<a class="soc__item" href="https://vk.com/tehnosadov" target="_blank">
+										<svg class="icon icon-vk ">
+											<use xlink:href="img/svg/sprite.svg#vk"></use>
+										</svg>
+									</a>
+									<a class="soc__item" href="https://youtube.com/channel/UC4Q_1trBaz7TReyeksjy7UA" target="_blank">
+										<svg class="icon icon-youtube ">
+											<use xlink:href="img/svg/sprite.svg#youtube"></use>
+										</svg>
+									</a>
+									<a class="soc__item" href="https://t.me/tehnosadov_bot" target="_blank">
+										<svg class="icon icon-telegram ">
+											<use xlink:href="img/svg/sprite.svg#telegram"></use>
+										</svg>
+									</a>
+									<a class="soc__item" href="https://api.whatsapp.com/message/BICUPZKPJ3TRH1" target="_blank">
+										<svg class="icon icon-whatsapp ">
+											<use xlink:href="img/svg/sprite.svg#whatsapp"></use>
+										</svg>
+									</a>
+									<a class="soc__item" href="https://ok.ru/group/60953239879731" target="_blank">
+										<svg class="icon icon-ok ">
+											<use xlink:href="img/svg/sprite.svg#ok"></use>
+										</svg>
+									</a>
+								</div>
 							</div>
 						</div>
 					</div>
@@ -616,7 +636,7 @@
 						</div>
 						<!-- +e.input-wrap-->
 						<div class="form-wrap__input-wrap form-group">
-							<label><span class="form-wrap__input-title">Телефон: </span><input class="form-wrap__input form-control" name="number" type="tel" placeholder="" step="any" required="required"/>
+							<label><span class="form-wrap__input-title">Телефон: </span><input class="form-wrap__input form-control" name="tel" type="tel" placeholder="" required="required"/>
 							</label>
 						</div>
 						<!-- +e.input-wrap-->
@@ -668,6 +688,7 @@
 		<script src="libs/swiper/swiper-bundle.min.js"></script>
 		<script src="libs/hc-sticky/hc-sticky.js"></script>
 		<script src="libs/ion-rangeslider/js/ion.rangeSlider.min.js"> </script>
-		<script src="js/common.js?v=0.0.1"></script>
+		<script src="libs/inputmask/inputmask.min.js"> </script>
+		<script src="js/common.js"></script>
 	</body>
 </html>

@@ -124,8 +124,19 @@
 	.product-card {
 		&__to-buy {
 			margin-bottom: 0;
+			position: relative;
+			padding-left: rem(17);
+			padding-right: rem(17);
+			justify-content: center;
+			@include media-breakpoint-up(lg) {
+				justify-content: flex-end;
+			}
 			.icon {
 				// font-size: rem(24);
+				position: absolute;
+				left: 5px;
+				top: 50%;
+				transform: translateY(-50%);
 			}
 		}
 	}

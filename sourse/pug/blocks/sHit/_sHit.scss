@@ -183,11 +183,16 @@
 			stroke: $body-color;
 		}
 	}
-	&__to-bookmarks:hover {
-		background-color:$yellow;
+	&__to-bookmarks {
+		&:hover, &.active {
+			background-color:$yellow;
+		}
 	}
-	&__to-compare:hover {
-		background-color:$green;
+
+	&__to-compare {
+		&:hover, &.active {
+			background-color:$green;
+		}
 	}
 	&__to-buy {
 		display: flex;
