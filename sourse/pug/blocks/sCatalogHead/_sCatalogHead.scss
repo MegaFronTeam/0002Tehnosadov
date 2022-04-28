@@ -29,10 +29,12 @@
 		background-color: $white;
 		border: 1px solid $gray;
 		display: flex;
-		justify-content: space-between;
+		@include media-breakpoint-up(lg) {
+			justify-content: space-between;
+		}
 		@include media-breakpoint-down(lg) {
 			flex-wrap: wrap;
-			justify-content: center;
+			// justify-content: center;
 		}
 		&__input {
 			background-color: transparent;
@@ -41,6 +43,9 @@
 		}
 		&__wrap {
 			position: relative;
+			@include media-breakpoint-down(md) {
+				width: 100%;
+			}
 			&::after {
 				content: '';
 				position: absolute;
@@ -56,6 +61,8 @@
 			label {
 				display: flex;
 				align-items: center;
+				margin-right: rem(10);
+				margin-left: rem(10);
 				span {
 					font-weight: 700;
 					color: $blue;
