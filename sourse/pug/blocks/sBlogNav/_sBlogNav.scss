@@ -21,6 +21,10 @@
 			top: 50%;
 			transform: translateY(-50);
 			right: 10px;
+			stroke: #444;
+			color: transparent;
+			font-size: 8px;
+			transition-duration: .4s;
 			@include media-breakpoint-up(lg) {
 				display: none;
 			}
@@ -37,8 +41,10 @@
 		max-height: 100vh;
 	}
 	ul {
+		display: block;
 		@include media-breakpoint-down(lg) {
 			display: none;
+			margin-top: 20px;
 		}
 		padding: 0;
 		list-style-type: none;
