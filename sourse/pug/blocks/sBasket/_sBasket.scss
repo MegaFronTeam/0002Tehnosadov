@@ -146,6 +146,11 @@
 			width: 40%;
 			order: -2
 		}
+		@include media-breakpoint-down(sm) {
+			width: 60%;
+			margin-top: 10px;
+			order: -2
+		}
 	}
 	&__name {
 		color: $body-color;
@@ -178,6 +183,7 @@
 		@include media-breakpoint-down(sm) {
 			width: fit-content;
 			font-weight: bold;
+			// display: table-cell;
 			// &::before {
 			// 	content: attr(data-label);
 			// 	margin-right: 10px;

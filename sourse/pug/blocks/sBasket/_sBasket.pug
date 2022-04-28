@@ -6,7 +6,7 @@ mixin basketItem(img,name,number,weight,price)
 		+e.title.TD
 			+e.name(href="#")!= name
 			+e.number.d-block.d-sm-none(data-label="Артикул ")!= number
-		+e.number.d-none.d-sm-block.TD(data-label="Артикул")!= number
+		+e.number.d-none.d-sm-table-cell.TD(data-label="Артикул")!= number
 		+e.count.TD(data-label="Количество")
 			+addblock()
 		+e.weight.TD(data-label="Вес") #{weight} кг

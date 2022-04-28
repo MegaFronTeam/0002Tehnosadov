@@ -2,7 +2,8 @@ mixin sBlogNav(data)
 	// start sBlogNav
 	+b.SECTION.sBlogNav.section#sBlogNav&attributes(attributes)
 		+e.sticky-wrap--js
-			+e.title Содержание
+			+e.title--js Содержание
+				+icon('chevron-down')
 			nav.blog-nav.custom-scroll(title="Содеражние статьи")
 				ul.blog-nav__list.nav
 					li.blog-nav__item

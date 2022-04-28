@@ -64,8 +64,8 @@
 
 	.product-card {
 		margin: 0 5px rem(10);
-		width: 100%;
-		@include media-breakpoint-only(sm) {
+		height: auto;
+		@include media-breakpoint-down(sm) {
 			width: calc((100% - 20px) / 2);
 		}
 		@include media-breakpoint-only(md) {
@@ -76,6 +76,9 @@
 		}
 		@include media-breakpoint-up(xxl) {
 			width: calc((100% - 50px) / 5);
+		}
+		@media (max-width: 440px) {
+			width: 100%;
 		}
 		&__to-bookmarks {
 			background-color: $yellow;

@@ -97,9 +97,6 @@
 	margin-bottom: $grid-gutter-width;
 	&__item {
 		padding: 2px;
-		display: flex;
-		align-items: center;
-		justify-content: center;
 		&:not(:first-child) {
 			border-top: 1px solid #ddd;
 		}

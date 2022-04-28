@@ -463,7 +463,16 @@ function eventHandler() {
 			}
 		});
 	})
-
+	
+	$(".sBlogNav__title--js").click(function () {
+		$(".blog-nav__list").slideToggle(function () {
+			if ($(".blog-nav__list").is(":visible")) {
+				$(".sBlogNav__title .icon").addClass('up')
+			} else {
+				$(".sBlogNav__title .icon").removeClass('up')
+			}
+		});
+	})
 	$('.filter-btn').on('click', function () {
 		$('.sFilter').addClass('active');
 		$('body').addClass('fixed');
