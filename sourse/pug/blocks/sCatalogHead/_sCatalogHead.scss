@@ -72,6 +72,7 @@
 		select {
 			option {
 				color: $body-color;
+				text-overflow: ellipsis;
 			}
 		}
 	}
