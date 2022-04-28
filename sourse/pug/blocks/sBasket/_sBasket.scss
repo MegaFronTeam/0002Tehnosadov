@@ -128,8 +128,10 @@
 .basket-item {
 	position: relative;
 	vertical-align: middle;
-	@include media-breakpoint-down(md) {
-		padding-bottom: rem(20);
+	@include media-breakpoint-down(sm) {
+		// padding-bottom: rem(20);
+		border: none;
+
 	}
 	&__img-wrap {
 		padding: $grid-gutter-width;
@@ -174,9 +176,23 @@
 			width: 25%;
 		}
 	}
-	&__count, &__weight,&__price {
+	&__count{
 		@include media-breakpoint-down(sm) {
-			width:33%;
+		width: 100%;
+		order: 3;
+		padding: 0 !important;
+		.addBlock{
+			width: 100%;
+			input{
+				flex-grow: 1;
+				width: initial; 
+			}
+		}
+		}
+	}
+	&__weight,&__price {
+		@include media-breakpoint-down(sm) {
+			width:50%;
 		}
 	}
 	&__number {
@@ -194,8 +210,8 @@
 	}
 	&__delete {
 		@include media-breakpoint-down(md) {
-			width: 20%;
-			order: -1;
+			width: 0;
+			// order: -1;
 		}
 	}
 
@@ -206,7 +222,7 @@
 		&:hover {
 			transform: rotate(180deg);
 		}
-		@include media-breakpoint-down(sm) {
+		@include media-breakpoint-down(md) {
 			position: absolute;
 			top: 10px;
 			right: 10px;
